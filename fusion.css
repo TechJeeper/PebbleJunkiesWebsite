@@ -1,0 +1,239 @@
+p, pre, blockquote, h1, h2, h3, h4, h5, h6 {
+	line-height: 1.2;
+	margin-top: 0px;	
+	margin-bottom: 19px;
+}
+
+pre {
+	font-family: 'Courier New', 'Lucida Console', Courier, Monaco, Monospace;
+}
+
+blockquote {
+	margin-bottom: 21.28px;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+address {
+	line-height: 1.2;
+	margin: 0px;
+	font-style: italic;
+}
+
+h1 {
+	font-size: 31px;
+}
+h2 {
+	font-size: 24px;
+}
+h3 {
+	font-size: 18px;
+}
+h4 {
+	font-size: 16px;
+}
+h5 {
+	font-size: 13px;
+}
+h6 {
+	font-size: 10px;
+}
+
+html, body, form {
+	margin: 0px;
+	padding: 0px;
+}
+
+a img {
+	border: 0px;
+}
+
+.NavBar_ul {
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+}
+.NavBar_li {
+	position: absolute;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+.NavBar_a {
+	margin: 0px;
+	padding: 0px;
+	cursor: pointer;
+	text-decoration: none;
+	display: block;
+}
+
+.nof-clearfix:before,
+.nof-clearfix:after {
+    content: "";
+    display: table;
+}
+
+.nof-clearfix:after {
+    clear: both;
+}
+
+.nof-clearfix {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.nof-positioning {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+}
+
+.nof-positioning > img {
+    vertical-align: top;
+}
+
+table.nof-positioning td > img {
+    vertical-align: top;
+}
+
+table.nof-positioning td {
+    line-height: 0;
+}
+
+.nof-navPositioning {
+	margin: 0px;
+	padding: 0px;
+	cursor: pointer;
+}
+
+.nof-navButtonAnchor {
+	margin: 0px;
+	padding: 0px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.nof-ajaxTemplateHide {
+	visibility:hidden;
+	background-color:white;
+	color:white;	
+}
+
+.nof-pgFrame p {
+	font-size: 0px;
+	line-height: 0px;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    /**overflow: visible;*/
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/* Vertical Alignment */
+.nof-align-top {
+  vertical-align: top;
+}
+
+.nof-align-middle {
+  vertical-align: middle;
+}
+
+.nof-align-bottom {
+  vertical-align: bottom;
+}
+
+/* Horizontal Alignment */
+.nof-block-left {
+  display: block;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.nof-block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nof-block-right {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+table.nof-block-left,
+table.nof-block-center,
+table.nof-block-right {
+  display: table;
+}
+
+/* Wrap Alignment */
+.nof-wrap-left {
+  float: left !important;
+}
+.nof-wrap-right {
+  float: right !important;
+}
+
+
+.mediaplayer {
+	position: relative;
+	/*height: 0;
+	width: 100%;*/
+}
+
+.mediaplayer video,
+.mediaplayer .polyfill-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.touchevents .mediaplayer,
+.touch .mediaplayer {
+	font-size: 24px;
+}
+
+/*@media (pointer:coarse), (touch-enabled), (-moz-touch-enabled), (-webkit-touch-enabled) {*/
+@media (pointer:coarse) {
+	.mediaplayer {
+		font-size: 24px;
+	}
+}
+
+/*fixed*/
+span > div > .jme-cb-box > div {
+	padding: 0;
+}
+
+.mediaplayer > div > .jme-cb-box > div {
+	padding: 0;
+}
+
+.mediaplayer[data-state="playing"][data-useractivity="false"] > .nof-audio ~ .jme-controlbar {
+  opacity: 100;
+  visibility: visible;
+}
+.mediaplayer[data-state="playing"][data-useractivity="false"] > .nof-audio ~ .cue-display span.cue-wrapper {
+  bottom: 0;
+}

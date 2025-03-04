@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pebble Developers - Pebble Junkies</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #ff9500;
+            --secondary: #00a2ff;
+            --dark: #000000;
+            --light: #ffffff;
+            --accent: #ff0;
+        }
+        
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .dev-section {
+            border: 3px solid #0033cc;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+        
+        footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .icon-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 2rem 0;
+        }
+        
+        .icon-item {
+            text-align: center;
+            width: 100px;
+        }
+        
+        .icon-item img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+        
+        .icon-item:hover img {
+            transform: scale(1.2);
+        }
+        
+        .icon-item p {
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        
+        .dev-link {
+            color: var(--accent);
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .dev-link:hover {
+            color: var(--primary);
+        }
+        
+        .card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--secondary);
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Pebble Junkies</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.rebble.io/">Rebble</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="meet_the_pebble_family.html">Pebble Family</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="developers.html">Developers</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <img src="./Logo_2.png" alt="Pebble Junkies Logo" class="img-fluid mb-4" style="max-width: 400px;">
+                <h1 class="section-title">Pebble Developers</h1>
+                <p class="lead mb-5">Resources for creating amazing Pebble apps and watchfaces</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="dev-section">
+                    <h2 class="text-center text-white mb-4">For the Devs out there</h2>
+                    <p class="text-center fs-5">Rebble has a lot of the old Pebble Developer site available. There is no Developer Portal yet but all of the instructions, examples and the SDK are all available.</p>
+                    <div class="text-center mt-4">
+                        <a href="https://developer.rebble.io/developer.pebble.com/index.html" class="dev-link">
+                            <i class="fas fa-code me-2"></i> Access Developer Resources
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title text-primary">Getting Started with Pebble Development</h3>
+                        <p class="card-text">Even though Pebble as a company is no longer around, you can still develop amazing apps and watchfaces for Pebble devices. Here's how to get started:</p>
+                        
+                        <ol class="mt-4">
+                            <li class="mb-2">Download the Pebble SDK from the Rebble developer site</li>
+                            <li class="mb-2">Set up your development environment (works on Windows, macOS, and Linux)</li>
+                            <li class="mb-2">Follow the tutorials to create your first watchface or app</li>
+                            <li class="mb-2">Test your creation using the Pebble emulator or on a physical device</li>
+                            <li class="mb-2">Share your creation with the Pebble community!</li>
+                        </ol>
+                        
+                        <div class="alert alert-info mt-4">
+                            <i class="fas fa-info-circle me-2"></i>
+                            The Pebble development community is still active on Discord and Reddit. Join these platforms to get help and share your projects!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quick Access Icons -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="text-center mb-4">Quick Access</h3>
+                <div class="icon-grid">
+                    <div class="icon-item">
+                        <a href="https://www.rebble.io/">
+                            <img src="./rebble1.png" alt="Rebble">
+                            <p>Rebble</p>
+                        </a>
+                    </div>
+                    <div class="icon-item">
+                        <a href="https://www.facebook.com/groups/pebble.junkies/">
+                            <img src="./facebbok1.png" alt="Facebook">
+                            <p>Facebook</p>
+                        </a>
+                    </div>
+                    <div class="icon-item">
+                        <a href="http://geol.com/pebble/pia/">
+                            <img src="./World_map1.png" alt="Map">
+                            <p>World Map</p>
+                        </a>
+                    </div>
+                    <div class="icon-item">
+                        <a href="./developers.html">
+                            <img src="./dev1.png" alt="Developers">
+                            <p>Developers</p>
+                        </a>
+                    </div>
+                    <div class="icon-item">
+                        <a href="http://discord.gg/aRUAYFN">
+                            <img src="./discord2.png" alt="Discord">
+                            <p>Discord</p>
+                        </a>
+                    </div>
+                    <div class="icon-item">
+                        <a href="./meet_the_pebble_family.html">
+                            <img src="./Pebble_family_1.png" alt="Pebble Family">
+                            <p>Pebble Family</p>
+                        </a>
+                    </div>
+                    <div class="icon-item">
+                        <a href="https://en.wikipedia.org/wiki/Pebble_(watch)">
+                            <img src="./wikipedia1.png" alt="Wikipedia">
+                            <p>History</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>About Pebble Junkies</h5>
+                    <p>The ultimate resource for Pebble smartwatch enthusiasts. Keeping the Pebble community alive and thriving!</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Community</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/groups/pebble.junkies/" class="text-white">Facebook Group</a></li>
+                        <li><a href="https://www.reddit.com/r/pebble/" class="text-white">Reddit</a></li>
+                        <li><a href="http://discord.gg/aRUAYFN" class="text-white">Discord</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.rebble.io/" class="text-white">Rebble</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 Pebble Junkies. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <!-- <p>Contact: <a href="mailto:Bryan@PebbleJunkies.com" class="text-white">Bryan@PebbleJunkies.com</a></p> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+ 

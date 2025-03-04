@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pebble 2 Button Fix - Pebble Junkies</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #ff9500;
+            --secondary: #00a2ff;
+            --dark: #000000;
+            --light: #ffffff;
+            --accent: #ff0;
+            --danger: #ff0000;
+        }
+        
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .section-title {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+        
+        footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 15px;
+            margin: 2rem 0;
+        }
+        
+        .icon-item {
+            text-align: center;
+        }
+        
+        .icon-item img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+        
+        .icon-item:hover img {
+            transform: scale(1.2);
+        }
+        
+        .icon-item p {
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        
+        .tutorial-header {
+            background-color: var(--danger);
+            color: var(--light);
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 5px;
+        }
+        
+        .tutorial-img {
+            max-width: 100%;
+            height: auto;
+            border: 3px solid var(--accent);
+            margin-bottom: 1.5rem;
+            border-radius: 5px;
+        }
+        
+        .step {
+            margin-bottom: 2rem;
+        }
+        
+        .step-number {
+            font-weight: bold;
+            color: var(--primary);
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Pebble Junkies</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.rebble.io/">Rebble</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="meet_the_pebble_family.html">Pebble Family</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="developers.html">Developers</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <img src="./Logo_2.png" alt="Pebble Junkies Logo" class="img-fluid mb-4" style="max-width: 400px;">
+                <div class="tutorial-header">
+                    <h1 class="mb-0">The In-Depth Pebble 2 Button Fix</h1>
+                    <p class="lead mb-0">by Cedric A. Solidon</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <p class="lead">The P2 has a typical problem where the buttons tend to wear down after several months of use. So I'm sharing again how I fixed mine. The replacement buttons have so far been more durable than the original although it isn't as soft.</p>
+                
+                <div class="step">
+                    <h3><span class="step-number">1.</span> Get your copy of the 3D plan</h3>
+                    <p>Google 'pebble2 side cover by Yusukeyusuke'. Click the thingverse link where you can download the necessary files.</p>
+                </div>
+                
+                <div class="step">
+                    <h3><span class="step-number">2.</span> Print your mould</h3>
+                    <p>Send the thingverse files to your 3D printing supplier (if you don't have a 3D printer). I had mine printed by a supplier I found at 3D Hubs. My mould was made of ABS plastic. Try to get the most detailed print possible.</p>
+                </div>
+                
+                <div class="step">
+                    <h3><span class="step-number">3.</span> Create your buttons</h3>
+                    <p>I used 2 packs of Sugru, first to create the button, the other to attach the buttons to the watch. It takes 24 hours for the button to form.</p>
+                    <p>Before putting Sugru on the mould, place a 'release agent' on the mould's surface to make sure that the Sugru doesn't stick when you remove it. The manufacturer suggests using cling wrap or petroleum jelly. But what worked for me was spray on butter you use for baking.</p>
+                </div>
+                
+                <div class="step">
+                    <h3><span class="step-number">4.</span> Attach the buttons</h3>
+                    <p>I like to put a thin layer of Sugru on the corners of the watch and then place the button on it. Keep in mind that your watch probably won't be waterproof anymore after this procedure.</p>
+                    <p>Hope that helps!</p>
+                </div>
+                
+                <div class="row mt-5">
+                    <div class="col-md-6 mb-4">
+                        <img src="./0001.jpg" alt="Step 1" class="tutorial-img">
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <img src="./0002.jpg" alt="Step 2" class="tutorial-img">
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <img src="./0003.jpg" alt="Step 3" class="tutorial-img">
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <img src="./0004.jpg" alt="Step 4" class="tutorial-img">
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <img src="./0005.jpg" alt="Step 5" class="tutorial-img">
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <img src="./0006.jpg" alt="Step 6" class="tutorial-img">
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <img src="./0007.jpg" alt="Step 7" class="tutorial-img">
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <img src="./0008.jpg" alt="Step 8" class="tutorial-img">
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <img src="./0009.jpg" alt="Step 9" class="tutorial-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quick Access Icons -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="text-center mb-4">Quick Access</h3>
+                <div class="icon-grid">
+                    <div class="icon-item">
+                        <a href="https://www.rebble.io/">
+                            <img src="./rebble1.png" alt="Rebble">
+                            <p>Rebble</p>
+                        </a>
+                    </div>
+                    <div class="icon-item">
+                        <a href="http://geol.com/pebble/">
+                            <img src="./Pebble1.png" alt="App Store">
+                            <p>App Store</p>
+                        </a>
+                    </div>
+                    <div class="icon-item">
+                        <a href="https://www.facebook.com/groups/pebble.junkies/">
+                            <img src="./facebbok1.png" alt="Facebook">
+                            <p>Facebook</p>
+                        </a>
+                    </div>
+                    <div class="icon-item">
+                        <a href="http://geol.com/pebble/pia/">
+                            <img src="./World_map1.png" alt="Map">
+                            <p>World Map</p>
+                        </a>
+                    </div>
+                    <div class="icon-item">
+                        <a href="./developers.html">
+                            <img src="./dev1.png" alt="Developers">
+                            <p>Developers</p>
+                        </a>
+                    </div>
+                    <div class="icon-item">
+                        <a href="http://discord.gg/aRUAYFN">
+                            <img src="./discord2.png" alt="Discord">
+                            <p>Discord</p>
+                        </a>
+                    </div>
+                    <div class="icon-item">
+                        <a href="./meet_the_pebble_family.html">
+                            <img src="./Pebble_family_1.png" alt="Pebble Family">
+                            <p>Pebble Family</p>
+                        </a>
+                    </div>
+                    <div class="icon-item">
+                        <a href="https://en.wikipedia.org/wiki/Pebble_(watch)">
+                            <img src="./wikipedia1.png" alt="Wikipedia">
+                            <p>History</p>
+                        </a>
+                    </div>
+                    <div class="icon-item">
+                        <a href="http://www.zazzle.com/pebble_junkies">
+                            <img src="./apparel1.png" alt="Apparel">
+                            <p>Shop</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>About Pebble Junkies</h5>
+                    <p>The ultimate resource for Pebble smartwatch enthusiasts. Keeping the Pebble community alive and thriving!</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Community</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/groups/pebble.junkies/" class="text-white">Facebook Group</a></li>
+                        <li><a href="https://www.reddit.com/r/pebble/" class="text-white">Reddit</a></li>
+                        <li><a href="http://discord.gg/aRUAYFN" class="text-white">Discord</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.rebble.io/" class="text-white">Rebble</a></li>
+                        <li><a href="http://geol.com/pebble/" class="text-white">App Store</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 Pebble Junkies. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>Contact: <a href="mailto:Bryan@PebbleJunkies.com" class="text-white">Bryan@PebbleJunkies.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+ 
