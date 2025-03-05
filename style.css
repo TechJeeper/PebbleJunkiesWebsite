@@ -222,3 +222,15 @@ div.TogglePanePlainContent {
 }
 
 /* Toggle Pane */
+
+/* Video Section */
+.video-container {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--secondary);
+    border-radius: 12px;
+}
+
+.video-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+}

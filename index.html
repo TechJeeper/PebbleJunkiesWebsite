@@ -135,8 +135,29 @@
             font-size: 0.8rem;
             margin-top: 0.5rem;
         }
+        
+        /* Video Section */
+        .video-container {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--secondary);
+            border-radius: 12px;
+        }
+        
+        .video-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+        }
     </style>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VEE9X9YCN0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VEE9X9YCN0');
+</script>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
@@ -155,6 +176,11 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="developers.html">Developers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://buymeacoffee.com/printventory" target="_blank">
+                            <i class="fas fa-coffee me-1"></i>Buy me a Coffee
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -249,6 +275,46 @@
                     <a href="http://geol.com/pebble/pia/" class="btn btn-outline-light btn-lg">
                         <i class="fas fa-map-marked-alt me-2"></i> View the Pebble Map
                     </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Battery Replacement Video Section -->
+        <div class="row mt-5">
+            <div class="col-lg-8 mx-auto">
+                <div class="card video-container">
+                    <div class="card-body p-4">
+                        <h3 class="section-title text-center mb-3">Battery Replacement Guide</h3>
+                        <div class="ratio ratio-16x9" style="max-width: 600px; margin: 0 auto;">
+                            <iframe 
+                                src="https://www.youtube.com/embed/WEs2i2CSits" 
+                                title="Pebble Watch Battery Replacement Guide" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Twitter Feed Section -->
+        <div class="row mt-5">
+            <div class="col-lg-8 mx-auto">
+                <div class="card video-container">
+                    <div class="card-body p-4">
+                        <h3 class="section-title text-center mb-3">Latest from Pebble</h3>
+                        <div style="max-width: 600px; margin: 0 auto;">
+                            <a class="twitter-timeline" 
+                               data-theme="dark" 
+                               data-height="600" 
+                               href="https://twitter.com/Pebble">
+                               Tweets by Pebble
+                            </a>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

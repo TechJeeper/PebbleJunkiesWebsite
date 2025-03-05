@@ -22,6 +22,9 @@
         
         body {
             background-color: var(--dark);
+            background-image: url('./Wallpaper_1.jpg');
+            background-size: cover;
+            background-attachment: fixed;
             color: var(--light);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
@@ -30,11 +33,11 @@
             background-color: rgba(0, 0, 0, 0.8);
         }
         
-        .dev-section {
-            border: 3px solid #0033cc;
-            background-color: rgba(0, 0, 0, 0.7);
+        .dev-section, .card {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--secondary);
+            border-radius: 12px;
             padding: 2rem;
-            border-radius: 8px;
             margin-bottom: 3rem;
         }
         
@@ -90,12 +93,20 @@
         }
         
         .card {
-            background-color: rgba(0, 0, 0, 0.7);
-            border: 1px solid var(--secondary);
             margin-top: 2rem;
+            background: rgba(0, 0, 0, 0.4);
         }
     </style>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VEE9X9YCN0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VEE9X9YCN0');
+</script>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
@@ -115,6 +126,11 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="developers.html">Developers</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://buymeacoffee.com/printventory" target="_blank">
+                            <i class="fas fa-coffee me-1"></i>Buy me a Coffee
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -124,7 +140,9 @@
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <img src="./Logo_2.png" alt="Pebble Junkies Logo" class="img-fluid mb-4" style="max-width: 400px;">
+                <a href="index.html">
+                    <img src="./Logo_2.png" alt="Pebble Junkies Logo" class="img-fluid mb-4" style="max-width: 400px;">
+                </a>
                 <h1 class="section-title">Pebble Developers</h1>
                 <p class="lead mb-5">Resources for creating amazing Pebble apps and watchfaces</p>
             </div>
@@ -145,9 +163,9 @@
                 <div class="card">
                     <div class="card-body">
                         <h3 class="card-title text-primary">Getting Started with Pebble Development</h3>
-                        <p class="card-text">Even though Pebble as a company is no longer around, you can still develop amazing apps and watchfaces for Pebble devices. Here's how to get started:</p>
+                        <p class="card-text text-white">Even though Pebble as a company is no longer around, you can still develop amazing apps and watchfaces for Pebble devices. Here's how to get started:</p>
                         
-                        <ol class="mt-4">
+                        <ol class="mt-4 text-white">
                             <li class="mb-2">Download the Pebble SDK from the Rebble developer site</li>
                             <li class="mb-2">Set up your development environment (works on Windows, macOS, and Linux)</li>
                             <li class="mb-2">Follow the tutorials to create your first watchface or app</li>
