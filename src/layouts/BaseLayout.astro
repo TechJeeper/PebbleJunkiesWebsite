@@ -5,16 +5,61 @@ interface Props {
   title?: string;
   description?: string;
   ogImage?: string;
+  ogType?: string;
+  noindex?: boolean;
 }
 
 const {
   title = 'Pebble Junkies',
   description = 'The one-stop shop for classic and new Pebble smartwatches — timeline, repairs, apps, news, and community.',
-  ogImage = '/images/Logo_2.png',
+  ogImage = '/images/Pebble_Time_2.jpg',
+  ogType = 'website',
+  noindex = false,
 } = Astro.props;
 
+const site = Astro.site ?? new URL('https://pebblejunkies.com');
 const pageTitle = title === 'Pebble Junkies' ? title : `${title} · Pebble Junkies`;
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const canonicalPath = path === '/' ? '/' : path;
+const canonicalUrl = new URL(canonicalPath === '/' ? '/' : canonicalPath, site).href.replace(/\/$/, '') || site.origin;
+const absoluteOgImage = ogImage.startsWith('http')
+  ? ogImage
+  : new URL(ogImage, site).href;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${site.origin}/#website`,
+      name: 'Pebble Junkies',
+      url: site.origin,
+      description,
+      inLanguage: 'en',
+      publisher: { '@id': `${site.origin}/#organization` },
+    },
+    {
+      '@type': 'Organization',
+      '@id': `${site.origin}/#organization`,
+      name: 'Pebble Junkies',
+      url: site.origin,
+      logo: new URL('/images/Logo_2.png', site).href,
+      sameAs: [
+        'https://www.facebook.com/groups/pebble.junkies/',
+        'https://github.com/TechJeeper/PebbleJunkiesWebsite',
+      ],
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${canonicalUrl}#webpage`,
+      url: canonicalUrl,
+      name: pageTitle,
+      description,
+      isPartOf: { '@id': `${site.origin}/#website` },
+      primaryImageOfPage: absoluteOgImage,
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -24,25 +69,58 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content="Pebble, Pebble watch, Pebble Time 2, Pebble Round 2, Pebble 2 Duo, Rebble, Core Devices, smartwatch, repair, battery, timeline"
+    />
+    <meta name="author" content="Pebble Junkies" />
     <meta name="theme-color" content="#07090d" />
+    <meta name="color-scheme" content="dark" />
+    {noindex ? (
+      <meta name="robots" content="noindex, nofollow" />
+    ) : (
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    )}
+    <meta name="googlebot" content="index, follow" />
+
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     <link
       rel="alternate"
       type="application/rss+xml"
       title="Pebble Junkies News Pulse"
       href="/rss.xml"
     />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Pebble Junkies" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={ogImage} />
-    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={absoluteOgImage} />
+    <meta property="og:image:secure_url" content={absoluteOgImage} />
+    <meta property="og:image:alt" content={pageTitle} />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={absoluteOgImage} />
+    <meta name="twitter:image:alt" content={pageTitle} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VEE9X9YCN0"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
@@ -50,6 +128,11 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
       gtag('js', new Date());
       gtag('config', 'G-VEE9X9YCN0');
     </script>
+    <script
+      data-goatcounter="https://pebblejunkies.goatcounter.com/count"
+      async
+      src="https://gc.zgo.at/count.js"
+    ></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
