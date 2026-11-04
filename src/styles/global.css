@@ -720,6 +720,25 @@ p {
   margin-bottom: 0.35rem;
 }
 
+a.watch-tile.app-tile {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app-tile .app-hearts {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--orange-hot);
+  white-space: nowrap;
+}
+
+.app-tile .app-blurb {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+  margin: 0 0 0.75rem;
+}
+
 .price {
   font-family: var(--font-display);
   font-weight: 800;

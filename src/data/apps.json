@@ -1,78 +1,500 @@
 {
-  "kits": [
+  "updatedAt": "2026-11-04",
+  "stores": [
     {
-      "id": "daily-driver",
-      "title": "Daily driver kit",
-      "blurb": "The first five things most Junkies install on a fresh watch.",
-      "picks": [
-        {
-          "name": "Muninn — Battery Wisdom",
-          "why": "Best battery prediction / monitoring consensus pick on r/pebble.",
-          "href": "https://apps.rebble.io/"
-        },
-        {
-          "name": "Find My Phone",
-          "why": "No companion drama — ping the phone from your wrist.",
-          "href": "https://apps.rebble.io/"
-        },
-        {
-          "name": "Music Boss",
-          "why": "The media remote. Layout presets shine on Time 2 & Round 2.",
-          "href": "https://apps.repebble.com/collections/most-loved/watchapps/1"
-        },
-        {
-          "name": "Official Timer + Stopwatch",
-          "why": "Weirdly not always preinstalled — grab them first.",
-          "href": "https://apps.rebble.io/"
-        },
-        {
-          "name": "Facebrowser",
-          "why": "Browse face thumbnails on-watch before you commit.",
-          "href": "https://apps.rebble.io/"
-        }
-      ]
+      "label": "Rebble Appstore",
+      "href": "https://apps.rebble.io/"
     },
     {
-      "id": "faces",
-      "title": "Watchface starter pack",
-      "blurb": "Legible, loved, and repeatedly named in 2025–26 community threads.",
-      "picks": [
-        {
-          "name": "TimeStyle / BrutalTimeStyle",
-          "why": "The face people keep coming back to.",
-          "href": "https://apps.rebble.io/"
-        },
-        {
-          "name": "WeatherGraph",
-          "why": "Weather that earns its pixels.",
-          "href": "https://apps.rebble.io/"
-        },
-        {
-          "name": "Dashboard (Lignite)",
-          "why": "Stats-forward with live settings previews.",
-          "href": "https://apps.rebble.io/"
-        },
-        {
-          "name": "Glimt",
-          "why": "Clean complications + serious readability.",
-          "href": "https://apps.rebble.io/"
-        },
-        {
-          "name": "Analog Pulse",
-          "why": "Dressy analog that still works on PT2.",
-          "href": "https://apps.rebble.io/"
-        }
-      ]
+      "label": "rePebble Appstore",
+      "href": "https://apps.repebble.com/"
+    },
+    {
+      "label": "Most Loved apps",
+      "href": "https://apps.repebble.com/collections/most-loved/watchapps/1"
+    },
+    {
+      "label": "Most Loved faces",
+      "href": "https://apps.repebble.com/collections/most-loved/watchfaces/1"
     }
   ],
   "notes": [
-    "Use the Rebble/Core store Most Loved and Featured collections — they reflect real installs, not ads.",
-    "Animated faces look incredible and eat battery. Check battery-impact hints in the new store when available.",
-    "Filter by hardware (aplite / basalt / chalk / diorite / emery / gabbro) so you don't sideload a face that won't fit."
+    "Pulled from rePebble Appstore Most Loved collections on 2026-11-04 via appstore-api.repebble.com.",
+    "Animated faces look incredible and eat battery — preview in the browser store when you can.",
+    "Filter by hardware (aplite / basalt / chalk / diorite / emery / gabbro) so you do not sideload a build that will not fit your watch."
   ],
-  "stores": [
-    { "label": "Rebble Appstore", "href": "https://apps.rebble.io/" },
-    { "label": "rePebble Appstore", "href": "https://apps.repebble.com/" },
-    { "label": "Most Loved apps", "href": "https://apps.repebble.com/collections/most-loved/watchapps/1" }
+  "watchapps": [
+    {
+      "id": "53a898a2cfee2a02c900006c",
+      "rank": 1,
+      "title": "Misfit",
+      "author": "Misfit",
+      "hearts": 18785,
+      "category": "Health & Fitness",
+      "description": "Turns your Pebble into a round-the-clock step and sleep tracker with goals and history on your wrist. A legacy favorite that still ranks at the top of Most Loved — proof that simple fitness on e-paper never went out of style.",
+      "href": "https://apps.repebble.com/application/53a898a2cfee2a02c900006c",
+      "image": "https://assets.repebble.com/apps/53a898a2cfee2a02c900006c/screenshots/basalt/screenshot-0.png",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "686578b965207500093d5a94",
+      "rank": 2,
+      "title": "Music Boss",
+      "author": "Reboot's Ramblings",
+      "hearts": 9299,
+      "category": "Remotes",
+      "description": "The media remote everyone argues about — and most Time 2 owners install anyway. Browse libraries, show album art, and control Spotify, Podcast Addict, and more; the unified 2026 app adds touch layouts and wrist-flick gestures on Time 2 and Round 2.",
+      "href": "https://apps.repebble.com/application/686578b965207500093d5a94",
+      "image": "https://assets.repebble.com/apps/686578b965207500093d5a94/screenshots/basalt/screenshot-0.gif",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "539e18f21a19dec6ca0000aa",
+      "rank": 3,
+      "title": "Pixel Miner",
+      "author": "WearGa",
+      "hearts": 8085,
+      "category": "Games",
+      "description": "The compulsive dig-em-up that ate thousands of commutes. Mine deeper, upgrade gear, and lose an hour without noticing — still one of the highest-hearted games on the store.",
+      "href": "https://apps.repebble.com/application/539e18f21a19dec6ca0000aa",
+      "image": "https://assets.repebble.com/apps/539e18f21a19dec6ca0000aa/screenshots/basalt/screenshot-0.png",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "diorite",
+        "emery",
+        "flint"
+      ]
+    },
+    {
+      "id": "52b20a9b05c04688bf000058",
+      "rank": 4,
+      "title": "Morpheuz",
+      "author": "James Fowler",
+      "hearts": 6832,
+      "category": "Health & Fitness",
+      "description": "Smart alarm, movement charts, Hue/LIFX wake-ups, and more sleep nerdery than any wrist deserves. Free, deeply configurable, and still the go-to when you want serious sleep tracking without a phone screen.",
+      "href": "https://apps.repebble.com/application/52b20a9b05c04688bf000058",
+      "image": "https://assets.repebble.com/screenshots/52b20a9b05c04688bf000058-1.png",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "55197642d6fa6f2633000092",
+      "rank": 5,
+      "title": "Battery+",
+      "author": "Ycleptic Studios",
+      "hearts": 6521,
+      "category": "Tools & Utilities",
+      "description": "Learns your usage patterns and predicts when you will actually hit empty — not just what percentage is left. Custom alert windows and Timeline pins make it the battery app r/pebble keeps recommending.",
+      "href": "https://apps.repebble.com/application/55197642d6fa6f2633000092",
+      "image": "https://assets.repebble.com/apps/55197642d6fa6f2633000092/screenshots/basalt/screenshot-0.gif",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "54a1ba1afc5f23e4c000012d",
+      "rank": 6,
+      "title": "Timer+",
+      "author": "Ycleptic Studios",
+      "hearts": 6311,
+      "category": "Tools & Utilities",
+      "description": "A polished timer and stopwatch that survives app closes and wakes you when time is up. Native Time 2 and Round 2 support landed in 2026 with sharper fonts — great for kitchen timers and Pomodoro guilt.",
+      "href": "https://apps.repebble.com/application/54a1ba1afc5f23e4c000012d",
+      "image": "https://assets.repebble.com/screenshots/54a1ba1afc5f23e4c000012d/basalt/ee6c08f3-63d5-4ca2-bb4c-1957849b88bd.gif",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "540f7cafbc27450164000157",
+      "rank": 7,
+      "title": "Compass",
+      "author": "Pebble",
+      "hearts": 6015,
+      "category": "Tools & Utilities",
+      "description": "Official Pebble compass with a slick rose-to-heading transition and a built-in spirit level. Core Devices refreshed it for new hardware in 2026 — still the outdoor nerd pick.",
+      "href": "https://apps.repebble.com/application/540f7cafbc27450164000157",
+      "image": "https://assets.repebble.com/apps/540f7cafbc27450164000157/screenshots/basalt/screenshot-0.png",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "529bb3eef33e76aaf6000004",
+      "rank": 8,
+      "title": "Cards for Pebble",
+      "author": "Keanu Lee",
+      "hearts": 4255,
+      "category": "Notifications",
+      "description": "Stack calendar, weather, stocks, transit, RSS, and custom cards on one scrolling dashboard. Configurable from the phone and perfect when you want glanceable data without opening ten apps.",
+      "href": "https://apps.repebble.com/application/529bb3eef33e76aaf6000004",
+      "image": "https://assets.repebble.com/screenshots/529bb3eef33e76aaf6000004-3.png",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "diorite",
+        "emery",
+        "flint"
+      ]
+    },
+    {
+      "id": "52f7a04b777f7eee6d000258",
+      "rank": 9,
+      "title": "Tiny Bird",
+      "author": "StuartHa",
+      "hearts": 3796,
+      "category": "Games",
+      "description": "Flappy Bird on your wrist, colorized for Time-era screens. Infuriating, nostalgic, and somehow still earning hearts a decade later.",
+      "href": "https://apps.repebble.com/application/52f7a04b777f7eee6d000258",
+      "image": "https://assets.repebble.com/apps/52f7a04b777f7eee6d000258/screenshots/basalt/screenshot-0.png",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "532323bf60c773c1420000a8",
+      "rank": 10,
+      "title": "Dialer for Pebble",
+      "author": "matejdro",
+      "hearts": 3667,
+      "category": "Tools & Utilities",
+      "description": "Answer, decline, and dial from the watch with caller ID and SMS replies (Android companion required). Power-user telephony for folks who refuse to fish their phone out of a pocket.",
+      "href": "https://apps.repebble.com/application/532323bf60c773c1420000a8",
+      "image": "https://assets.repebble.com/apps/532323bf60c773c1420000a8/screenshots/basalt/screenshot-0.png",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "55b6cd955e0716cd6b0000a1",
+      "rank": 11,
+      "title": "Timer",
+      "author": "Pebble",
+      "hearts": 3565,
+      "category": "Tools & Utilities",
+      "description": "Core Devices rebuilt Pebble's official multi-timer with Timeline pins for long counts and an optional done chime. Eight timers, background friendly, no subscription nonsense.",
+      "href": "https://apps.repebble.com/application/55b6cd955e0716cd6b0000a1",
+      "image": "https://assets.repebble.com/apps/55b6cd955e0716cd6b0000a1/screenshots/basalt/screenshot-0.gif",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "55b6c2c3e68f5acdfc00008d",
+      "rank": 12,
+      "title": "Stopwatch",
+      "author": "Pebble",
+      "hearts": 3077,
+      "category": "Tools & Utilities",
+      "description": "Simple lap stopwatch from the Pebble team — runs in the background with up to twenty laps. Boring in the best way when you just need timing that works.",
+      "href": "https://apps.repebble.com/application/55b6c2c3e68f5acdfc00008d",
+      "image": "https://assets.repebble.com/apps/55b6c2c3e68f5acdfc00008d/screenshots/basalt/screenshot-0.png",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    }
+  ],
+  "watchfaces": [
+    {
+      "id": "52cc44e045ffdd31dd000180",
+      "rank": 1,
+      "title": "YWeather",
+      "author": "David Rodríguez Rincón",
+      "hearts": 22526,
+      "category": "Faces",
+      "description": "Hyper-detailed weather with radar, alerts, and more config than most phone widgets. YWeather dominates Most Loved for a reason — if you only install one data-heavy face, make it this one.",
+      "href": "https://apps.repebble.com/application/52cc44e045ffdd31dd000180",
+      "image": "https://assets.repebble.com/apps/52cc44e045ffdd31dd000180/screenshots/basalt/screenshot-0.gif",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "55a5c024f4510f794c000071",
+      "rank": 2,
+      "title": "TimeStyle",
+      "author": "Freakified",
+      "hearts": 16193,
+      "category": "Faces",
+      "description": "The community's default readable face — fonts, colors, and complications you can tune for years. TimeStyle (and Brutal variants) show up in almost every \"what face should I use?\" thread.",
+      "href": "https://apps.repebble.com/application/55a5c024f4510f794c000071",
+      "image": "https://assets.repebble.com/screenshots/55a5c024f4510f794c000071/basalt/440f0a14-acaa-4f7d-bc72-5ac64a9b1ba1.gif",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "533966299820be90ed0000c5",
+      "rank": 3,
+      "title": "Real Weather",
+      "author": "Reno",
+      "hearts": 16111,
+      "category": "Faces",
+      "description": "Clean forecast layout with sensible defaults and enough options to match your vibe. Real Weather stays legible in sunlight and doesn't pretend to be a miniature phone app.",
+      "href": "https://apps.repebble.com/application/533966299820be90ed0000c5",
+      "image": "https://assets.repebble.com/apps/533966299820be90ed0000c5/screenshots/basalt/screenshot-0.gif",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "52bb213af9846878c200015b",
+      "rank": 4,
+      "title": "Modern",
+      "author": "Łukasz Zalewski",
+      "hearts": 14681,
+      "category": "Faces",
+      "description": "Minimal, modern, and unapologetically stylish. Modern nails the \"dress watch that is still a Pebble\" look without sacrificing contrast on e-paper.",
+      "href": "https://apps.repebble.com/application/52bb213af9846878c200015b",
+      "image": "https://assets.repebble.com/apps/52bb213af9846878c200015b/screenshots/aplite/screenshot-0.png",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "diorite",
+        "emery",
+        "flint"
+      ]
+    },
+    {
+      "id": "53381b17d1719b42b800028b",
+      "rank": 5,
+      "title": "Weather Land",
+      "author": "Reno",
+      "hearts": 11668,
+      "category": "Faces",
+      "description": "Playful pixel weather with charm to spare. Weather Land trades corporate polish for personality — great when you want forecasts that feel fun.",
+      "href": "https://apps.repebble.com/application/53381b17d1719b42b800028b",
+      "image": "https://assets.repebble.com/apps/53381b17d1719b42b800028b/screenshots/basalt/screenshot-0.gif",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "52b231c2b70e1c159500009b",
+      "rank": 6,
+      "title": "91 Dub v4.0",
+      "author": "orviwan",
+      "hearts": 10040,
+      "category": "Faces",
+      "description": "Bold typography and a distinctive layout that reads instantly at arm's length. 91 Dub is a design-school flex that somehow works as a daily driver.",
+      "href": "https://apps.repebble.com/application/52b231c2b70e1c159500009b",
+      "image": "https://assets.repebble.com/screenshots/52b231c2b70e1c159500009b-0.png",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "55431083b7d4a71c0000003b",
+      "rank": 7,
+      "title": "Mario Time Watchface",
+      "author": "Alexey Cluster",
+      "hearts": 8301,
+      "category": "Faces",
+      "description": "Nostalgic Mario clock energy for your wrist. Not subtle, not sorry — a fan favorite that keeps racking up hearts from folks who grew up with side-scrollers.",
+      "href": "https://apps.repebble.com/application/55431083b7d4a71c0000003b",
+      "image": "https://assets.repebble.com/apps/55431083b7d4a71c0000003b/screenshots/basalt/screenshot-0.gif",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "5299db40129af76761000087",
+      "rank": 8,
+      "title": "Studio Clock",
+      "author": "Dale Perkel",
+      "hearts": 6619,
+      "category": "Faces",
+      "description": "Swiss-inspired studio clock aesthetics with careful spacing and analog flair. Studio Clock is the pick when you want classy without clutter.",
+      "href": "https://apps.repebble.com/application/5299db40129af76761000087",
+      "image": "https://assets.repebble.com/screenshots/5299db40129af76761000087-0.png",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "555283c7efff0cc8e50000b0",
+      "rank": 9,
+      "title": "Slides of Time",
+      "author": "Morris",
+      "hearts": 6298,
+      "category": "Faces",
+      "description": "Animated time transitions that show off color e-paper without going full battery vampire. Slides of Time balances motion and readability better than most animated faces.",
+      "href": "https://apps.repebble.com/application/555283c7efff0cc8e50000b0",
+      "image": "https://assets.repebble.com/apps/555283c7efff0cc8e50000b0/screenshots/basalt/screenshot-0.gif",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "52978a53bbd0862701000002",
+      "rank": 10,
+      "title": "Timely",
+      "author": "Martin Norland (@cynorg)",
+      "hearts": 5752,
+      "category": "Faces",
+      "description": "Friendly, rounded numerals and gentle animations — Timely feels approachable on every Pebble shape. A safe recommendation when you are setting up a watch for someone new.",
+      "href": "https://apps.repebble.com/application/52978a53bbd0862701000002",
+      "image": "https://assets.repebble.com/apps/52978a53bbd0862701000002/screenshots/basalt/screenshot-0.png",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "diorite",
+        "emery",
+        "flint"
+      ]
+    },
+    {
+      "id": "54f9cb9ecf945829e8000048",
+      "rank": 11,
+      "title": "DIN Time",
+      "author": "Christian Liljeberg",
+      "hearts": 5490,
+      "category": "Faces",
+      "description": "Industrial DIN typography for designers who crave grid alignment on a round screen. Crisp, stark, and weirdly satisfying if you love type nerdery.",
+      "href": "https://apps.repebble.com/application/54f9cb9ecf945829e8000048",
+      "image": "https://assets.repebble.com/screenshots/54f9cb9ecf945829e8000048-0.png",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "52d313a912ea3dcf84000024",
+      "rank": 12,
+      "title": "Futura Weather",
+      "author": "Niknam Moslehi",
+      "hearts": 5216,
+      "category": "Faces",
+      "description": "Classic Futura weather face that aged gracefully across basalt and emery hardware. Still beloved for simple conditions plus an icon that reads at a glance.",
+      "href": "https://apps.repebble.com/application/52d313a912ea3dcf84000024",
+      "image": "https://assets.repebble.com/screenshots/52d313a912ea3dcf84000024-0.png",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "diorite",
+        "emery",
+        "flint"
+      ]
+    }
   ]
 }

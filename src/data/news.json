@@ -1,5 +1,15 @@
 [
   {
+    "id": "rebble-board-2026",
+    "date": "2026-03-31",
+    "source": "Rebble Blog",
+    "title": "Meet your new Board of Directors",
+    "blurb": "First community board election wraps: David, Will, Stasia, and Ruby stay; JP joins; Joshua remains Treasurer. Hackathon planning and Pebble 2.0 alignment on the agenda.",
+    "href": "https://rebble.io/2026/03/31/the-new-board.html",
+    "tags": ["rebble", "community"],
+    "auto": true
+  },
+  {
     "id": "plugins",
     "date": "2026-10-22",
     "source": "Bluesky · Eric Migicovsky",
