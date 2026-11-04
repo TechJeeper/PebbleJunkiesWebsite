@@ -131,16 +131,15 @@ const latestNews = news.slice(0, 4);
   <section class="section" style="padding-top:0">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow">History you can scrub</p>
+        <p class="eyebrow">History you can scroll</p>
         <h2>Interactive timeline</h2>
         <p>
           From the 2012 Kickstarter rocket, through the Fitbit winter and Rebble survival, to Google
-          open-sourcing PebbleOS and the Core Devices revival.
+          open-sourcing PebbleOS and the Core Devices revival. Keep scrolling — the timeline stays
+          locked until you finish the story.
         </p>
       </div>
-      <div class="reveal">
-        <TimelineExplorer />
-      </div>
+      <TimelineExplorer compact />
       <div class="btn-row" style="margin-top:1rem">
         <a class="btn btn-ghost" href="/timeline">Fullscreen timeline page →</a>
       </div>

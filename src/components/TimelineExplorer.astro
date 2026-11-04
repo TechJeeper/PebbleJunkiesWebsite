@@ -2,6 +2,13 @@
 import '../styles/timeline.css';
 import timeline from '../data/timeline.json';
 
+interface Props {
+  /** Shorter scroll distance per milestone (homepage). */
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+
 const eras = [
   { id: 'all', label: 'All eras' },
   { id: 'origin', label: 'Origin' },
@@ -11,184 +18,411 @@ const eras = [
 ];
 
 const initial = timeline[0];
+
+function yearOf(iso: string) {
+  return new Date(iso + 'T12:00:00').getFullYear();
+}
+
+function shortDate(iso: string) {
+  return new Date(iso + 'T12:00:00').toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  });
+}
 ---
 
-<section class="timeline-shell" id="timeline" data-timeline>
-  <div class="era-filters" role="tablist" aria-label="Filter timeline eras">
-    {eras.map((era, i) => (
-      <button
-        type="button"
-        data-era={era.id}
-        class:list={[{ 'is-active': i === 0 }]}
-        role="tab"
-        aria-selected={i === 0 ? 'true' : 'false'}
-      >
-        {era.label}
-      </button>
-    ))}
-  </div>
-
-  <div class="timeline-layout">
-    <div class="timeline-track-wrap">
-      <div class="timeline-rail" aria-hidden="true"></div>
-      <div class="timeline-track" tabindex="0" aria-label="Pebble history timeline">
-        {timeline.map((event, index) => (
+<div
+  class:list={['timeline-scrolly', { 'is-compact': compact }]}
+  data-timeline
+  data-compact={compact ? 'true' : 'false'}
+  style={`--steps: ${timeline.length}`}
+>
+  <div class="timeline-pin">
+    <div class="timeline-toolbar">
+      <div class="era-filters" role="tablist" aria-label="Filter timeline eras">
+        {eras.map((era, i) => (
           <button
             type="button"
-            class:list={['tl-node', { 'is-active': index === 0 }]}
-            data-id={event.id}
-            data-era={event.era}
-            data-index={index}
-            aria-pressed={index === 0 ? 'true' : 'false'}
+            data-era={era.id}
+            class:list={[{ 'is-active': i === 0 }]}
+            role="tab"
+            aria-selected={i === 0 ? 'true' : 'false'}
           >
-            <div class="tl-card">
-              <time datetime={event.date}>
-                {new Date(event.date + 'T12:00:00').toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'short',
-                })}
-              </time>
-              <h3>{event.title}</h3>
-              <p>{event.summary}</p>
-            </div>
+            {era.label}
           </button>
         ))}
       </div>
+      <p class="timeline-progress mono" aria-live="polite">
+        <span data-progress-index>1</span>
+        <span class="timeline-progress-sep">/</span>
+        <span data-progress-total>{timeline.length}</span>
+      </p>
     </div>
 
-    <aside class="timeline-detail" aria-live="polite">
-      <div class="scanlines" aria-hidden="true"></div>
-      <div class="detail-era" data-detail-era>{initial.era}</div>
-      <h2 data-detail-title>{initial.title}</h2>
-      <div class="detail-date" data-detail-date>
-        {new Date(initial.date + 'T12:00:00').toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric',
-        })}
-      </div>
-      <p class="detail-body" data-detail-body>{initial.summary}</p>
-      <div class="detail-links" data-detail-links>
-        {initial.links.map((link) => (
-          <a class="btn btn-ghost" href={link.href} target="_blank" rel="noopener">
-            {link.label}
-          </a>
+    <div class="pebble-stage">
+      <ol class="timeline-years" aria-label="Jump to year" data-year-list>
+        {timeline.map((event, index) => (
+          <li>
+            <button
+              type="button"
+              class:list={['tl-year-btn', { 'is-active': index === 0 }]}
+              data-year-index={index}
+              data-era={event.era}
+              aria-current={index === 0 ? 'true' : undefined}
+            >
+              {yearOf(event.date)}
+            </button>
+          </li>
         ))}
+      </ol>
+
+      <div class="pebble-watch" data-watch>
+        <button type="button" class="pebble-hw pebble-hw-back" data-hw="back" aria-label="Jump to first milestone"></button>
+
+        <div class="pebble-case">
+          <div class="pebble-bezel">
+            <section
+              class="pebble-screen"
+              id="timeline"
+              tabindex="0"
+              aria-label="Pebble history timeline"
+            >
+              <header class="pebble-status" aria-hidden="true">
+                <span class="pebble-status-time" data-status-time>9:41</span>
+                <span class="pebble-status-brand">PEBBLE</span>
+                <span class="pebble-status-batt">
+                  <span data-progress-index-mini>1</span>/<span data-progress-total-mini>{timeline.length}</span>
+                </span>
+              </header>
+
+              <div class="pebble-pins" aria-live="polite">
+                <div class="pebble-pin is-prev" data-pin="prev" hidden>
+                  <span class="pebble-pin-year" data-prev-year></span>
+                  <span class="pebble-pin-title" data-prev-title></span>
+                </div>
+
+                <article class="pebble-pin is-now" data-pin="now">
+                  <div class="pebble-pin-axis" aria-hidden="true">
+                    <span class="pebble-dot" data-era-dot></span>
+                  </div>
+                  <div class="pebble-pin-card">
+                    <p class="pebble-pin-meta">
+                      <span data-detail-era>{initial.era}</span>
+                      <span class="pebble-pin-sep">·</span>
+                      <time data-detail-date datetime={initial.date}>{shortDate(initial.date)}</time>
+                    </p>
+                    <h2 data-detail-title>{initial.title}</h2>
+                    <p class="pebble-pin-body" data-detail-body>{initial.summary}</p>
+                    <div class="pebble-pin-links" data-detail-links>
+                      {initial.links.map((link) => (
+                        <a href={link.href} target="_blank" rel="noopener">{link.label}</a>
+                      ))}
+                    </div>
+                  </div>
+                </article>
+
+                <div class="pebble-pin is-next" data-pin="next" hidden>
+                  <span class="pebble-pin-year" data-next-year></span>
+                  <span class="pebble-pin-title" data-next-title></span>
+                </div>
+              </div>
+
+              <p class="pebble-hint" data-hint>Scroll · or use the buttons</p>
+            </section>
+          </div>
+        </div>
+
+        <div class="pebble-hw-col" aria-hidden="false">
+          <button type="button" class="pebble-hw pebble-hw-up" data-hw="up" aria-label="Previous milestone"></button>
+          <button type="button" class="pebble-hw pebble-hw-select" data-hw="select" aria-label="Open milestone link"></button>
+          <button type="button" class="pebble-hw pebble-hw-down" data-hw="down" aria-label="Next milestone"></button>
+        </div>
       </div>
-    </aside>
+    </div>
   </div>
-</section>
+</div>
 
 <script define:vars={{ timeline }}>
   const root = document.querySelector('[data-timeline]');
   if (!root) throw new Error('timeline root missing');
 
-  const nodes = [...root.querySelectorAll('.tl-node')];
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const filters = [...root.querySelectorAll('.era-filters button')];
-  const track = root.querySelector('.timeline-track');
+  const yearButtons = [...root.querySelectorAll('.tl-year-btn')];
+  const screen = root.querySelector('.pebble-screen');
   const detailEra = root.querySelector('[data-detail-era]');
   const detailTitle = root.querySelector('[data-detail-title]');
   const detailDate = root.querySelector('[data-detail-date]');
   const detailBody = root.querySelector('[data-detail-body]');
   const detailLinks = root.querySelector('[data-detail-links]');
+  const progressIndex = root.querySelector('[data-progress-index]');
+  const progressTotal = root.querySelector('[data-progress-total]');
+  const progressIndexMini = root.querySelector('[data-progress-index-mini]');
+  const progressTotalMini = root.querySelector('[data-progress-total-mini]');
+  const statusTime = root.querySelector('[data-status-time]');
+  const eraDot = root.querySelector('[data-era-dot]');
+  const hint = root.querySelector('[data-hint]');
+  const pinPrev = root.querySelector('[data-pin="prev"]');
+  const pinNext = root.querySelector('[data-pin="next"]');
+  const prevYear = root.querySelector('[data-prev-year]');
+  const prevTitle = root.querySelector('[data-prev-title]');
+  const nextYear = root.querySelector('[data-next-year]');
+  const nextTitle = root.querySelector('[data-next-title]');
+  const watch = root.querySelector('[data-watch]');
 
+  let era = 'all';
+  let current = 0;
+  let locked = false;
+  let ticking = false;
+
+  const yearOf = (iso) => new Date(iso + 'T12:00:00').getFullYear();
   const fmt = (iso) =>
     new Date(iso + 'T12:00:00').toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
+      month: 'short',
       day: 'numeric',
+      year: 'numeric',
     });
 
-  function scrollTrackTo(index) {
-    const active = nodes[index];
-    if (!track || !active) return;
-    const left = active.offsetLeft - (track.clientWidth - active.offsetWidth) / 2;
-    track.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
+  function tickClock() {
+    if (!statusTime) return;
+    const now = new Date();
+    statusTime.textContent = now.toLocaleTimeString('en-US', {
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true,
+    }).replace(/\s?[AP]M$/i, (m) => m.trim().charAt(0).toLowerCase() === 'a' || m.trim().charAt(0).toLowerCase() === 'p'
+      ? ''
+      : '');
+    // Prefer compact 24h-ish Pebble vibe: H:MM
+    const h = now.getHours();
+    const m = String(now.getMinutes()).padStart(2, '0');
+    statusTime.textContent = `${h % 12 || 12}:${m}`;
   }
 
-  function select(index, { syncHash = true, scroll = true } = {}) {
-    const event = timeline[index];
-    if (!event) return;
+  function visibleIndexes() {
+    return timeline
+      .map((event, index) => ({ event, index }))
+      .filter(({ event }) => era === 'all' || event.era === era)
+      .map(({ index }) => index);
+  }
 
-    nodes.forEach((node, i) => {
-      const on = i === index;
-      node.classList.toggle('is-active', on);
-      node.setAttribute('aria-pressed', on ? 'true' : 'false');
-    });
+  function setSteps(n) {
+    root.style.setProperty('--steps', String(Math.max(1, n)));
+    const label = String(n);
+    if (progressTotal) progressTotal.textContent = label;
+    if (progressTotalMini) progressTotalMini.textContent = label;
+  }
 
-    detailEra.textContent = event.era;
-    detailTitle.textContent = event.title;
-    detailDate.textContent = fmt(event.date);
-    detailBody.textContent = event.summary;
+  function renderLinks(links) {
+    if (!detailLinks) return;
     detailLinks.innerHTML = '';
-    for (const link of event.links || []) {
+    if (!links?.length) return;
+    for (const link of links) {
       const a = document.createElement('a');
-      a.className = 'btn btn-ghost';
       a.href = link.href;
       a.target = '_blank';
       a.rel = 'noopener';
       a.textContent = link.label;
       detailLinks.appendChild(a);
     }
+  }
 
-    if (scroll) scrollTrackTo(index);
+  function neighbor(visible, pos, delta) {
+    const i = pos + delta;
+    if (i < 0 || i >= visible.length) return null;
+    return timeline[visible[i]];
+  }
 
-    if (syncHash && event.id) {
-      const url = new URL(location.href);
-      url.hash = event.id;
-      history.replaceState(null, '', url);
+  function select(index, { syncHash = true } = {}) {
+    const event = timeline[index];
+    if (!event) return;
+    current = index;
+
+    yearButtons.forEach((btn, i) => {
+      const on = i === index;
+      btn.classList.toggle('is-active', on);
+      if (on) btn.setAttribute('aria-current', 'true');
+      else btn.removeAttribute('aria-current');
+    });
+    yearButtons[index]?.scrollIntoView({ block: 'nearest', behavior: reduceMotion ? 'auto' : 'smooth' });
+
+    detailEra.textContent = event.era;
+    detailTitle.textContent = event.title;
+    detailDate.textContent = fmt(event.date);
+    detailDate.setAttribute('datetime', event.date);
+    detailBody.textContent = event.summary;
+    renderLinks(event.links);
+
+    if (eraDot) eraDot.dataset.era = event.era;
+    if (watch) watch.dataset.era = event.era;
+
+    const visible = visibleIndexes();
+    const pos = Math.max(0, visible.indexOf(index));
+    const label = String(pos + 1);
+    if (progressIndex) progressIndex.textContent = label;
+    if (progressIndexMini) progressIndexMini.textContent = label;
+
+    const prev = neighbor(visible, pos, -1);
+    const next = neighbor(visible, pos, 1);
+    if (pinPrev) {
+      pinPrev.hidden = !prev;
+      if (prev) {
+        prevYear.textContent = String(yearOf(prev.date));
+        prevTitle.textContent = prev.title;
+      }
+    }
+    if (pinNext) {
+      pinNext.hidden = !next;
+      if (next) {
+        nextYear.textContent = String(yearOf(next.date));
+        nextTitle.textContent = next.title;
+      }
+    }
+
+    screen?.classList.remove('is-flash');
+    void screen?.offsetWidth;
+    screen?.classList.add('is-flash');
+
+    if (syncHash && event.id && !reduceMotion) {
+      if (/\/timeline\/?$/.test(location.pathname)) {
+        const url = new URL(location.href);
+        url.hash = event.id;
+        history.replaceState(null, '', url);
+      }
     }
   }
 
-  function filterEra(era) {
+  function stageMetrics() {
+    const top = root.offsetTop;
+    const scrollable = Math.max(1, root.offsetHeight - window.innerHeight);
+    return { top, scrollable };
+  }
+
+  function indexFromScroll() {
+    const visible = visibleIndexes();
+    if (!visible.length) return 0;
+    const { top, scrollable } = stageMetrics();
+    const p = Math.min(1, Math.max(0, (window.scrollY - top) / scrollable));
+    return visible[Math.round(p * (visible.length - 1))];
+  }
+
+  function scrollToIndex(index, behavior = 'smooth') {
+    const visible = visibleIndexes();
+    const pos = visible.indexOf(index);
+    if (pos < 0) return;
+    const { top, scrollable } = stageMetrics();
+    const p = visible.length <= 1 ? 0 : pos / (visible.length - 1);
+    window.scrollTo({ top: top + p * scrollable, behavior: reduceMotion ? 'auto' : behavior });
+  }
+
+  function step(delta) {
+    const visible = visibleIndexes();
+    const pos = visible.indexOf(current);
+    const next = visible[Math.min(visible.length - 1, Math.max(0, pos + delta))];
+    if (next == null || next === current) return;
+    select(next);
+    if (!reduceMotion) scrollToIndex(next);
+  }
+
+  function syncFromScroll() {
+    ticking = false;
+    const next = indexFromScroll();
+    if (next !== current) select(next, { syncHash: true });
+
+    const { top, scrollable } = stageMetrics();
+    const y = window.scrollY;
+    const inStage = y >= top - 2 && y <= top + scrollable + 2;
+    if (inStage !== locked) {
+      locked = inStage;
+      root.classList.toggle('is-locked', locked);
+      if (hint) hint.hidden = !locked;
+    }
+  }
+
+  function onScroll() {
+    if (reduceMotion) return;
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(syncFromScroll);
+    }
+  }
+
+  function filterEra(nextEra) {
+    era = nextEra;
     filters.forEach((btn) => {
       const on = btn.dataset.era === era;
       btn.classList.toggle('is-active', on);
       btn.setAttribute('aria-selected', on ? 'true' : 'false');
     });
-
-    nodes.forEach((node) => {
-      const show = era === 'all' || node.dataset.era === era;
-      node.classList.toggle('is-hidden', !show);
+    yearButtons.forEach((btn) => {
+      const show = era === 'all' || btn.dataset.era === era;
+      btn.parentElement?.classList.toggle('is-hidden', !show);
     });
-
-    const firstVisible = nodes.find((n) => !n.classList.contains('is-hidden'));
-    if (firstVisible) select(Number(firstVisible.dataset.index));
+    const visible = visibleIndexes();
+    setSteps(visible.length);
+    const pick = visible.includes(current) ? current : visible[0] ?? 0;
+    select(pick, { syncHash: false });
+    if (!reduceMotion) scrollToIndex(pick, 'auto');
   }
 
-  nodes.forEach((node) => {
-    node.addEventListener('click', () => select(Number(node.dataset.index)));
+  filters.forEach((btn) => btn.addEventListener('click', () => filterEra(btn.dataset.era)));
+  yearButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const index = Number(btn.dataset.yearIndex);
+      select(index);
+      if (!reduceMotion) scrollToIndex(index);
+    });
   });
 
-  filters.forEach((btn) => {
-    btn.addEventListener('click', () => filterEra(btn.dataset.era));
+  root.querySelector('[data-hw="up"]')?.addEventListener('click', () => step(-1));
+  root.querySelector('[data-hw="down"]')?.addEventListener('click', () => step(1));
+  root.querySelector('[data-hw="back"]')?.addEventListener('click', () => {
+    const first = visibleIndexes()[0];
+    if (first == null) return;
+    select(first);
+    if (!reduceMotion) scrollToIndex(first);
+  });
+  root.querySelector('[data-hw="select"]')?.addEventListener('click', () => {
+    const firstLink = detailLinks?.querySelector('a');
+    if (firstLink) firstLink.click();
+    else screen?.focus();
   });
 
-  track?.addEventListener('keydown', (e) => {
-    const current = nodes.findIndex((n) => n.classList.contains('is-active'));
-    if (e.key === 'ArrowRight') {
+  screen?.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
       e.preventDefault();
-      select(Math.min(timeline.length - 1, current + 1));
+      step(1);
     }
-    if (e.key === 'ArrowLeft') {
+    if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
       e.preventDefault();
-      select(Math.max(0, current - 1));
+      step(-1);
     }
   });
 
-  // Start at Kickstarter. Never scroll the page — only the track, and not on first paint.
-  // Deep links on /timeline still select the matching card without jumping the viewport.
+  if (reduceMotion) {
+    root.classList.add('is-static');
+    setSteps(1);
+    if (hint) hint.hidden = true;
+  } else {
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+  }
+
+  tickClock();
+  setInterval(tickClock, 30000);
+
   const hash = location.hash.replace(/^#/, '');
   const fromHash = timeline.findIndex((e) => e.id === hash);
   const startIndex = fromHash >= 0 ? fromHash : 0;
-  select(startIndex, { syncHash: false, scroll: false });
+  select(startIndex, { syncHash: false });
+  setSteps(visibleIndexes().length);
 
-  // If we landed with a stale timeline hash on the homepage, clear it so refresh stays on the hero.
   if (location.pathname === '/' || location.pathname === '/index.html') {
-    if (fromHash >= 0) {
-      history.replaceState(null, '', location.pathname + location.search);
-    }
-  } else if (fromHash >= 0) {
-    requestAnimationFrame(() => scrollTrackTo(startIndex));
+    if (fromHash >= 0) history.replaceState(null, '', location.pathname + location.search);
+  } else if (fromHash >= 0 && !reduceMotion) {
+    requestAnimationFrame(() => scrollToIndex(startIndex, 'auto'));
   }
+
+  syncFromScroll();
 </script>
