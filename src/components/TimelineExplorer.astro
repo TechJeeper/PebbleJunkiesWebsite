@@ -30,6 +30,25 @@ function shortDate(iso: string) {
     year: 'numeric',
   });
 }
+
+/** One rail entry per calendar year — first milestone index + eras in that year. */
+const yearRail = (() => {
+  const seen = new Map<number, { year: number; firstIndex: number; eras: Set<string> }>();
+  timeline.forEach((event, index) => {
+    const year = yearOf(event.date);
+    const row = seen.get(year);
+    if (!row) {
+      seen.set(year, { year, firstIndex: index, eras: new Set([event.era]) });
+    } else {
+      row.eras.add(event.era);
+    }
+  });
+  return [...seen.values()].map((row) => ({
+    year: row.year,
+    firstIndex: row.firstIndex,
+    eras: [...row.eras].join(','),
+  }));
+})();
 ---
 
 <div
@@ -62,16 +81,17 @@ function shortDate(iso: string) {
 
     <div class="pebble-stage">
       <ol class="timeline-years" aria-label="Jump to year" data-year-list>
-        {timeline.map((event, index) => (
+        {yearRail.map((row, i) => (
           <li>
             <button
               type="button"
-              class:list={['tl-year-btn', { 'is-active': index === 0 }]}
-              data-year-index={index}
-              data-era={event.era}
-              aria-current={index === 0 ? 'true' : undefined}
+              class:list={['tl-year-btn', { 'is-active': i === 0 }]}
+              data-year={row.year}
+              data-year-index={row.firstIndex}
+              data-eras={row.eras}
+              aria-current={i === 0 ? 'true' : undefined}
             >
-              {yearOf(event.date)}
+              {row.year}
             </button>
           </li>
         ))}
@@ -239,13 +259,16 @@ function shortDate(iso: string) {
     if (!event) return;
     current = index;
 
-    yearButtons.forEach((btn, i) => {
-      const on = i === index;
+    const activeYear = String(yearOf(event.date));
+    yearButtons.forEach((btn) => {
+      const on = btn.dataset.year === activeYear;
       btn.classList.toggle('is-active', on);
       if (on) btn.setAttribute('aria-current', 'true');
       else btn.removeAttribute('aria-current');
     });
-    yearButtons[index]?.scrollIntoView({ block: 'nearest', behavior: reduceMotion ? 'auto' : 'smooth' });
+    yearButtons
+      .find((btn) => btn.dataset.year === activeYear)
+      ?.scrollIntoView({ block: 'nearest', behavior: reduceMotion ? 'auto' : 'smooth' });
 
     detailEra.textContent = event.era;
     detailTitle.textContent = event.title;
@@ -356,7 +379,8 @@ function shortDate(iso: string) {
       btn.setAttribute('aria-selected', on ? 'true' : 'false');
     });
     yearButtons.forEach((btn) => {
-      const show = era === 'all' || btn.dataset.era === era;
+      const eras = (btn.dataset.eras || '').split(',').filter(Boolean);
+      const show = era === 'all' || eras.includes(era);
       btn.parentElement?.classList.toggle('is-hidden', !show);
     });
     const visible = visibleIndexes();
@@ -366,10 +390,16 @@ function shortDate(iso: string) {
     if (!reduceMotion) scrollToIndex(pick, 'auto');
   }
 
+  function firstVisibleInYear(year) {
+    const y = Number(year);
+    return visibleIndexes().find((index) => yearOf(timeline[index].date) === y);
+  }
+
   filters.forEach((btn) => btn.addEventListener('click', () => filterEra(btn.dataset.era)));
   yearButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
-      const index = Number(btn.dataset.yearIndex);
+      const index = firstVisibleInYear(btn.dataset.year) ?? Number(btn.dataset.yearIndex);
+      if (index == null || Number.isNaN(index)) return;
       select(index);
       if (!reduceMotion) scrollToIndex(index);
     });
