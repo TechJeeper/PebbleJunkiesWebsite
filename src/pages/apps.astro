@@ -6,6 +6,11 @@ function formatHearts(n: number) {
   if (n >= 1000) return `${(n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, '')}k`;
   return String(n);
 }
+
+/** rePebble store app pages live at /{uuid} — never /details/{uuid} (404). */
+function storeHref(app: { id: string; href?: string }) {
+  return `https://apps.repebble.com/${app.id}`;
+}
 ---
 
 <BaseLayout
@@ -37,7 +42,7 @@ function formatHearts(n: number) {
       </div>
       <div class="app-card-grid">
         {apps.watchapps.map((app) => (
-          <a class="app-card" href={app.href} target="_blank" rel="noopener">
+          <a class="app-card" href={storeHref(app)} target="_blank" rel="noopener">
             <div class="app-card-media">
               {app.image ? (
                 <img src={app.image} alt="" loading="lazy" width="144" height="168" />
@@ -79,7 +84,7 @@ function formatHearts(n: number) {
       </div>
       <div class="app-card-grid">
         {apps.watchfaces.map((app) => (
-          <a class="app-card" href={app.href} target="_blank" rel="noopener">
+          <a class="app-card" href={storeHref(app)} target="_blank" rel="noopener">
             <div class="app-card-media">
               {app.image ? (
                 <img src={app.image} alt="" loading="lazy" width="144" height="168" />

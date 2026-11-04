@@ -55,7 +55,7 @@ Write `src/data/apps.json` roughly like:
       "hearts": 0,
       "category": "...",
       "description": "2–4 sentence Junkies-voice summary of what it does and why people love it",
-      "href": "https://apps.repebble.com/...",
+      "href": "https://apps.repebble.com/{id}",
       "image": "https://...",
       "platforms": ["emery", "basalt"]
     }
