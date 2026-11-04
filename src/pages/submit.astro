@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/submit.css';
+
+const repoIssuesNew = 'https://github.com/TechJeeper/PebbleJunkiesWebsite/issues/new';
+---
+
+<BaseLayout
+  title="Submit news or information"
+  description="Tip Pebble Junkies about shipping updates, corrections, repair intel, or watch details — opens a GitHub issue."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Community tips</p>
+      <h1>Submit news or information</h1>
+      <p>
+        Spot a shipping update, a wrong spec, a repair part number, or something we should cover?
+        Fill this out and we will open a GitHub issue so it does not get lost in a chat scroll.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <form class="submit-form" id="submit-news-form" novalidate>
+        <label>
+          Category
+          <select name="category" required>
+            <option value="News / shipping update">News / shipping update</option>
+            <option value="Correction / fix something on the site">Correction / fix something on the site</option>
+            <option value="Repair tip or part info">Repair tip or part info</option>
+            <option value="Watch specs or catalog detail">Watch specs or catalog detail</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+
+        <label>
+          Short title
+          <span class="hint">Shown as the GitHub issue title</span>
+          <input
+            name="title"
+            type="text"
+            required
+            maxlength="120"
+            placeholder="e.g. Round 2 batch left the factory Oct 30"
+            autocomplete="off"
+          />
+        </label>
+
+        <label>
+          Details
+          <span class="hint">Facts, dates, model names — the more concrete, the better</span>
+          <textarea
+            name="details"
+            required
+            maxlength="6000"
+            placeholder="What happened, when, which watch, and why it matters…"
+          ></textarea>
+        </label>
+
+        <label>
+          Source link
+          <span class="hint">Optional — Bluesky, blog, Discord, Reddit, docs</span>
+          <input name="source" type="url" maxlength="500" placeholder="https://" inputmode="url" />
+        </label>
+
+        <label>
+          Your name or handle
+          <span class="hint">Optional — only if you want credit or a follow-up</span>
+          <input name="contact" type="text" maxlength="120" placeholder="Name, @handle, or email" autocomplete="nickname" />
+        </label>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="submit">Continue on GitHub</button>
+          <a class="btn btn-ghost" href={`${repoIssuesNew}?template=submit-news.yml`}>Use GitHub form instead</a>
+        </div>
+      </form>
+
+      <p class="submit-note">
+        You will need to be signed into GitHub and press <strong>Submit new issue</strong> on the next
+        screen. That keeps spam off our inbox and puts tips where we can track them.
+        Repo:
+        <a href="https://github.com/TechJeeper/PebbleJunkiesWebsite/issues" target="_blank" rel="noopener">
+          TechJeeper/PebbleJunkiesWebsite
+        </a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<script is:inline>
+  (() => {
+    const form = document.getElementById('submit-news-form');
+    if (!form) return;
+
+    const REPO_NEW = 'https://github.com/TechJeeper/PebbleJunkiesWebsite/issues/new';
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      const category = String(data.get('category') || 'Other').trim();
+      const titleRaw = String(data.get('title') || '').trim();
+      const details = String(data.get('details') || '').trim();
+      const source = String(data.get('source') || '').trim();
+      const contact = String(data.get('contact') || '').trim();
+
+      if (!titleRaw || !details) {
+        form.reportValidity();
+        return;
+      }
+
+      const title = `[Submission] ${titleRaw}`.slice(0, 140);
+      const body = [
+        `### Category`,
+        category,
+        ``,
+        `### Details`,
+        details,
+        ``,
+        `### Source`,
+        source || '_Not provided_',
+        ``,
+        `### Contact / credit`,
+        contact || '_Not provided_',
+        ``,
+        `---`,
+        `_Submitted via pebblejunkies.com/submit_`,
+      ].join('\n');
+
+      const url = new URL(REPO_NEW);
+      url.searchParams.set('title', title);
+      url.searchParams.set('body', body);
+      url.searchParams.set('labels', 'community-submission');
+
+      window.location.href = url.toString();
+    });
+  })();
+</script>

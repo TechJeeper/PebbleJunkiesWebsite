@@ -1,0 +1,34 @@
+name: Submit news or information
+description: Tip us off about shipping updates, corrections, repair intel, or watch details.
+title: "[Submission]: "
+labels: ["community-submission"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - News / shipping update
+        - Correction / fix something on the site
+        - Repair tip or part info
+        - Watch specs or catalog detail
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What should we know?
+      description: Facts, dates, model names, and context. The more concrete, the better.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source link (optional)
+      description: Bluesky, blog, Discord, Reddit, docs, etc.
+  - type: input
+    id: contact
+    attributes:
+      label: How can we credit / follow up? (optional)
+      description: Name, handle, or email — only if you want.
