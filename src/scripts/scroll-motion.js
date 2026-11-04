@@ -8,12 +8,11 @@ function initScrollProgress() {
   const bar = document.getElementById('scroll-progress');
   if (!bar) return () => {};
 
-  const update = () => {
+  return () => {
     const max = document.documentElement.scrollHeight - window.innerHeight;
     const p = max > 0 ? (window.scrollY / max) * 100 : 0;
     bar.style.transform = `scaleX(${clamp(p, 0, 100) / 100})`;
   };
-  return update;
 }
 
 function initHeader() {
@@ -31,14 +30,18 @@ function initNav() {
     const open = links?.classList.toggle('is-open');
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
+  links?.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => {
+      links.classList.remove('is-open');
+      toggle?.setAttribute('aria-expanded', 'false');
+    });
+  });
 }
 
 function decorateMotionTargets() {
   document.querySelectorAll('.page-hero .container > *').forEach((el, i) => {
-    if (!el.classList.contains('reveal')) {
-      el.classList.add('reveal', 'reveal-up');
-      el.style.setProperty('--reveal-delay', `${i * 80}ms`);
-    }
+    el.classList.add('reveal', 'reveal-up');
+    el.style.setProperty('--reveal-delay', `${i * 50}ms`);
   });
 
   document.querySelectorAll('.section-head').forEach((el) => {
@@ -48,39 +51,32 @@ function decorateMotionTargets() {
   document.querySelectorAll('.lane').forEach((el, i) => {
     el.classList.add('reveal');
     el.classList.add(el.classList.contains('reverse') ? 'reveal-left' : 'reveal-right');
-    el.style.setProperty('--reveal-delay', `${(i % 3) * 60}ms`);
+    el.style.setProperty('--reveal-delay', `${(i % 3) * 40}ms`);
   });
 
-  const staggerGroups = [
-    '.watch-grid',
-    '.news-list',
-    '.grid-2',
-    '.grid-3',
-    '.footer-grid',
-  ];
-
-  for (const sel of staggerGroups) {
+  for (const sel of ['.watch-grid', '.news-list', '.grid-2', '.grid-3']) {
     document.querySelectorAll(sel).forEach((group) => {
       group.classList.add('stagger');
+      // Parent may already have .reveal from markup — reveal it too so children aren't trapped at opacity 0.
+      if (group.classList.contains('reveal')) {
+        group.classList.add('reveal-up');
+      }
       [...group.children].forEach((child, i) => {
         child.classList.add('reveal', 'reveal-up');
-        child.style.setProperty('--reveal-delay', `${i * 70}ms`);
+        child.style.setProperty('--reveal-delay', `${Math.min(i, 8) * 40}ms`);
       });
     });
   }
 
   document.querySelectorAll('.panel').forEach((el, i) => {
     if (el.closest('.stagger')) return;
-    el.classList.add('reveal', 'reveal-scale');
-    el.style.setProperty('--reveal-delay', `${(i % 4) * 50}ms`);
+    el.classList.add('reveal', 'reveal-up');
+    el.style.setProperty('--reveal-delay', `${(i % 4) * 35}ms`);
   });
+}
 
-  document.querySelectorAll('.hero-bg img, .lane-visual img, .watch-tile .media img').forEach((img) => {
-    if (!img.closest('[data-parallax]')) {
-      const wrap = img.parentElement;
-      if (wrap) wrap.setAttribute('data-parallax', wrap.classList.contains('hero-bg') ? '0.35' : '0.18');
-    }
-  });
+function revealNow(el) {
+  el.classList.add('is-in');
 }
 
 function initReveals() {
@@ -88,7 +84,7 @@ function initReveals() {
   if (!nodes.length) return;
 
   if (reduceMotion) {
-    nodes.forEach((el) => el.classList.add('is-in'));
+    nodes.forEach(revealNow);
     return;
   }
 
@@ -96,47 +92,40 @@ function initReveals() {
     (entries) => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
-          entry.target.classList.add('is-in');
+          revealNow(entry.target);
           io.unobserve(entry.target);
         }
       }
     },
-    { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+    { threshold: 0.02, rootMargin: '0px 0px 12% 0px' }
   );
 
-  nodes.forEach((el) => io.observe(el));
+  const vh = window.innerHeight;
+  nodes.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < vh * 0.98 && rect.bottom > 0) {
+      revealNow(el);
+      return;
+    }
+    io.observe(el);
+  });
 }
 
-function initParallax() {
+function initHeroScroll() {
   if (reduceMotion) return () => {};
 
-  const layers = [...document.querySelectorAll('[data-parallax]')];
   const hero = document.querySelector('.hero');
-  const heroContent = document.querySelector('.hero-content');
+  const heroBg = document.querySelector('.hero-bg');
+  if (!hero || !heroBg) return () => {};
 
   return () => {
     const vh = window.innerHeight;
-
-    for (const layer of layers) {
-      const speed = Number(layer.getAttribute('data-parallax') || '0.2');
-      const rect = layer.getBoundingClientRect();
-      const mid = rect.top + rect.height / 2;
-      const offset = (mid - vh / 2) * speed * -1;
-      const img = layer.matches('img') ? layer : layer.querySelector('img');
-      if (img) {
-        img.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0) scale(1.08)`;
-      } else {
-        layer.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
-      }
-    }
-
-    if (hero && heroContent) {
-      const y = window.scrollY;
-      const fade = clamp(1 - y / (vh * 0.75), 0, 1);
-      heroContent.style.opacity = String(fade);
-      heroContent.style.transform = `translate3d(0, ${(y * 0.22).toFixed(1)}px, 0)`;
-      hero.style.setProperty('--hero-veil', String(clamp(y / (vh * 0.9), 0, 0.55)));
-    }
+    const y = window.scrollY;
+    // Parallax the wrapper only — img keeps its CSS drift animation (no transform fight).
+    const shift = Math.min(y * 0.18, vh * 0.35);
+    heroBg.style.transform = `translate3d(0, ${shift.toFixed(1)}px, 0)`;
+    const start = vh * 0.35;
+    hero.style.setProperty('--hero-veil', String(y <= start ? 0 : clamp((y - start) / (vh * 0.9), 0, 0.45)));
   };
 }
 
@@ -147,39 +136,23 @@ function initFloatingOrbs() {
 
   return () => {
     const y = window.scrollY;
-    stage.style.setProperty('--orb-y', `${(y * 0.08).toFixed(1)}px`);
-    stage.style.setProperty('--orb-shift', `${Math.sin(y / 420) * 40}px`);
+    stage.style.setProperty('--orb-y', `${(y * 0.03).toFixed(1)}px`);
+    stage.style.setProperty('--orb-shift', `${Math.sin(y / 640) * 14}px`);
   };
 }
 
-function initMagneticSections() {
-  if (reduceMotion) return;
-
-  document.querySelectorAll('.section').forEach((section) => {
-    section.classList.add('section-motion');
-  });
-
-  const io = new IntersectionObserver(
-    (entries) => {
-      for (const entry of entries) {
-        entry.target.classList.toggle('is-active-section', entry.isIntersecting);
-      }
-    },
-    { threshold: 0.18 }
-  );
-
-  document.querySelectorAll('.section-motion').forEach((el) => io.observe(el));
-}
-
 function boot() {
+  if ((location.pathname === '/' || location.pathname === '/index.html') && !location.hash) {
+    window.scrollTo(0, 0);
+  }
+
   initNav();
   decorateMotionTargets();
   initReveals();
-  initMagneticSections();
 
   const updateProgress = initScrollProgress();
   const updateHeader = initHeader();
-  const updateParallax = initParallax();
+  const updateHero = initHeroScroll();
   const updateOrbs = initFloatingOrbs();
 
   let ticking = false;
@@ -189,9 +162,8 @@ function boot() {
     requestAnimationFrame(() => {
       updateProgress();
       updateHeader();
-      updateParallax();
+      updateHero();
       updateOrbs();
-      document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
       ticking = false;
     });
   };

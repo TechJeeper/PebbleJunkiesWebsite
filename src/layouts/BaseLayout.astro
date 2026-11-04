@@ -52,6 +52,7 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
     </script>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
     <div class="scroll-orbs" id="scroll-orbs" aria-hidden="true">
       <span class="orb-a"></span>
@@ -74,13 +75,14 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
             <li><a href="/apps" aria-current={path === '/apps' ? 'page' : undefined}>Apps</a></li>
             <li><a href="/news" aria-current={path === '/news' ? 'page' : undefined}>News</a></li>
             <li><a href="/start" aria-current={path === '/start' ? 'page' : undefined}>Get Started</a></li>
-            <li><a href="/developers" aria-current={path === '/developers' ? 'page' : undefined}>Developers</a></li>
-            <li><a href="/community" aria-current={path === '/community' ? 'page' : undefined}>Community</a></li>
+            <li class="nav-sep" aria-hidden="true"></li>
+            <li><a class="nav-secondary" href="/developers" aria-current={path === '/developers' ? 'page' : undefined}>Developers</a></li>
+            <li><a class="nav-secondary" href="/community" aria-current={path === '/community' ? 'page' : undefined}>Community</a></li>
           </ul>
         </div>
       </header>
 
-      <main>
+      <main id="main">
         <slot />
       </main>
 

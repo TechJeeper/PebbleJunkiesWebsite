@@ -10,7 +10,7 @@ const eras = [
   { id: 'revival', label: 'Revival' },
 ];
 
-const initial = timeline[timeline.length - 1];
+const initial = timeline[0];
 ---
 
 <section class="timeline-shell" id="timeline" data-timeline>
@@ -35,11 +35,11 @@ const initial = timeline[timeline.length - 1];
         {timeline.map((event, index) => (
           <button
             type="button"
-            class:list={['tl-node', { 'is-active': index === timeline.length - 1 }]}
+            class:list={['tl-node', { 'is-active': index === 0 }]}
             data-id={event.id}
             data-era={event.era}
             data-index={index}
-            aria-pressed={index === timeline.length - 1 ? 'true' : 'false'}
+            aria-pressed={index === 0 ? 'true' : 'false'}
           >
             <div class="tl-card">
               <time datetime={event.date}>
@@ -99,7 +99,14 @@ const initial = timeline[timeline.length - 1];
       day: 'numeric',
     });
 
-  function select(index) {
+  function scrollTrackTo(index) {
+    const active = nodes[index];
+    if (!track || !active) return;
+    const left = active.offsetLeft - (track.clientWidth - active.offsetWidth) / 2;
+    track.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
+  }
+
+  function select(index, { syncHash = true, scroll = true } = {}) {
     const event = timeline[index];
     if (!event) return;
 
@@ -124,11 +131,12 @@ const initial = timeline[timeline.length - 1];
       detailLinks.appendChild(a);
     }
 
-    const active = nodes[index];
-    active?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    if (scroll) scrollTrackTo(index);
 
-    if (event.id) {
-      history.replaceState(null, '', `#${event.id}`);
+    if (syncHash && event.id) {
+      const url = new URL(location.href);
+      url.hash = event.id;
+      history.replaceState(null, '', url);
     }
   }
 
@@ -168,7 +176,19 @@ const initial = timeline[timeline.length - 1];
     }
   });
 
-  const hash = location.hash.replace('#', '');
+  // Start at Kickstarter. Never scroll the page — only the track, and not on first paint.
+  // Deep links on /timeline still select the matching card without jumping the viewport.
+  const hash = location.hash.replace(/^#/, '');
   const fromHash = timeline.findIndex((e) => e.id === hash);
-  select(fromHash >= 0 ? fromHash : timeline.length - 1);
+  const startIndex = fromHash >= 0 ? fromHash : 0;
+  select(startIndex, { syncHash: false, scroll: false });
+
+  // If we landed with a stale timeline hash on the homepage, clear it so refresh stays on the hero.
+  if (location.pathname === '/' || location.pathname === '/index.html') {
+    if (fromHash >= 0) {
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+  } else if (fromHash >= 0) {
+    requestAnimationFrame(() => scrollTrackTo(startIndex));
+  }
 </script>
