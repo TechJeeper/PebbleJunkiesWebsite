@@ -1,12 +1,16 @@
 [
   {
-    "id": "plugins",
-    "date": "2026-10-22",
+    "id": "bsky-91ecc8c70c",
+    "date": "2026-11-01",
     "source": "Bluesky · Eric Migicovsky",
-    "title": "Pebble Plugins preview — biggest SDK change in years",
-    "blurb": "Headless JS plugins on the phone feed weather, calendar, home control, and more to watchfaces and Index. New permissions model for location and network.",
-    "href": "https://developer.repebble.com/guides/plugins/",
-    "tags": ["sdk", "core"]
+    "title": "Folks in BC - we almost got the fix out in time for (lack of) time change, but it's still in beta testing. Yo…",
+    "blurb": "Folks in BC - we almost got the fix out in time for (lack of) time change, but it's still in beta testing. You can get it here rePebble.com/account",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3mzb6hnm3422v",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
   },
   {
     "id": "round2-ramp",
@@ -15,7 +19,178 @@
     "title": "Next batch of Round 2s leave the factory",
     "blurb": "Production ramping slowly but surely. Keep an eye on order confirmation emails from info@repebble.com.",
     "href": "https://bsky.app/profile/ericmigi.com",
-    "tags": ["hardware", "round-2"]
+    "tags": [
+      "hardware",
+      "round-2"
+    ]
+  },
+  {
+    "id": "bsky-1e4bcc58de",
+    "date": "2026-10-30",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "All sizes of Index 01 are now in stock on rePebble.com/index and ship within 48 hours! If you pre-ordered but…",
+    "blurb": "All sizes of Index 01 are now in stock on rePebble.com/index and ship within 48 hours! If you pre-ordered but didn't select your size yet, go to orders.rePebble.com and pick your size.",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3mz4foc6pqk2h",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
+  },
+  {
+    "id": "bsky-c68e133066",
+    "date": "2026-10-30",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "next batch of Round 2's out the factory door - ramping up slowly but surely!",
+    "blurb": "next batch of Round 2's out the factory door - ramping up slowly but surely!",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3mz4ccmljsc2w",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
+  },
+  {
+    "id": "bsky-c303162adf",
+    "date": "2026-10-28",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "Enjoying this trip back in time... apps.repebble.com/sensory_aa1f...",
+    "blurb": "Enjoying this trip back in time... apps.repebble.com/sensory_aa1f...",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3myx42zag3k2l",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
+  },
+  {
+    "id": "bsky-7fdd6b32b8",
+    "date": "2026-10-26",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "publish Pebble apps easily from CI! developer.repebble.com/guides/appst...",
+    "blurb": "publish Pebble apps easily from CI! developer.repebble.com/guides/appst...",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3mysvymaev22n",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
+  },
+  {
+    "id": "bsky-a74ef4c7fd",
+    "date": "2026-10-26",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "Pebble watches last a loooooong time on a battery charge. But it depends on the watchface you pick! Some feat…",
+    "blurb": "Pebble watches last a loooooong time on a battery charge. But it depends on the watchface you pick! Some feature beautiful animations, which may slightly decrease battery life. Now you can view that impact on the Pebble…",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3mysd4vo52s2a",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
+  },
+  {
+    "id": "bsky-ec4d8980c5",
+    "date": "2026-10-23",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "The Pebble appstore (apps.rePebble.com) now features - Top Charts of most used watchfaces (sort by publish da…",
+    "blurb": "The Pebble appstore (apps.rePebble.com) now features - Top Charts of most used watchfaces (sort by publish date to see the newest up-and-coming apps/faces) - watchfaces now run live in the browser (on PebbleOS running i…",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3myl2lds6tc2c",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
+  },
+  {
+    "id": "bsky-981ab6d6b4",
+    "date": "2026-10-23",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "Location Sharing plugin for Pebble and Index - gets data from your Google Maps and Apple Find My shared locat…",
+    "blurb": "Location Sharing plugin for Pebble and Index - gets data from your Google Maps and Apple Find My shared locations. I made it show biking/walking distance if they're closer by!",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3mykzqbzb7k2h",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
+  },
+  {
+    "id": "plugins",
+    "date": "2026-10-22",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "Pebble Plugins preview — biggest SDK change in years",
+    "blurb": "Headless JS plugins on the phone feed weather, calendar, home control, and more to watchfaces and Index. New permissions model for location and network.",
+    "href": "https://developer.repebble.com/guides/plugins/",
+    "tags": [
+      "sdk",
+      "core"
+    ]
+  },
+  {
+    "id": "bsky-db3ff49d33",
+    "date": "2026-10-22",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "Pebble devs - we're working on something big for you 👀The biggest change to the SDK since...forever. Plugins…",
+    "blurb": "Pebble devs - we're working on something big for you 👀The biggest change to the SDK since...forever. Plugins: headless apps that provide data (eg weather, finance, traffic) or offer actions (home control, music, webhoo…",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3myi5hrwlqk2f",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
+  },
+  {
+    "id": "bsky-ae390e2a5b",
+    "date": "2026-10-21",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "it's always nice to see one of the core ideas of Pebble 2.0 resonating with folks. It's definitely different…",
+    "blurb": "it's always nice to see one of the core ideas of Pebble 2.0 resonating with folks. It's definitely different than how all other gadgets are made. we build Pebble for ourselves and don't worry too much about 'competing'…",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3myfuhf7enc2j",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
+  },
+  {
+    "id": "bsky-3599aa0492",
+    "date": "2026-10-21",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "PebbleOS runs in browser (pebbleos.readthedocs.io/en/latest/pl...) and...on Apple watch??",
+    "blurb": "PebbleOS runs in browser (pebbleos.readthedocs.io/en/latest/pl...) and...on Apple watch??",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3myfn5p4gac2m",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
+  },
+  {
+    "id": "blog-57cb862b58",
+    "date": "2026-09-30",
+    "source": "rePebble Blog",
+    "title": "Pebble Round 2 Starts Shipping!",
+    "blurb": "TLDR PR2 is in production!! See all the strap options What you need to know about Pebble Round 2 Address confirmation email instructions FAQ Pebble Round 2 is in production!! Finally! 😌 We’re not out of the woods yet,…",
+    "href": "https://repebble.com/blog/pebble-round-2-starts-shipping",
+    "tags": [
+      "core",
+      "blog"
+    ],
+    "auto": true
+  },
+  {
+    "id": "blog-a61a9df3cd",
+    "date": "2026-08-30",
+    "source": "rePebble Blog",
+    "title": "New Pebble Weather App + Software Updates",
+    "blurb": "All Pebble Time 2 invites have been sent and we're now in-stock! It’s been a long Time coming, but if you have been waiting, now is your moment. Pebble Time 2 is in stock on rePebble.com/watch and ships within 48 hours!…",
+    "href": "https://repebble.com/blog/new-pebble-weather-app-software-updates",
+    "tags": [
+      "core",
+      "blog"
+    ],
+    "auto": true
   },
   {
     "id": "pt2-instock",
@@ -24,34 +199,10 @@
     "title": "All Time 2 pre-orders shipped — now in stock",
     "blurb": "Didn't pre-order? PT2 is on rePebble.com/watch and ships within 48 hours. Color selectors for folks who hadn't locked one in.",
     "href": "https://repebble.com/watch",
-    "tags": ["hardware", "time-2"]
-  },
-  {
-    "id": "mass-production",
-    "date": "2026-03-24",
-    "source": "rePebble Blog",
-    "title": "Pebble Time 2 is in mass production",
-    "blurb": "30m water-resistance testing on the line, 20k+ pre-orders, first ships late March 2026. Honest expectations post included.",
-    "href": "https://repebble.com/blog/pebble-time-2-is-in-mass-production",
-    "tags": ["hardware", "time-2"]
-  },
-  {
-    "id": "rebble-core",
-    "date": "2025-10-09",
-    "source": "Rebble Blog",
-    "title": "Rebbles in a world with Core",
-    "blurb": "Shared appstore backend between Rebble and Core Devices. Publish once, reach both ecosystems. Core helps fund Rebble Web Services.",
-    "href": "https://rebble.io/2025/10/09/rebbles-in-a-world-with-core.html",
-    "tags": ["rebble", "ecosystem"]
-  },
-  {
-    "id": "oss",
-    "date": "2025-01-27",
-    "source": "Google Open Source",
-    "title": "See the code that powered the Pebble smartwatches",
-    "blurb": "Google releases most of classic PebbleOS — the spark that made Core Devices and the hardware comeback possible.",
-    "href": "https://opensource.googleblog.com/2025/01/see-code-that-powered-pebble-smartwatches.html",
-    "tags": ["opensource"]
+    "tags": [
+      "hardware",
+      "time-2"
+    ]
   },
   {
     "id": "appstore-wasm",
@@ -60,6 +211,278 @@
     "title": "Watchfaces run live in the browser",
     "blurb": "apps.rePebble.com Top Charts + WASM PebbleOS previews. Battery-impact insights for animated faces.",
     "href": "https://apps.repebble.com/",
-    "tags": ["apps", "store"]
+    "tags": [
+      "apps",
+      "store"
+    ]
+  },
+  {
+    "id": "blog-01b13fcae4",
+    "date": "2026-07-24",
+    "source": "rePebble Blog",
+    "title": "Index 01 Is In Mass Production!",
+    "blurb": "TL:DR Index 01 is in mass production What you need to know about Index 01 What can I do with Index 01? What to expect Things to be aware of Things to look forward to Great news everybody Index 01 has now entered mass pr…",
+    "href": "https://repebble.com/blog/index-01-is-in-mass-production",
+    "tags": [
+      "core",
+      "blog"
+    ],
+    "auto": true
+  },
+  {
+    "id": "blog-a0bb4aeeb4",
+    "date": "2026-07-14",
+    "source": "rePebble Blog",
+    "title": "Pebble Mega Update - July 2026",
+    "blurb": "TL:DR; Pebble Time 2 Shipping Status Pebble Software Updates PT2 - Issues You’ve Reported Pebble Round 2 Production Update Index 01 Production Update Pebble Time 2 Shipping Status Since we started mass production in lat…",
+    "href": "https://repebble.com/blog/pebble-mega-update-july-2026",
+    "tags": [
+      "core",
+      "blog"
+    ],
+    "auto": true
+  },
+  {
+    "id": "blog-c06771c6ad",
+    "date": "2026-05-18",
+    "source": "rePebble Blog",
+    "title": "How I Use My Index 01 + Production Update",
+    "blurb": "TL;DR Production Update - behind schedule but on track How I use my Index 01 - watch the Tick Talk episode for demos! Product design philosophy - why we made it this way Index software - see how Index 01 data appears in…",
+    "href": "https://repebble.com/blog/how-i-use-my-index-01-production-update",
+    "tags": [
+      "core",
+      "blog"
+    ],
+    "auto": true
+  },
+  {
+    "id": "blog-d3501025c4",
+    "date": "2026-04-28",
+    "source": "rePebble Blog",
+    "title": "Spring 2026 Dev Contest Results!",
+    "blurb": "Over 500 new Pebble apps and watchfaces! Thank you to all the developers who entered the developer contest It was so much fun following the leaderboard and seeing new apps show up every day. A few thoughts: It's so incr…",
+    "href": "https://repebble.com/blog/spring-2026-dev-contest-results",
+    "tags": [
+      "core",
+      "blog"
+    ],
+    "auto": true
+  },
+  {
+    "id": "blog-314b647773",
+    "date": "2026-04-02",
+    "source": "rePebble Blog",
+    "title": "Spring 2026 Pebble App Contest + SDK Updates",
+    "blurb": "Announcing Spring 2026 Pebble App Contest! In honour of Pebble Time 2 entering mass production , we’re hosting a contest to celebrate developers who have created amazing apps and watchfaces for Pebble…and to encourage d…",
+    "href": "https://repebble.com/blog/spring-2026-pebble-app-contest",
+    "tags": [
+      "core",
+      "blog"
+    ],
+    "auto": true
+  },
+  {
+    "id": "blog-5900b90763",
+    "date": "2026-03-31",
+    "source": "Rebble Blog",
+    "title": "Meet Your New Board of Directors",
+    "blurb": "<p>The first ever <a href=\"https://rebble.io/2026/03/04/vote-for-your-next-board.html\">Rebble Board Election</a> has concluded, the previous board have ratified the results, and now we’re excited to share the outcome! A…",
+    "href": "https://rebble.io/2026/03/31/the-new-board.html",
+    "tags": [
+      "rebble",
+      "blog"
+    ],
+    "auto": true
+  },
+  {
+    "id": "mass-production",
+    "date": "2026-03-24",
+    "source": "rePebble Blog",
+    "title": "Pebble Time 2 is in mass production",
+    "blurb": "30m water-resistance testing on the line, 20k+ pre-orders, first ships late March 2026. Honest expectations post included.",
+    "href": "https://repebble.com/blog/pebble-time-2-is-in-mass-production",
+    "tags": [
+      "hardware",
+      "time-2"
+    ]
+  },
+  {
+    "id": "blog-c2a2e579a7",
+    "date": "2026-03-04",
+    "source": "Rebble Blog",
+    "title": "Vote for your next Board of Directors!",
+    "blurb": "<p>Hi Rebblers,</p> <p>This is just a short blog post to say: <a href=\"https://auth.rebble.io/vote/board-election-spring-2026\">voting is now open for the Rebble Foundation’s next Board of Directors</a>! As I mentioned <…",
+    "href": "https://rebble.io/2026/03/04/vote-for-your-next-board.html",
+    "tags": [
+      "rebble",
+      "blog"
+    ],
+    "auto": true
+  },
+  {
+    "id": "blog-58655f7d2e",
+    "date": "2026-02-20",
+    "source": "rePebble Blog",
+    "title": "CloudPebble Returns! Plus New Pure JavaScript and Round 2 SDK",
+    "blurb": "As mentioned in our software roadmap , we’ve been working on many improvements to Pebble’s already pretty awesome SDK and developer environment. CloudPebble Returns! Fresh from several years in hibernation, CloudPebble…",
+    "href": "https://repebble.com/blog/cloudpebble-returns-plus-pure-javascript-and-round-2-sdk",
+    "tags": [
+      "core",
+      "blog"
+    ],
+    "auto": true
+  },
+  {
+    "id": "blog-68a9b70501",
+    "date": "2026-02-18",
+    "source": "rePebble Blog",
+    "title": "February Pebble Production and Software Updates",
+    "blurb": "Mega update on Pebble Time 2, Pebble Round 2 and Index 01 Things are busy in Pebbleland! We’re getting close to shipping 3 new hardware products and all the associated software that comes along with them. Overall, thing…",
+    "href": "https://repebble.com/blog/february-pebble-production-and-software-updates",
+    "tags": [
+      "core",
+      "blog"
+    ],
+    "auto": true
+  },
+  {
+    "id": "blog-96d3647d12",
+    "date": "2026-02-16",
+    "source": "Rebble Blog",
+    "title": "Nominate yourself for the Board of Directors!",
+    "blurb": "<p>Hi, there! For those of you who have been following <a href=\"https://forum.rebble.io/\">the Rebble Dev Forum</a>, you might have noticed that we’re <a href=\"https://forum.rebble.io/t/rebble-board-elections-2026/634/2\"…",
+    "href": "https://rebble.io/2026/02/16/nominate-yourself.html",
+    "tags": [
+      "rebble",
+      "blog"
+    ],
+    "auto": true
+  },
+  {
+    "id": "blog-70ed3da43e",
+    "date": "2026-01-21",
+    "source": "Rebble Blog",
+    "title": "A peek into the future: microPebble on iOS",
+    "blurb": "<p>In <a href=\"https://rebble.io/2025/12/27/rebble-finances-2025-wrapped.html\">my previous blog post about Rebble’s finances this year</a>, I alluded to the idea of Rebble commissioning a port of <a href=\"https://github…",
+    "href": "https://rebble.io/2026/01/21/micropebble-on-ios.html",
+    "tags": [
+      "rebble",
+      "blog"
+    ],
+    "auto": true
+  },
+  {
+    "id": "blog-af5edf242e",
+    "date": "2026-01-02",
+    "source": "rePebble Blog",
+    "title": "Pebble Round 2 - The Most Stylish Pebble Ever",
+    "blurb": "We’ve finally gotten around to it The entire Pebble relaunch would not be complete without revisiting one of our most iconic watches from 2015 - Pebble Time Round. It stole many hearts in the Pebble community and remain…",
+    "href": "https://repebble.com/blog/pebble-round-2-the-most-stylish-pebble-ever",
+    "tags": [
+      "core",
+      "blog"
+    ],
+    "auto": true
+  },
+  {
+    "id": "blog-e7759dbc59",
+    "date": "2025-12-27",
+    "source": "Rebble Blog",
+    "title": "Rebble Foundation Finances 2025 #Wrapped!",
+    "blurb": "<p>Hi everyone! It’s me, Joshua, your friendly Treasurer for the Rebble Foundation. <a href=\"https://rebble.io/2025/11/24/rebble-in-your-own-world.html\">We promised earlier this year</a> that we were going to find ways…",
+    "href": "https://rebble.io/2025/12/27/rebble-finances-2025-wrapped.html",
+    "tags": [
+      "rebble",
+      "blog"
+    ],
+    "auto": true
+  },
+  {
+    "id": "blog-3c9e442c68",
+    "date": "2025-12-09",
+    "source": "rePebble Blog",
+    "title": "Meet Pebble Index 01 - External Memory For Your Brain",
+    "blurb": "Catch your best ideas before they slip through your fingers Do you ever have flashes of insight or an idea worth remembering? This happens to me 5-10 times every day. If I don’t write down the thought immediately, it sl…",
+    "href": "https://repebble.com/blog/meet-pebble-index-01-external-memory-for-your-brain",
+    "tags": [
+      "core",
+      "blog"
+    ],
+    "auto": true
+  },
+  {
+    "id": "blog-aca4a509eb",
+    "date": "2025-12-09",
+    "source": "Rebble Blog",
+    "title": "Happy Rebble Day: the Dev Forum is back!",
+    "blurb": "<p>Today, December 9th, is Rebble Day – the 9th anniversary of the <a href=\"https://rebble.io/2016/12/09/rebble-pebble-reborn.html\">official birth of Rebble</a> – and what better way to celebrate than by sharing the lat…",
+    "href": "https://rebble.io/2025/12/09/the-new-rebble-forum.html",
+    "tags": [
+      "rebble",
+      "blog"
+    ],
+    "auto": true
+  },
+  {
+    "id": "blog-98045ea4cc",
+    "date": "2025-11-24",
+    "source": "Rebble Blog",
+    "title": "Rebble in your own world",
+    "blurb": "<p>It’s been a bit of a rough ride in the Pebble world lately. Since our blogpost from <a href=\"https://rebble.io/2025/11/17/core-devices-keeps-stealing-our-work.html\">last week</a>, and <a href=\"https://ericmigi.com/bl…",
+    "href": "https://rebble.io/2025/11/24/rebble-in-your-own-world.html",
+    "tags": [
+      "rebble",
+      "blog"
+    ],
+    "auto": true
+  },
+  {
+    "id": "blog-4eb3dacc56",
+    "date": "2025-11-19",
+    "source": "Rebble Blog",
+    "title": "Some Personal Thoughts On This Whole Mess",
+    "blurb": "<p>Hi all – Joshua here. I wanted to write down some personal thoughts about this whole mess. (If you missed it, we – Rebble – <a href=\"https://rebble.io/2025/11/17/core-devices-keeps-stealing-our-work.html\">wrote a blo…",
+    "href": "https://rebble.io/2025/11/19/some-personal-thoughts-on-this-whole-mess.html",
+    "tags": [
+      "rebble",
+      "blog"
+    ],
+    "auto": true
+  },
+  {
+    "id": "blog-99ec2f7a6f",
+    "date": "2025-11-17",
+    "source": "Rebble Blog",
+    "title": "Core Devices Keeps Taking Advantage Of Our Work",
+    "blurb": "<p><em>Edit (November 26th, 2am Pacific): This post was originally titled “Core Devices Keeps Stealing Our Work”. We’ve had a bit of time to reflect on this blog post, and we no longer agree with the characterization of…",
+    "href": "https://rebble.io/2025/11/17/core-devices-keeps-stealing-our-work.html",
+    "tags": [
+      "rebble",
+      "blog"
+    ],
+    "auto": true
+  },
+  {
+    "id": "rebble-core",
+    "date": "2025-10-09",
+    "source": "Rebble Blog",
+    "title": "Rebbles in a world with Core",
+    "blurb": "Shared appstore backend between Rebble and Core Devices. Publish once, reach both ecosystems. Core helps fund Rebble Web Services.",
+    "href": "https://rebble.io/2025/10/09/rebbles-in-a-world-with-core.html",
+    "tags": [
+      "rebble",
+      "ecosystem"
+    ]
+  },
+  {
+    "id": "oss",
+    "date": "2025-01-27",
+    "source": "Google Open Source",
+    "title": "See the code that powered the Pebble smartwatches",
+    "blurb": "Google releases most of classic PebbleOS — the spark that made Core Devices and the hardware comeback possible.",
+    "href": "https://opensource.googleblog.com/2025/01/see-code-that-powered-pebble-smartwatches.html",
+    "tags": [
+      "opensource"
+    ]
   }
 ]

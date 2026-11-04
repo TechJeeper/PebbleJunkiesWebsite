@@ -31,7 +31,7 @@ npm run preview
 | `src/data/timeline.json` | Interactive timeline milestones |
 | `src/data/watches.json` | New + classic catalog |
 | `src/data/news.json` | Curated + auto news pulse |
-| `src/data/apps.json` | App / watchface starter kits |
+| `src/data/apps.json` | Most Loved store charts (watchapps + watchfaces) |
 | `src/data/repairs.json` | Parts, docs, services |
 
 ## News + RSS

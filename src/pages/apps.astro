@@ -1,19 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import apps from '../data/apps.json';
+
+function formatHearts(n: number) {
+  if (n >= 1000) return `${(n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, '')}k`;
+  return String(n);
+}
 ---
 
 <BaseLayout
   title="App Guides"
-  description="Junkies-curated Pebble app and watchface starter kits with links to the Rebble and rePebble stores."
+  description="Most Loved watchapps and watchfaces from the rePebble store — ranked, hearted, and summarized by Pebble Junkies."
 >
   <section class="page-hero">
     <div class="container">
-      <p class="eyebrow">App reviews · starter kits</p>
-      <h1>What to install first</h1>
+      <p class="eyebrow">Store charts · {apps.updatedAt}</p>
+      <h1>Most Loved on the store</h1>
       <p>
-        We are not cloning the store — we are curating opinions. Starter kits pulled from r/pebble,
-        Rebble forum threads, and Most Loved charts.
+        Live picks from the rePebble Appstore API — the same Most Loved collections the community actually
+        installs. We add Junkies context; hearts and ranks come from the store.
       </p>
       <div class="btn-row" style="margin-top:1.25rem">
         {apps.stores.map((s) => (
@@ -25,29 +30,87 @@ import apps from '../data/apps.json';
 
   <section class="section" style="padding-top:0">
     <div class="container">
-      {apps.kits.map((kit) => (
-        <div style="margin-bottom:3rem">
-          <div class="section-head">
-            <p class="eyebrow">Junkies pick</p>
-            <h2>{kit.title}</h2>
-            <p>{kit.blurb}</p>
-          </div>
-          <div class="news-list">
-            {kit.picks.map((pick, i) => (
-              <a class="news-item" href={pick.href} target="_blank" rel="noopener">
-                <time>#{i + 1}</time>
-                <div>
-                  <h3>{pick.name}</h3>
-                  <p>{pick.why}</p>
-                </div>
-                <span class="source">Store</span>
-              </a>
-            ))}
-          </div>
-        </div>
-      ))}
+      <div class="section-head">
+        <p class="eyebrow">Watchapps & companions</p>
+        <h2>Top apps</h2>
+        <p>Utilities, remotes, games — the installs that survived a decade of shutdowns.</p>
+      </div>
+      <div class="app-card-grid">
+        {apps.watchapps.map((app) => (
+          <a class="app-card" href={app.href} target="_blank" rel="noopener">
+            <div class="app-card-media">
+              {app.image ? (
+                <img src={app.image} alt="" loading="lazy" width="144" height="168" />
+              ) : (
+                <span class="app-card-fallback">{app.title.slice(0, 1)}</span>
+              )}
+              <span class="app-card-rank">#{app.rank}</span>
+            </div>
+            <div class="app-card-body">
+              <div class="app-card-top">
+                <h3>{app.title}</h3>
+                <span class="app-card-hearts" title="Store hearts">♥ {formatHearts(app.hearts)}</span>
+              </div>
+              <p class="app-card-meta">
+                <span>{app.author}</span>
+                <span class="dot">·</span>
+                <span>{app.category}</span>
+              </p>
+              <p class="app-card-desc">{app.description}</p>
+              {app.platforms?.length ? (
+                <p class="app-card-platforms mono">
+                  {app.platforms.slice(0, 6).join(' · ')}
+                  {app.platforms.length > 6 ? ' · …' : ''}
+                </p>
+              ) : null}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
 
-      <div class="panel" style="padding:1.5rem">
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Watchfaces</p>
+        <h2>Top faces</h2>
+        <p>Legibility first — then weather, animation, and sheer Pebble personality.</p>
+      </div>
+      <div class="app-card-grid">
+        {apps.watchfaces.map((app) => (
+          <a class="app-card" href={app.href} target="_blank" rel="noopener">
+            <div class="app-card-media">
+              {app.image ? (
+                <img src={app.image} alt="" loading="lazy" width="144" height="168" />
+              ) : (
+                <span class="app-card-fallback">{app.title.slice(0, 1)}</span>
+              )}
+              <span class="app-card-rank">#{app.rank}</span>
+            </div>
+            <div class="app-card-body">
+              <div class="app-card-top">
+                <h3>{app.title}</h3>
+                <span class="app-card-hearts" title="Store hearts">♥ {formatHearts(app.hearts)}</span>
+              </div>
+              <p class="app-card-meta">
+                <span>{app.author}</span>
+                <span class="dot">·</span>
+                <span>{app.category}</span>
+              </p>
+              <p class="app-card-desc">{app.description}</p>
+              {app.platforms?.length ? (
+                <p class="app-card-platforms mono">
+                  {app.platforms.slice(0, 6).join(' · ')}
+                  {app.platforms.length > 6 ? ' · …' : ''}
+                </p>
+              ) : null}
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div class="panel" style="padding:1.5rem;margin-top:2.5rem">
         <h3 style="margin-top:0">Pro tips</h3>
         <ul>
           {apps.notes.map((n) => (
