@@ -8,6 +8,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "update-news": "node scripts/update-news.mjs",
+    "check-app-links": "node scripts/check-app-links.mjs",
     "refresh-content": "node scripts/refresh-content.mjs",
     "refresh-content:dry": "node scripts/refresh-content.mjs --dry-run"
   },

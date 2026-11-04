@@ -32,6 +32,9 @@ jobs:
         run: npm run update-news
         continue-on-error: true
 
+      - name: Verify app store links
+        run: node scripts/check-app-links.mjs
+
       - run: npm run build
 
       - uses: actions/upload-pages-artifact@v3

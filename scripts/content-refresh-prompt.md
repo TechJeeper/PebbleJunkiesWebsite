@@ -11,6 +11,7 @@ You are updating the **Pebble Junkies** static site (Astro + GitHub Pages) so it
 - Do **not** commit secrets, API keys, or `.env` files.
 - Keep the site building: `npm run build` should still succeed.
 - Attribute sources with real URLs (rePebble blog, Rebble, Bluesky, iFixit, Wikipedia, store API).
+- **App store links (critical):** In `apps.json`, set `id` to the API’s Mongo-style application id (`data[].id`, 24 hex chars). Set `href` to `data[].links.share` (or `https://apps.rebble.io/application/{id}`). **Never** put the UUID in `id` or `href`. **Never** use `apps.repebble.com/details/...` or `apps.repebble.com/{uuid}` — those 404 / soft-404.
 
 ## Sources to check (live)
 
@@ -48,16 +49,15 @@ Write `src/data/apps.json` roughly like:
   "notes": ["..."],
   "watchapps": [
     {
-      "id": "...",
+      "id": "53a898a2cfee2a02c900006c",
+      "uuid": "0b73b76a-cd65-4dc2-9585-aaa213320858",
       "rank": 1,
       "title": "...",
       "author": "...",
       "hearts": 0,
       "category": "...",
       "description": "2–4 sentence Junkies-voice summary of what it does and why people love it",
-      "id": "<mongo-style store id from API, NOT uuid>",
-      "uuid": "<optional uuid>",
-      "href": "https://apps.rebble.io/application/{id}",
+      "href": "https://apps.rebble.io/application/53a898a2cfee2a02c900006c",
       "image": "https://...",
       "platforms": ["emery", "basalt"]
     }
@@ -66,15 +66,16 @@ Write `src/data/apps.json` roughly like:
 }
 ```
 
-If the store API field names differ, map them cleanly. Descriptions should be readable site copy, not a raw dump of the entire listing.
+Map API fields carefully: `id` ← `data[].id` (NOT `data[].uuid`). `href` ← `data[].links.share`. Descriptions should be readable site copy, not a raw dump of the entire listing.
 
 ## Process
 
 1. Research the live sources above.
 2. Update the JSON files with accurate changes.
 3. Adjust `src/pages/apps.astro` if needed so watchapps + watchfaces render as a rich card UI (image, rank, hearts, description, store link).
-4. Run `npm run build` and fix any breakages you introduced.
-5. Commit with a clear message like `chore(content): scheduled pulse refresh` and open/keep the PR.
+4. Run `node scripts/check-app-links.mjs` — every app/face href must pass. Fix any failures before committing.
+5. Run `npm run build` and fix any breakages you introduced.
+6. Commit with a clear message like `chore(content): scheduled pulse refresh` and open/keep the PR.
 
 ## Voice
 

@@ -8,12 +8,18 @@ function formatHearts(n: number) {
 }
 
 /**
- * Store listing pages use the Mongo-style application id (not the UUID).
- * Prefer API share links: https://apps.rebble.io/application/{id}
+ * Store pages need the Mongo-style application id (24 hex), never the UUID.
+ * Prefer API `links.share`, then extract id from image paths / known hrefs.
  */
-function storeHref(app: { id: string; href?: string }) {
-  if (app.href?.includes('apps.rebble.io/application/')) return app.href;
-  return `https://apps.rebble.io/application/${app.id}`;
+function storeHref(app: { id: string; href?: string; image?: string | null }) {
+  const fromShare = app.href?.match(/apps\.rebble\.io\/(?:en_US\/)?application\/([a-f0-9]{24})/i)?.[1];
+  const fromImage = app.image?.match(/\/(?:apps|screenshots)\/([a-f0-9]{24})(?:\/|-)/i)?.[1];
+  const fromId = /^[a-f0-9]{24}$/i.test(app.id) ? app.id : null;
+  const storeId = fromShare || fromImage || fromId;
+  if (storeId) return `https://apps.rebble.io/application/${storeId}`;
+  // Last resort: keep an existing absolute href rather than inventing a UUID URL.
+  if (app.href?.startsWith('https://')) return app.href;
+  return 'https://apps.rebble.io/';
 }
 ---
 
