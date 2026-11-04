@@ -26,118 +26,139 @@
   ],
   "watchapps": [
     {
-      "id": "0b73b76a-cd65-4dc2-9585-aaa213320858",
+      "id": "53a898a2cfee2a02c900006c",
+      "uuid": "0b73b76a-cd65-4dc2-9585-aaa213320858",
       "rank": 1,
       "title": "Misfit",
       "author": "Misfit",
       "hearts": 18785,
       "category": "Health & Fitness",
       "description": "The OG activity companion — sleep and step tracking that still earns hearts a decade later. Pairs with the phone app for goals and history without turning your wrist into a fitness billboard.",
-      "href": "https://apps.repebble.com/0b73b76a-cd65-4dc2-9585-aaa213320858",
+      "href": "https://apps.rebble.io/application/53a898a2cfee2a02c900006c",
       "image": "https://assets.repebble.com/apps/53a898a2cfee2a02c900006c/screenshots/basalt/screenshot-0.png",
       "platforms": [
-        "chalk",
-        "basalt",
-        "aplite"
-      ]
-    },
-    {
-      "id": "5ee42a7a-f173-4026-b522-a8e79393ad25",
-      "rank": 2,
-      "title": "Music Boss",
-      "author": "Reboot's Ramblings",
-      "hearts": 9299,
-      "category": "Remotes",
-      "description": "The media remote Pebble people refuse to uninstall. Album art, layouts for every era of watch, and active PT2/Round 2 updates with touch-friendly controls.",
-      "href": "https://apps.repebble.com/5ee42a7a-f173-4026-b522-a8e79393ad25",
-      "image": "https://assets.repebble.com/screenshots/686578b965207500093d5a94/emery/6ce796fb-38f4-4a02-b105-62b3bedfc1ae.gif",
-      "platforms": [
-        "basalt",
         "aplite",
-        "diorite",
+        "basalt",
         "chalk",
+        "diorite",
         "emery",
         "flint",
         "gabbro"
       ]
     },
     {
-      "id": "808903cb-fa37-4247-b012-7dfe5c9269e1",
-      "rank": 3,
-      "title": "Pixel Miner",
-      "author": "WearGa",
-      "hearts": 8085,
-      "category": "Games",
-      "description": "Retro mining on your wrist — tap, upgrade, repeat. A pocket-game vibe that proves e-paper can do cozy without melting the battery.",
-      "href": "https://apps.repebble.com/808903cb-fa37-4247-b012-7dfe5c9269e1",
-      "image": "https://assets.repebble.com/apps/539e18f21a19dec6ca0000aa/screenshots/basalt/screenshot-0.png",
+      "id": "686578b965207500093d5a94",
+      "uuid": "5ee42a7a-f173-4026-b522-a8e79393ad25",
+      "rank": 2,
+      "title": "Music Boss",
+      "author": "Reboot's Ramblings",
+      "hearts": 9299,
+      "category": "Remotes",
+      "description": "The media remote Pebble people refuse to uninstall. Album art, layouts for every era of watch, and active PT2/Round 2 updates with touch-friendly controls.",
+      "href": "https://apps.rebble.io/application/686578b965207500093d5a94",
+      "image": "https://assets.repebble.com/apps/686578b965207500093d5a94/screenshots/basalt/screenshot-0.gif",
       "platforms": [
+        "aplite",
         "basalt",
-        "aplite"
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
       ]
     },
     {
-      "id": "5be44f1d-d262-4ea6-aa30-ddbec1e3cab2",
+      "id": "539e18f21a19dec6ca0000aa",
+      "uuid": "808903cb-fa37-4247-b012-7dfe5c9269e1",
+      "rank": 3,
+      "title": "Pixel Miner",
+      "author": "WearGa",
+      "hearts": 8087,
+      "category": "Games",
+      "description": "Retro mining on your wrist — tap, upgrade, repeat. A pocket-game vibe that proves e-paper can do cozy without melting the battery.",
+      "href": "https://apps.rebble.io/application/539e18f21a19dec6ca0000aa",
+      "image": "https://assets.repebble.com/apps/539e18f21a19dec6ca0000aa/screenshots/basalt/screenshot-0.png",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "diorite",
+        "emery",
+        "flint"
+      ]
+    },
+    {
+      "id": "52b20a9b05c04688bf000058",
+      "uuid": "5be44f1d-d262-4ea6-aa30-ddbec1e3cab2",
       "rank": 4,
       "title": "Morpheuz",
       "author": "James Fowler",
       "hearts": 6832,
       "category": "Health & Fitness",
       "description": "Smart alarm that watches your sleep cycles and wakes you in a lighter phase. Community classic for anyone who hates jarring buzzers.",
-      "href": "https://apps.repebble.com/5be44f1d-d262-4ea6-aa30-ddbec1e3cab2",
+      "href": "https://apps.rebble.io/application/52b20a9b05c04688bf000058",
       "image": "https://assets.repebble.com/screenshots/52b20a9b05c04688bf000058-1.png",
       "platforms": [
         "aplite",
         "basalt",
-        "chalk"
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
       ]
     },
     {
-      "id": "3275cdcd-eb08-4d42-bb05-0649a9dc3db0",
+      "id": "55197642d6fa6f2633000092",
+      "uuid": "3275cdcd-eb08-4d42-bb05-0649a9dc3db0",
       "rank": 5,
       "title": "Battery+",
       "author": "Ycleptic Studios",
-      "hearts": 6521,
+      "hearts": 6522,
       "category": "Tools & Utilities",
       "description": "Honest battery stats and predictions on-watch. Install early on a fresh Pebble so you know whether that animated face is worth it.",
-      "href": "https://apps.repebble.com/3275cdcd-eb08-4d42-bb05-0649a9dc3db0",
+      "href": "https://apps.rebble.io/application/55197642d6fa6f2633000092",
       "image": "https://assets.repebble.com/apps/55197642d6fa6f2633000092/screenshots/basalt/screenshot-0.gif",
       "platforms": [
         "aplite",
         "basalt",
         "chalk",
-        "diorite"
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
       ]
     },
     {
-      "id": "17bf83aa-88a9-459a-a6e5-60aa60e1dc07",
+      "id": "54a1ba1afc5f23e4c000012d",
+      "uuid": "17bf83aa-88a9-459a-a6e5-60aa60e1dc07",
       "rank": 6,
       "title": "Timer+",
       "author": "Ycleptic Studios",
-      "hearts": 6311,
+      "hearts": 6312,
       "category": "Tools & Utilities",
       "description": "Kitchen-timer energy with presets and labels — the kind of utility app that stays pinned for years.",
-      "href": "https://apps.repebble.com/17bf83aa-88a9-459a-a6e5-60aa60e1dc07",
-      "image": "https://assets.repebble.com/screenshots/54a1ba1afc5f23e4c000012d/emery/e9b991b6-3eb5-4045-b6df-bc8e7cfaa899.gif",
+      "href": "https://apps.rebble.io/application/54a1ba1afc5f23e4c000012d",
+      "image": "https://assets.repebble.com/screenshots/54a1ba1afc5f23e4c000012d/basalt/ee6c08f3-63d5-4ca2-bb4c-1957849b88bd.gif",
       "platforms": [
         "aplite",
         "basalt",
-        "flint",
         "chalk",
         "diorite",
-        "gabbro",
-        "emery"
+        "emery",
+        "flint",
+        "gabbro"
       ]
     },
     {
-      "id": "49827722-4f3b-4e3f-9e96-d660089f50c1",
+      "id": "540f7cafbc27450164000157",
+      "uuid": "49827722-4f3b-4e3f-9e96-d660089f50c1",
       "rank": 7,
       "title": "Compass",
       "author": "Pebble",
-      "hearts": 6015,
+      "hearts": 6016,
       "category": "Tools & Utilities",
       "description": "Simple heading on your wrist when GPS feels like overkill. Hikers and festival-goers still swear by it.",
-      "href": "https://apps.repebble.com/49827722-4f3b-4e3f-9e96-d660089f50c1",
+      "href": "https://apps.rebble.io/application/540f7cafbc27450164000157",
       "image": "https://assets.repebble.com/apps/540f7cafbc27450164000157/screenshots/basalt/screenshot-0.png",
       "platforms": [
         "aplite",
@@ -150,60 +171,76 @@
       ]
     },
     {
-      "id": "436fe462-4aa0-4ca3-bd2c-2c8e72b03281",
+      "id": "529bb3eef33e76aaf6000004",
+      "uuid": "436fe462-4aa0-4ca3-bd2c-2c8e72b03281",
       "rank": 8,
       "title": "Cards for Pebble",
       "author": "Keanu Lee",
       "hearts": 4255,
       "category": "Notifications",
       "description": "Flashcard drills on the bus — lightweight learning without pulling out your phone.",
-      "href": "https://apps.repebble.com/436fe462-4aa0-4ca3-bd2c-2c8e72b03281",
+      "href": "https://apps.rebble.io/application/529bb3eef33e76aaf6000004",
       "image": "https://assets.repebble.com/screenshots/529bb3eef33e76aaf6000004-3.png",
       "platforms": [
-        "aplite"
+        "aplite",
+        "basalt",
+        "diorite",
+        "emery",
+        "flint"
       ]
     },
     {
-      "id": "2edff9df-4d60-47db-9962-437d40c5f1e2",
+      "id": "52f7a04b777f7eee6d000258",
+      "uuid": "2edff9df-4d60-47db-9962-437d40c5f1e2",
       "rank": 9,
       "title": "Tiny Bird",
       "author": "StuartHa",
       "hearts": 3796,
       "category": "Games",
       "description": "Flappy nostalgia, Pebble-sized. Short sessions, big grin, surprisingly addictive on four buttons.",
-      "href": "https://apps.repebble.com/2edff9df-4d60-47db-9962-437d40c5f1e2",
+      "href": "https://apps.rebble.io/application/52f7a04b777f7eee6d000258",
       "image": "https://assets.repebble.com/apps/52f7a04b777f7eee6d000258/screenshots/basalt/screenshot-0.png",
       "platforms": [
-        "chalk",
+        "aplite",
         "basalt",
-        "aplite"
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
       ]
     },
     {
-      "id": "158a074d-85ce-43d2-ab7d-14416ddc1058",
+      "id": "532323bf60c773c1420000a8",
+      "uuid": "158a074d-85ce-43d2-ab7d-14416ddc1058",
       "rank": 10,
       "title": "Dialer for Pebble",
       "author": "matejdro",
       "hearts": 3667,
       "category": "Tools & Utilities",
       "description": "Initiate calls from your watch when your phone is buried in a bag. Niche now, beloved when it worked everywhere.",
-      "href": "https://apps.repebble.com/158a074d-85ce-43d2-ab7d-14416ddc1058",
+      "href": "https://apps.rebble.io/application/532323bf60c773c1420000a8",
       "image": "https://assets.repebble.com/apps/532323bf60c773c1420000a8/screenshots/basalt/screenshot-0.png",
       "platforms": [
+        "aplite",
         "basalt",
         "chalk",
-        "aplite"
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
       ]
     },
     {
-      "id": "c64aae42-b822-4d6d-995b-bc7c38e843f4",
+      "id": "55b6cd955e0716cd6b0000a1",
+      "uuid": "c64aae42-b822-4d6d-995b-bc7c38e843f4",
       "rank": 11,
       "title": "Timer",
       "author": "Pebble",
-      "hearts": 3564,
+      "hearts": 3570,
       "category": "Tools & Utilities",
       "description": "Official Pebble timer — dead simple and always worth having if your firmware bundle skipped it.",
-      "href": "https://apps.repebble.com/c64aae42-b822-4d6d-995b-bc7c38e843f4",
+      "href": "https://apps.rebble.io/application/55b6cd955e0716cd6b0000a1",
       "image": "https://assets.repebble.com/apps/55b6cd955e0716cd6b0000a1/screenshots/basalt/screenshot-0.gif",
       "platforms": [
         "aplite",
@@ -216,72 +253,39 @@
       ]
     },
     {
-      "id": "14bd9cd3-14dc-4b81-bd58-2f1fb9b57978",
+      "id": "55b6c2c3e68f5acdfc00008d",
+      "uuid": "14bd9cd3-14dc-4b81-bd58-2f1fb9b57978",
       "rank": 12,
       "title": "Stopwatch",
       "author": "Pebble",
-      "hearts": 3076,
+      "hearts": 3078,
       "category": "Tools & Utilities",
       "description": "Official stopwatch with clean lap timing. Another “grab it from the store” baseline utility.",
-      "href": "https://apps.repebble.com/14bd9cd3-14dc-4b81-bd58-2f1fb9b57978",
+      "href": "https://apps.rebble.io/application/55b6c2c3e68f5acdfc00008d",
       "image": "https://assets.repebble.com/apps/55b6c2c3e68f5acdfc00008d/screenshots/basalt/screenshot-0.png",
       "platforms": [
-        "chalk",
-        "gabbro",
         "aplite",
         "basalt",
+        "chalk",
         "diorite",
-        "emery"
+        "emery",
+        "flint",
+        "gabbro"
       ]
     }
   ],
   "watchfaces": [
     {
-      "id": "35a28a4d-0c9f-408f-9c6d-551e65f03186",
+      "id": "52cc44e045ffdd31dd000180",
+      "uuid": "35a28a4d-0c9f-408f-9c6d-551e65f03186",
       "rank": 1,
       "title": "YWeather",
       "author": "David Rodríguez Rincón",
-      "hearts": 22526,
+      "hearts": 22525,
       "category": "Faces",
       "description": "Shake-for-weather royalty — current conditions plus today’s forecast on one glanceable face. Still topping Most Loved for a reason.",
-      "href": "https://apps.repebble.com/35a28a4d-0c9f-408f-9c6d-551e65f03186",
+      "href": "https://apps.rebble.io/application/52cc44e045ffdd31dd000180",
       "image": "https://assets.repebble.com/apps/52cc44e045ffdd31dd000180/screenshots/basalt/screenshot-0.gif",
-      "platforms": [
-        "aplite",
-        "basalt",
-        "chalk"
-      ]
-    },
-    {
-      "id": "4368ffa4-f0fb-4823-90be-f754b076bdaa",
-      "rank": 2,
-      "title": "TimeStyle",
-      "author": "Freakified",
-      "hearts": 16182,
-      "category": "Faces",
-      "description": "The configurable face everyone recommends to newcomers. Mix digital and analog elements until it matches your vibe.",
-      "href": "https://apps.repebble.com/4368ffa4-f0fb-4823-90be-f754b076bdaa",
-      "image": "https://assets.repebble.com/screenshots/55a5c024f4510f794c000071/emery/1471d2cd-a416-4bc2-ab7a-e680ab59cf1a.gif",
-      "platforms": [
-        "gabbro",
-        "emery",
-        "aplite",
-        "basalt",
-        "chalk",
-        "diorite",
-        "flint"
-      ]
-    },
-    {
-      "id": "1f0b0701-cc8f-47ec-86e7-7181397f9a52",
-      "rank": 3,
-      "title": "Real Weather",
-      "author": "Reno",
-      "hearts": 16111,
-      "category": "Faces",
-      "description": "Weather with personality — forecasts and conditions tuned for readability on color and B&W Pebbles alike.",
-      "href": "https://apps.repebble.com/1f0b0701-cc8f-47ec-86e7-7181397f9a52",
-      "image": "https://assets.repebble.com/screenshots/533966299820be90ed0000c5/emery/98113682-6f7a-4007-b9be-7052aed6dbaa.png",
       "platforms": [
         "aplite",
         "basalt",
@@ -293,150 +297,228 @@
       ]
     },
     {
-      "id": "3beca065-3267-43b4-bc18-8f489555db89",
+      "id": "55a5c024f4510f794c000071",
+      "uuid": "4368ffa4-f0fb-4823-90be-f754b076bdaa",
+      "rank": 2,
+      "title": "TimeStyle",
+      "author": "Freakified",
+      "hearts": 16212,
+      "category": "Faces",
+      "description": "The configurable face everyone recommends to newcomers. Mix digital and analog elements until it matches your vibe.",
+      "href": "https://apps.rebble.io/application/55a5c024f4510f794c000071",
+      "image": "https://assets.repebble.com/screenshots/55a5c024f4510f794c000071/basalt/440f0a14-acaa-4f7d-bc72-5ac64a9b1ba1.gif",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "533966299820be90ed0000c5",
+      "uuid": "1f0b0701-cc8f-47ec-86e7-7181397f9a52",
+      "rank": 3,
+      "title": "Real Weather",
+      "author": "Reno",
+      "hearts": 16110,
+      "category": "Faces",
+      "description": "Weather with personality — forecasts and conditions tuned for readability on color and B&W Pebbles alike.",
+      "href": "https://apps.rebble.io/application/533966299820be90ed0000c5",
+      "image": "https://assets.repebble.com/apps/533966299820be90ed0000c5/screenshots/basalt/screenshot-0.gif",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "52bb213af9846878c200015b",
+      "uuid": "3beca065-3267-43b4-bc18-8f489555db89",
       "rank": 4,
       "title": "Modern",
       "author": "Łukasz Zalewski",
       "hearts": 14681,
       "category": "Faces",
       "description": "Minimal, high-contrast modern watchface that looks sharp on round and rectangular screens.",
-      "href": "https://apps.repebble.com/3beca065-3267-43b4-bc18-8f489555db89",
+      "href": "https://apps.rebble.io/application/52bb213af9846878c200015b",
       "image": "https://assets.repebble.com/apps/52bb213af9846878c200015b/screenshots/aplite/screenshot-0.png",
       "platforms": [
-        "aplite"
-      ]
-    },
-    {
-      "id": "1f0b0701-cc8f-47ec-86e7-7181397f9a25",
-      "rank": 5,
-      "title": "Weather Land",
-      "author": "Reno",
-      "hearts": 11667,
-      "category": "Faces",
-      "description": "Playful weather landscape that changes with conditions — eye candy that stays legible in sunlight.",
-      "href": "https://apps.repebble.com/1f0b0701-cc8f-47ec-86e7-7181397f9a25",
-      "image": "https://assets.repebble.com/screenshots/53381b17d1719b42b800028b/emery/85f70ddf-c3a3-4bbf-972e-d3b61df94f81.png",
-      "platforms": [
-        "chalk",
         "aplite",
         "basalt",
-        "gabbro",
         "diorite",
         "emery",
         "flint"
       ]
     },
     {
-      "id": "0c3ca0ae-9067-4764-af92-bdcad1fb6084",
+      "id": "53381b17d1719b42b800028b",
+      "uuid": "1f0b0701-cc8f-47ec-86e7-7181397f9a25",
+      "rank": 5,
+      "title": "Weather Land",
+      "author": "Reno",
+      "hearts": 11670,
+      "category": "Faces",
+      "description": "Playful weather landscape that changes with conditions — eye candy that stays legible in sunlight.",
+      "href": "https://apps.rebble.io/application/53381b17d1719b42b800028b",
+      "image": "https://assets.repebble.com/apps/53381b17d1719b42b800028b/screenshots/basalt/screenshot-0.gif",
+      "platforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+      ]
+    },
+    {
+      "id": "52b231c2b70e1c159500009b",
+      "uuid": "0c3ca0ae-9067-4764-af92-bdcad1fb6084",
       "rank": 6,
       "title": "91 Dub v4.0",
       "author": "orviwan",
-      "hearts": 10040,
+      "hearts": 10041,
       "category": "Faces",
       "description": "Bold typographic face with a music-forward layout. A style statement that still reads at arm’s length.",
-      "href": "https://apps.repebble.com/0c3ca0ae-9067-4764-af92-bdcad1fb6084",
+      "href": "https://apps.rebble.io/application/52b231c2b70e1c159500009b",
       "image": "https://assets.repebble.com/screenshots/52b231c2b70e1c159500009b-0.png",
       "platforms": [
-        "diorite",
-        "basalt",
         "aplite",
-        "chalk"
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
       ]
     },
     {
-      "id": "43caa750-2896-4f46-94dc-1adbd4bc1ff3",
+      "id": "55431083b7d4a71c0000003b",
+      "uuid": "43caa750-2896-4f46-94dc-1adbd4bc1ff3",
       "rank": 7,
       "title": "Mario Time Watchface",
       "author": "Alexey Cluster",
-      "hearts": 8301,
+      "hearts": 8302,
       "category": "Faces",
       "description": "Fan-favorite playful face — nostalgia bait done with love (not official Nintendo, obviously).",
-      "href": "https://apps.repebble.com/43caa750-2896-4f46-94dc-1adbd4bc1ff3",
+      "href": "https://apps.rebble.io/application/55431083b7d4a71c0000003b",
       "image": "https://assets.repebble.com/apps/55431083b7d4a71c0000003b/screenshots/basalt/screenshot-0.gif",
       "platforms": [
-        "diorite",
         "aplite",
         "basalt",
-        "chalk"
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
       ]
     },
     {
-      "id": "84678888-13d8-41dc-ba56-47f88724dea5",
+      "id": "5299db40129af76761000087",
+      "uuid": "84678888-13d8-41dc-ba56-47f88724dea5",
       "rank": 8,
       "title": "Studio Clock",
       "author": "Dale Perkel",
       "hearts": 6619,
       "category": "Faces",
       "description": "Studio-grade analog clock aesthetics for dress-watch Pebble days.",
-      "href": "https://apps.repebble.com/84678888-13d8-41dc-ba56-47f88724dea5",
+      "href": "https://apps.rebble.io/application/5299db40129af76761000087",
       "image": "https://assets.repebble.com/screenshots/5299db40129af76761000087-0.png",
       "platforms": [
+        "aplite",
         "basalt",
         "chalk",
-        "aplite"
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
       ]
     },
     {
-      "id": "15166aa8-2be9-4c0e-982b-d02500b5b43e",
+      "id": "555283c7efff0cc8e50000b0",
+      "uuid": "15166aa8-2be9-4c0e-982b-d02500b5b43e",
       "rank": 9,
       "title": "Slides of Time",
       "author": "Morris",
-      "hearts": 6298,
+      "hearts": 6299,
       "category": "Faces",
       "description": "Smooth sliding time display — animation fans check battery impact, but the motion is chef’s kiss on e-paper.",
-      "href": "https://apps.repebble.com/15166aa8-2be9-4c0e-982b-d02500b5b43e",
+      "href": "https://apps.rebble.io/application/555283c7efff0cc8e50000b0",
       "image": "https://assets.repebble.com/apps/555283c7efff0cc8e50000b0/screenshots/basalt/screenshot-0.gif",
       "platforms": [
+        "aplite",
+        "basalt",
         "chalk",
         "diorite",
-        "aplite",
-        "basalt"
+        "emery",
+        "flint",
+        "gabbro"
       ]
     },
     {
-      "id": "55f7744b-f586-45b8-854c-554f34489f20",
+      "id": "52978a53bbd0862701000002",
+      "uuid": "55f7744b-f586-45b8-854c-554f34489f20",
       "rank": 10,
       "title": "Timely",
       "author": "Martin Norland (@cynorg)",
       "hearts": 5752,
       "category": "Faces",
       "description": "Information-dense without clutter — calendar and time complications for people who live in their schedule.",
-      "href": "https://apps.repebble.com/55f7744b-f586-45b8-854c-554f34489f20",
+      "href": "https://apps.rebble.io/application/52978a53bbd0862701000002",
       "image": "https://assets.repebble.com/apps/52978a53bbd0862701000002/screenshots/basalt/screenshot-0.png",
       "platforms": [
+        "aplite",
         "basalt",
-        "aplite"
+        "diorite",
+        "emery",
+        "flint"
       ]
     },
     {
-      "id": "4bdcba55-4ed2-45ba-b933-fd6357a5e2ca",
+      "id": "54f9cb9ecf945829e8000048",
+      "uuid": "4bdcba55-4ed2-45ba-b933-fd6357a5e2ca",
       "rank": 11,
       "title": "DIN Time",
       "author": "Christian Liljeberg",
       "hearts": 5490,
       "category": "Faces",
       "description": "Industrial DIN typography — crisp, European, unmistakable from across the room.",
-      "href": "https://apps.repebble.com/4bdcba55-4ed2-45ba-b933-fd6357a5e2ca",
+      "href": "https://apps.rebble.io/application/54f9cb9ecf945829e8000048",
       "image": "https://assets.repebble.com/screenshots/54f9cb9ecf945829e8000048-0.png",
       "platforms": [
+        "aplite",
         "basalt",
         "chalk",
         "diorite",
-        "aplite"
+        "emery",
+        "flint",
+        "gabbro"
       ]
     },
     {
-      "id": "6ebe49d7-bc89-498e-b147-049f49c099ad",
+      "id": "52d313a912ea3dcf84000024",
+      "uuid": "6ebe49d7-bc89-498e-b147-049f49c099ad",
       "rank": 12,
       "title": "Futura Weather",
       "author": "Niknam Moslehi",
       "hearts": 5216,
       "category": "Faces",
       "description": "Futura type plus weather data — design-nerd favorite that pairs style with shake-to-refresh forecasts.",
-      "href": "https://apps.repebble.com/6ebe49d7-bc89-498e-b147-049f49c099ad",
+      "href": "https://apps.rebble.io/application/52d313a912ea3dcf84000024",
       "image": "https://assets.repebble.com/screenshots/52d313a912ea3dcf84000024-0.png",
       "platforms": [
-        "aplite"
+        "aplite",
+        "basalt",
+        "diorite",
+        "emery",
+        "flint"
       ]
     }
   ]

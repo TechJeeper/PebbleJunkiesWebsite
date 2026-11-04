@@ -55,7 +55,9 @@ Write `src/data/apps.json` roughly like:
       "hearts": 0,
       "category": "...",
       "description": "2–4 sentence Junkies-voice summary of what it does and why people love it",
-      "href": "https://apps.repebble.com/{id}",
+      "id": "<mongo-style store id from API, NOT uuid>",
+      "uuid": "<optional uuid>",
+      "href": "https://apps.rebble.io/application/{id}",
       "image": "https://...",
       "platforms": ["emery", "basalt"]
     }

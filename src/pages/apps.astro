@@ -7,9 +7,13 @@ function formatHearts(n: number) {
   return String(n);
 }
 
-/** rePebble store app pages live at /{uuid} — never /details/{uuid} (404). */
+/**
+ * Store listing pages use the Mongo-style application id (not the UUID).
+ * Prefer API share links: https://apps.rebble.io/application/{id}
+ */
 function storeHref(app: { id: string; href?: string }) {
-  return `https://apps.repebble.com/${app.id}`;
+  if (app.href?.includes('apps.rebble.io/application/')) return app.href;
+  return `https://apps.rebble.io/application/${app.id}`;
 }
 ---
 
