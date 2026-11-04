@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Pebble Error Codes"
+  description="Decode common Pebble FE error codes and connection troubleshooting steps."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Sadface decoder</p>
+      <h1>Error codes</h1>
+      <p>When the watch throws a hex tantrum, start here.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container" style="max-width:860px">
+      <img
+        src="/images/FE504510_FE504511_FE504512.JPG"
+        alt="Pebble showing FE504510 FE504511 FE504512"
+        style="border-radius:16px; border:1px solid var(--line); margin-bottom:1.5rem"
+      />
+
+      <article class="panel" style="padding:1.5rem">
+        <h2 style="font-size:1.5rem">FE504510 · FE504511 · FE504512</h2>
+        <p class="muted">Usually a phone ↔ watch connection snarl rather than a dead brick.</p>
+        <h3 style="font-size:1.1rem; margin-top:1.25rem">Try this order</h3>
+        <ol style="color:var(--muted); padding-left:1.1rem">
+          <li style="margin-bottom:0.45rem">Restart the Pebble (hold Back ~10 seconds).</li>
+          <li style="margin-bottom:0.45rem">Restart the phone.</li>
+          <li style="margin-bottom:0.45rem">Confirm Bluetooth is on and the watch is in range.</li>
+          <li style="margin-bottom:0.45rem">Forget the Pebble in Bluetooth settings, then re-pair from the companion app.</li>
+          <li style="margin-bottom:0.45rem">Reinstall the Pebble / Core app if pairing still fails.</li>
+          <li style="margin-bottom:0.45rem">Last resort: factory reset the watch (you will re-download apps).</li>
+        </ol>
+      </article>
+
+      <div class="grid-2" style="margin-top:1.25rem">
+        <img src="/images/FE504502.JPG" alt="Additional FE error example" style="border-radius:14px; border:1px solid var(--line)" />
+        <img src="/images/FE504502_FE504503_FE504504.JPG" alt="FE504502 FE504503 FE504504" style="border-radius:14px; border:1px solid var(--line)" />
+      </div>
+
+      <div class="btn-row" style="margin-top:2rem">
+        <a class="btn btn-ghost" href="/repair">← Repair hub</a>
+        <a class="btn btn-ghost" href="/community">Ask the community</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

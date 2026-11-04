@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import repairs from '../data/repairs.json';
+---
+
+<BaseLayout
+  title="Repair & Parts"
+  description="Pebble battery part numbers, iFixit guides, Steel PDFs, DIY video, and community repair services."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Fix it · Don't trash it</p>
+      <h1>Repair & parts hub</h1>
+      <p>
+        Community ask, answered: battery part numbers, documentation, DIY paths, and known repair
+        folks — all in one place.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="panel" style="padding:1.25rem 1.4rem; border-color: rgba(255,209,102,0.35); margin-bottom:2rem">
+        <p style="margin:0; color: var(--warn)"><strong>Safety first.</strong> {repairs.disclaimer}</p>
+      </div>
+
+      <div class="section-head">
+        <p class="eyebrow">Batteries</p>
+        <h2>Part numbers & guides</h2>
+      </div>
+
+      <div class="grid-2">
+        {repairs.batteries.map((b) => (
+          <article class="panel" style="padding:1.35rem">
+            <div class="top" style="display:flex; justify-content:space-between; gap:0.75rem; align-items:start">
+              <h3 style="font-size:1.35rem; margin:0">{b.model}</h3>
+              <span class="pill">{b.difficulty}</span>
+            </div>
+            <p class="mono" style="color:var(--orange); margin:0.85rem 0 0.35rem">{b.part}</p>
+            <p class="muted" style="margin-bottom:0.85rem">{b.capacity}</p>
+            <p>{b.notes}</p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href={b.ifixit} target="_blank" rel="noopener">Buy / parts</a>
+              <a class="btn btn-ghost" href={b.guide} target="_blank" rel="noopener">Guide</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Watch & learn</p>
+        <h2>DIY battery video</h2>
+        <p>The guide Cody pointed folks to in the Junkies thread — embedded for convenience.</p>
+      </div>
+      <div class="panel" style="padding:1rem; overflow:hidden">
+        <div style="position:relative; padding-bottom:56.25%; height:0">
+          <iframe
+            style="position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:12px"
+            src="https://www.youtube.com/embed/WEs2i2CSits"
+            title="Pebble Watch Battery Replacement Guide"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <div class="section-head">
+            <p class="eyebrow">PDFs on this site</p>
+            <h2>Steel teardown docs</h2>
+          </div>
+          <div class="news-list">
+            {repairs.docs.map((d) => (
+              <a class="news-item" href={d.href} target="_blank" rel="noopener">
+                <time>PDF</time>
+                <div>
+                  <h3>{d.title}</h3>
+                  <p>Hosted on pebblejunkies.com</p>
+                </div>
+                <span class="source">Download</span>
+              </a>
+            ))}
+          </div>
+        </div>
+        <div>
+          <div class="section-head">
+            <p class="eyebrow">Ship it out</p>
+            <h2>Known repair services</h2>
+          </div>
+          <div class="news-list">
+            {repairs.services.map((s) => (
+              <div class="news-item" style="cursor:default">
+                <time>{s.region}</time>
+                <div>
+                  <h3>{s.name}</h3>
+                  <p>{s.notes}</p>
+                  <p class="muted" style="margin-top:0.4rem">{s.how}</p>
+                </div>
+                <span class="source">Unofficial</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">More tech docs</p>
+        <h2>Legacy Junkies guides</h2>
+      </div>
+      <div class="grid-3">
+        {repairs.guides.map((g) => (
+          <a class="panel" href={g.href} style="padding:1.25rem; text-decoration:none; color:inherit; display:block">
+            <h3 style="font-size:1.2rem">{g.title}</h3>
+            <p class="muted" style="margin:0">{g.blurb}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

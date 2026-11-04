@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Get Started"
+  description="Setup paths for new Pebble Time 2 / Round 2 owners and classic Rebble users."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Onboarding</p>
+      <h1>Get started</h1>
+      <p>Two doors. Same destination: a happy watch and a full app drawer.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container grid-2">
+      <article class="panel" style="padding:1.6rem">
+        <p class="eyebrow">New hardware</p>
+        <h2 style="font-size:1.8rem">Time 2 · Round 2 · Duo</h2>
+        <ol style="padding-left:1.1rem; color:var(--muted)">
+          <li style="margin-bottom:0.6rem">Unbox, charge with the magnetic puck, pick a 22mm / 20mm / 14mm band as needed.</li>
+          <li style="margin-bottom:0.6rem">Install the official Pebble mobile app from Core Devices (iOS / Android).</li>
+          <li style="margin-bottom:0.6rem">Create / sign in, pair over Bluetooth, take the OTA firmware update.</li>
+          <li style="margin-bottom:0.6rem">Browse <a href="https://apps.repebble.com/" target="_blank" rel="noopener">apps.repebble.com</a> — 10k+ faces still work.</li>
+          <li style="margin-bottom:0.6rem">Grab our <a href="/apps">daily driver kit</a>. Avoid second-updating faces if you want max battery.</li>
+        </ol>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://repebble.com/watch" target="_blank" rel="noopener">rePebble shop</a>
+          <a class="btn btn-ghost" href="https://developer.repebble.com/" target="_blank" rel="noopener">Dev docs</a>
+        </div>
+      </article>
+
+      <article class="panel" style="padding:1.6rem">
+        <p class="eyebrow">Classic hardware</p>
+        <h2 style="font-size:1.8rem">OG · Steel · Time · Round · 2</h2>
+        <ol style="padding-left:1.1rem; color:var(--muted)">
+          <li style="margin-bottom:0.6rem">If it will not boot, check <a href="/repair">Repair</a> before you e-waste it.</li>
+          <li style="margin-bottom:0.6rem">Install / keep the classic Pebble app, then switch account services to <a href="https://rebble.io/" target="_blank" rel="noopener">Rebble</a>.</li>
+          <li style="margin-bottom:0.6rem">Optional Android: <a href="https://gadgetbridge.org/" target="_blank" rel="noopener">Gadgetbridge</a> for a no-account companion.</li>
+          <li style="margin-bottom:0.6rem">Open the Rebble store, restore faces, enable Timeline / weather if you subscribe.</li>
+          <li style="margin-bottom:0.6rem">Join the Junkies spaces so the next firmware tip finds you.</li>
+        </ol>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://rebble.io/" target="_blank" rel="noopener">Join Rebble</a>
+          <a class="btn btn-ghost" href="/community">Community links</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

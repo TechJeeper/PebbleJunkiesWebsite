@@ -1,0 +1,65 @@
+[
+  {
+    "id": "plugins",
+    "date": "2026-10-22",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "Pebble Plugins preview — biggest SDK change in years",
+    "blurb": "Headless JS plugins on the phone feed weather, calendar, home control, and more to watchfaces and Index. New permissions model for location and network.",
+    "href": "https://developer.repebble.com/guides/plugins/",
+    "tags": ["sdk", "core"]
+  },
+  {
+    "id": "round2-ramp",
+    "date": "2026-10-30",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "Next batch of Round 2s leave the factory",
+    "blurb": "Production ramping slowly but surely. Keep an eye on order confirmation emails from info@repebble.com.",
+    "href": "https://bsky.app/profile/ericmigi.com",
+    "tags": ["hardware", "round-2"]
+  },
+  {
+    "id": "pt2-instock",
+    "date": "2026-08-25",
+    "source": "rePebble / Bluesky",
+    "title": "All Time 2 pre-orders shipped — now in stock",
+    "blurb": "Didn't pre-order? PT2 is on rePebble.com/watch and ships within 48 hours. Color selectors for folks who hadn't locked one in.",
+    "href": "https://repebble.com/watch",
+    "tags": ["hardware", "time-2"]
+  },
+  {
+    "id": "mass-production",
+    "date": "2026-03-24",
+    "source": "rePebble Blog",
+    "title": "Pebble Time 2 is in mass production",
+    "blurb": "30m water-resistance testing on the line, 20k+ pre-orders, first ships late March 2026. Honest expectations post included.",
+    "href": "https://repebble.com/blog/pebble-time-2-is-in-mass-production",
+    "tags": ["hardware", "time-2"]
+  },
+  {
+    "id": "rebble-core",
+    "date": "2025-10-09",
+    "source": "Rebble Blog",
+    "title": "Rebbles in a world with Core",
+    "blurb": "Shared appstore backend between Rebble and Core Devices. Publish once, reach both ecosystems. Core helps fund Rebble Web Services.",
+    "href": "https://rebble.io/2025/10/09/rebbles-in-a-world-with-core.html",
+    "tags": ["rebble", "ecosystem"]
+  },
+  {
+    "id": "oss",
+    "date": "2025-01-27",
+    "source": "Google Open Source",
+    "title": "See the code that powered the Pebble smartwatches",
+    "blurb": "Google releases most of classic PebbleOS — the spark that made Core Devices and the hardware comeback possible.",
+    "href": "https://opensource.googleblog.com/2025/01/see-code-that-powered-pebble-smartwatches.html",
+    "tags": ["opensource"]
+  },
+  {
+    "id": "appstore-wasm",
+    "date": "2026-08-01",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "Watchfaces run live in the browser",
+    "blurb": "apps.rePebble.com Top Charts + WASM PebbleOS previews. Battery-impact insights for animated faces.",
+    "href": "https://apps.repebble.com/",
+    "tags": ["apps", "store"]
+  }
+]

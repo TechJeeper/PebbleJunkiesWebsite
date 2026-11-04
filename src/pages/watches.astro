@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import watches from '../data/watches.json';
+---
+
+<BaseLayout
+  title="Watches"
+  description="Catalog of new Pebble Time 2, Round 2, 2 Duo and classic Pebble models with specs and platforms."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Catalog</p>
+      <h1>Meet the whole family</h1>
+      <p>
+        Core Devices revived the brand with open-source PebbleOS. The classics still run on Rebble.
+        Here is every generation that matters — with platforms, bands, and battery reality checks.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Core Devices · 2025+</p>
+        <h2>New Pebbles</h2>
+        <p>Open source firmware. Weeks of battery. Ten thousand legacy apps.</p>
+      </div>
+
+      <div class="watch-grid">
+        {watches.new.map((w) => (
+          <article class="watch-tile">
+            <div class="media">
+              <img src={w.image} alt={w.name} loading="lazy" />
+            </div>
+            <div class="body">
+              <div class="top">
+                <h3>{w.name}</h3>
+                <span class={`pill pill-${w.statusTone}`}>{w.status}</span>
+              </div>
+              <p class="tagline">{w.tagline}</p>
+              <p class="price" style="margin-bottom:0.85rem">{w.price}</p>
+              <ul class="watch-meta">
+                <li><strong>Display</strong> — {w.display}</li>
+                <li><strong>Battery</strong> — {w.battery}</li>
+                <li><strong>Frame</strong> — {w.frame}</li>
+                <li><strong>Sensors</strong> — {w.sensors}</li>
+                <li><strong>Extras</strong> — {w.extras}</li>
+                <li><strong>Platform</strong> — <span class="mono">{w.platform}</span></li>
+              </ul>
+              <div style="margin-top:1rem">
+                <a class="btn btn-ghost" href={w.shop} target="_blank" rel="noopener">rePebble</a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Pebble Technology · 2013–2016</p>
+        <h2>Classic Pebbles</h2>
+        <p>Still lovable. Often need a new battery. Still fully welcome here.</p>
+      </div>
+
+      <div class="watch-grid">
+        {watches.classic.map((w) => (
+          <article class="watch-tile">
+            <div class="media">
+              <img src={w.image} alt={w.name} loading="lazy" />
+            </div>
+            <div class="body">
+              <div class="top">
+                <h3>{w.name}</h3>
+                <span class="pill">{w.years}</span>
+              </div>
+              <ul class="watch-meta" style="margin-top:0.75rem">
+                <li><strong>Display</strong> — {w.display}</li>
+                <li><strong>Battery</strong> — {w.battery}</li>
+                <li><strong>Notes</strong> — {w.notes}</li>
+                <li><strong>Platform</strong> — <span class="mono">{w.platform}</span></li>
+              </ul>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="btn-row" style="margin-top:2rem">
+        <a class="btn btn-primary" href="/repair">Need a battery? Repair hub</a>
+        <a class="btn btn-ghost" href="/start">Set one up</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

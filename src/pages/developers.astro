@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Developers"
+  description="PebbleOS, SDK, CloudPebble, plugins, and open-source links for classic and new Pebble watches."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Build faces · ship apps · fork the OS</p>
+      <h1>Developers</h1>
+      <p>
+        PebbleOS is open source. The mobile app is open source. Plugins are landing. Whether you
+        target emery Time 2 boards or keep classic basalt alive — start here.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container grid-2">
+      <a class="panel" href="https://developer.repebble.com/" target="_blank" rel="noopener" style="padding:1.5rem; text-decoration:none; color:inherit">
+        <p class="eyebrow">Primary</p>
+        <h3>developer.repebble.com</h3>
+        <p class="muted">Official docs for PebbleOS boards, SDK, plugins, CloudPebble, and guides.</p>
+      </a>
+      <a class="panel" href="https://github.com/coredevices/pebbleos" target="_blank" rel="noopener" style="padding:1.5rem; text-decoration:none; color:inherit">
+        <p class="eyebrow">Firmware</p>
+        <h3>coredevices/pebbleos</h3>
+        <p class="muted">Apache-2.0 firmware. Boards: asterix (Duo), obelix (Time 2), getafix (Round 2).</p>
+      </a>
+      <a class="panel" href="https://developer.rebble.io/developer.pebble.com/index.html" target="_blank" rel="noopener" style="padding:1.5rem; text-decoration:none; color:inherit">
+        <p class="eyebrow">Legacy archive</p>
+        <h3>Classic Pebble developer docs</h3>
+        <p class="muted">Mirrored original developer.pebble.com content via Rebble.</p>
+      </a>
+      <a class="panel" href="https://developer.repebble.com/guides/plugins/" target="_blank" rel="noopener" style="padding:1.5rem; text-decoration:none; color:inherit">
+        <p class="eyebrow">New</p>
+        <h3>Plugins preview</h3>
+        <p class="muted">Headless JS services on the phone — weather, calendar, actions for faces & Index.</p>
+      </a>
+    </div>
+
+    <div class="panel" style="padding:1.5rem; margin-top:2rem">
+      <h3 style="margin-top:0">Quick start mindset</h3>
+      <ol style="color:var(--muted); padding-left:1.1rem">
+        <li style="margin-bottom:0.5rem">Install the modern SDK / pebble-tool from Core docs.</li>
+        <li style="margin-bottom:0.5rem">Use the WASM playground / emulator before flashing anything spicy.</li>
+        <li style="margin-bottom:0.5rem">Publish through the shared Rebble/Core developer portal so both stores see your app.</li>
+        <li style="margin-bottom:0.5rem">Filter <span class="mono">targetPlatforms</span> carefully (aplite → gabbro).</li>
+        <li style="margin-bottom:0.5rem">Hang in Discord when you brick a watch — PRF and sideload paths are documented.</li>
+      </ol>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://developer.repebble.com/pebbleos/" target="_blank" rel="noopener">PebbleOS docs</a>
+        <a class="btn btn-ghost" href="/community">Community</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,78 @@
+{
+  "kits": [
+    {
+      "id": "daily-driver",
+      "title": "Daily driver kit",
+      "blurb": "The first five things most Junkies install on a fresh watch.",
+      "picks": [
+        {
+          "name": "Muninn — Battery Wisdom",
+          "why": "Best battery prediction / monitoring consensus pick on r/pebble.",
+          "href": "https://apps.rebble.io/"
+        },
+        {
+          "name": "Find My Phone",
+          "why": "No companion drama — ping the phone from your wrist.",
+          "href": "https://apps.rebble.io/"
+        },
+        {
+          "name": "Music Boss",
+          "why": "The media remote. Layout presets shine on Time 2 & Round 2.",
+          "href": "https://apps.repebble.com/collections/most-loved/watchapps/1"
+        },
+        {
+          "name": "Official Timer + Stopwatch",
+          "why": "Weirdly not always preinstalled — grab them first.",
+          "href": "https://apps.rebble.io/"
+        },
+        {
+          "name": "Facebrowser",
+          "why": "Browse face thumbnails on-watch before you commit.",
+          "href": "https://apps.rebble.io/"
+        }
+      ]
+    },
+    {
+      "id": "faces",
+      "title": "Watchface starter pack",
+      "blurb": "Legible, loved, and repeatedly named in 2025–26 community threads.",
+      "picks": [
+        {
+          "name": "TimeStyle / BrutalTimeStyle",
+          "why": "The face people keep coming back to.",
+          "href": "https://apps.rebble.io/"
+        },
+        {
+          "name": "WeatherGraph",
+          "why": "Weather that earns its pixels.",
+          "href": "https://apps.rebble.io/"
+        },
+        {
+          "name": "Dashboard (Lignite)",
+          "why": "Stats-forward with live settings previews.",
+          "href": "https://apps.rebble.io/"
+        },
+        {
+          "name": "Glimt",
+          "why": "Clean complications + serious readability.",
+          "href": "https://apps.rebble.io/"
+        },
+        {
+          "name": "Analog Pulse",
+          "why": "Dressy analog that still works on PT2.",
+          "href": "https://apps.rebble.io/"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Use the Rebble/Core store Most Loved and Featured collections — they reflect real installs, not ads.",
+    "Animated faces look incredible and eat battery. Check battery-impact hints in the new store when available.",
+    "Filter by hardware (aplite / basalt / chalk / diorite / emery / gabbro) so you don't sideload a face that won't fit."
+  ],
+  "stores": [
+    { "label": "Rebble Appstore", "href": "https://apps.rebble.io/" },
+    { "label": "rePebble Appstore", "href": "https://apps.repebble.com/" },
+    { "label": "Most Loved apps", "href": "https://apps.repebble.com/collections/most-loved/watchapps/1" }
+  ]
+}

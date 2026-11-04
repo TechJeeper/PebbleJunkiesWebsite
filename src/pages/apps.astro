@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import apps from '../data/apps.json';
+---
+
+<BaseLayout
+  title="App Guides"
+  description="Junkies-curated Pebble app and watchface starter kits with links to the Rebble and rePebble stores."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">App reviews · starter kits</p>
+      <h1>What to install first</h1>
+      <p>
+        We are not cloning the store — we are curating opinions. Starter kits pulled from r/pebble,
+        Rebble forum threads, and Most Loved charts.
+      </p>
+      <div class="btn-row" style="margin-top:1.25rem">
+        {apps.stores.map((s) => (
+          <a class="btn btn-ghost" href={s.href} target="_blank" rel="noopener">{s.label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      {apps.kits.map((kit) => (
+        <div style="margin-bottom:3rem">
+          <div class="section-head">
+            <p class="eyebrow">Junkies pick</p>
+            <h2>{kit.title}</h2>
+            <p>{kit.blurb}</p>
+          </div>
+          <div class="news-list">
+            {kit.picks.map((pick, i) => (
+              <a class="news-item" href={pick.href} target="_blank" rel="noopener">
+                <time>#{i + 1}</time>
+                <div>
+                  <h3>{pick.name}</h3>
+                  <p>{pick.why}</p>
+                </div>
+                <span class="source">Store</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      <div class="panel" style="padding:1.5rem">
+        <h3 style="margin-top:0">Pro tips</h3>
+        <ul>
+          {apps.notes.map((n) => (
+            <li class="muted" style="margin-bottom:0.55rem">{n}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

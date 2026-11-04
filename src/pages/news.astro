@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import news from '../data/news.json';
+---
+
+<BaseLayout
+  title="News Pulse"
+  description="Curated Pebble updates from Eric Migicovsky on Bluesky, rePebble blog, and Rebble — one feed."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Company signal · community curated</p>
+      <h1>News pulse</h1>
+      <p>
+        Eric posts on Bluesky. Shipping notes land on the rePebble blog. Rebble writes long-form.
+        We collect the important bits so you do not need a personal OSINT hobby.
+      </p>
+      <div class="btn-row" style="margin-top:1.25rem">
+        <a class="btn btn-primary" href="/rss.xml">Subscribe via RSS</a>
+        <a class="btn btn-ghost" href="https://bsky.app/profile/ericmigi.com" target="_blank" rel="noopener">
+          Eric · Bluesky
+        </a>
+        <a class="btn btn-ghost" href="https://repebble.com/blog" target="_blank" rel="noopener">
+          rePebble blog
+        </a>
+        <a class="btn btn-ghost" href="https://rebble.io/" target="_blank" rel="noopener">
+          Rebble
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="news-list">
+        {news.map((item) => (
+          <a class="news-item" href={item.href} target="_blank" rel="noopener">
+            <time datetime={item.date}>
+              {new Date(item.date + 'T12:00:00').toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+              })}
+            </time>
+            <div>
+              <h3>{item.title}</h3>
+              <p>{item.blurb}</p>
+              <div style="margin-top:0.55rem; display:flex; gap:0.4rem; flex-wrap:wrap">
+                {item.tags.map((t) => (
+                  <span class="pill">{t}</span>
+                ))}
+                {item.auto && <span class="pill">auto</span>}
+              </div>
+            </div>
+            <span class="source">{item.source}</span>
+          </a>
+        ))}
+      </div>
+
+      <div class="panel" style="padding:1.25rem; margin-top:2rem">
+        <p class="muted" style="margin:0">
+          <strong style="color:var(--paper)">How this stays fresh:</strong>
+          A nightly GitHub Action (plus every Pages deploy) pulls Eric’s Bluesky posts and
+          rePebble/Rebble blog RSS into <span class="mono">src/data/news.json</span>, then rebuilds
+          <a href="/rss.xml">/rss.xml</a> for readers and apps.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,123 @@
+{
+  "new": [
+    {
+      "id": "time-2",
+      "name": "Pebble Time 2",
+      "tagline": "The cancelled dream, finally on your wrist.",
+      "price": "$225",
+      "status": "In stock — ships ~48h",
+      "statusTone": "live",
+      "image": "/images/Pebble_Time_2.jpg",
+      "display": "1.5\" 64-color e-paper (200×228)",
+      "battery": "~14 days today · 30-day hardware target",
+      "frame": "Stainless steel + polycarbonate",
+      "sensors": "6-axis IMU, HR, compass",
+      "extras": "Touch + 4 buttons, mic×2, speaker, RGB backlight, 22mm bands, 30m WR",
+      "platform": "emery / obelix",
+      "shop": "https://repebble.com/watch",
+      "generation": "core"
+    },
+    {
+      "id": "round-2",
+      "name": "Pebble Round 2",
+      "tagline": "The most stylish Pebble ever — round, steel, color.",
+      "price": "$199",
+      "status": "Shipping ramping",
+      "statusTone": "soon",
+      "image": "/images/Rainbow_Pebble_Round.jpg",
+      "display": "1.3\" 64-color e-paper (260×260)",
+      "battery": "10–14 days",
+      "frame": "Stainless steel",
+      "sensors": "3-axis IMU, compass",
+      "extras": "Touch + 4 buttons, mic, 14/20mm bands, 30m WR target",
+      "platform": "gabbro / getafix",
+      "shop": "https://repebble.com/watch",
+      "generation": "core"
+    },
+    {
+      "id": "duo",
+      "name": "Pebble 2 Duo",
+      "tagline": "Do-over done right — B&W, barometer, open source.",
+      "price": "$149",
+      "status": "Sold out",
+      "statusTone": "gone",
+      "image": "/images/Pebble_2.jpg",
+      "display": "1.2\" black & white e-paper",
+      "battery": "~18 days average",
+      "frame": "Polycarbonate (black or white)",
+      "sensors": "Barometer, compass, IMU",
+      "extras": "Like Pebble 2, but better — open PebbleOS",
+      "platform": "flint / asterix",
+      "shop": "https://repebble.com/watch",
+      "generation": "core"
+    }
+  ],
+  "classic": [
+    {
+      "id": "og",
+      "name": "Original Pebble",
+      "years": "2013–2016",
+      "image": "/images/Pebble_OG_3.jpg",
+      "display": "1.26\" B&W Sharp Memory LCD (144×168)",
+      "battery": "~7 days",
+      "notes": "Kickstarter legend. Plastic body, always-on, 5 ATM.",
+      "platform": "aplite",
+      "generation": "classic"
+    },
+    {
+      "id": "steel",
+      "name": "Pebble Steel",
+      "years": "2014–2016",
+      "image": "/images/Pebble_Steel.png",
+      "display": "B&W glass screen",
+      "battery": "~7 days",
+      "notes": "Dress-watch Pebble. Battery swaps need soldering — see Repair.",
+      "platform": "aplite",
+      "generation": "classic"
+    },
+    {
+      "id": "time",
+      "name": "Pebble Time",
+      "years": "2015–2016",
+      "image": "/images/Pebble_time.jpg",
+      "display": "64-color e-paper",
+      "battery": "~7 days",
+      "notes": "Microphone, Timeline, the color era begins.",
+      "platform": "basalt",
+      "generation": "classic"
+    },
+    {
+      "id": "time-steel",
+      "name": "Pebble Time Steel",
+      "years": "2015–2016",
+      "image": "/images/Pebble_Time_Steel.jpg",
+      "display": "64-color e-paper",
+      "battery": "~10 days",
+      "notes": "Premium Time. Same display tech lineage as Time 2.",
+      "platform": "basalt",
+      "generation": "classic"
+    },
+    {
+      "id": "time-round",
+      "name": "Pebble Time Round",
+      "years": "2015–2016",
+      "image": "/images/Pebble_Round_Black.jpg",
+      "display": "Round 64-color",
+      "battery": "~2 days",
+      "notes": "Gorgeous and thin. Tiny battery — DIY replaceable via iFixit.",
+      "platform": "chalk",
+      "generation": "classic"
+    },
+    {
+      "id": "pebble-2",
+      "name": "Pebble 2 / 2 HR",
+      "years": "2016",
+      "image": "/images/Pebble_2a.jpg",
+      "display": "B&W e-paper",
+      "battery": "~7 days",
+      "notes": "HR model added optical heart rate. Last classic gen before shutdown.",
+      "platform": "diorite",
+      "generation": "classic"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const gallery = [
+  { src: '/images/Inside_HR_1.jpg', caption: 'Opened HR chassis' },
+  { src: '/images/Inside_HR_2.jpg', caption: 'Board & interconnects' },
+  { src: '/images/Inside_HR_3.jpg', caption: 'Sensor stack' },
+  { src: '/images/Inside_HR_4.jpg', caption: 'Power & flex detail' },
+  { src: '/images/Inside_HR_5.jpg', caption: 'Housing layout' },
+  { src: '/images/Inside_HR_6.jpg', caption: 'Reassembly reference' },
+];
+---
+
+<BaseLayout
+  title="Inside the Pebble HR"
+  description="Photo teardown tour of the Pebble 2 HR — board, optical HR sensor, and battery."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Teardown</p>
+      <h1>Inside the Pebble HR</h1>
+      <p>A look at the first heart-rate Pebble — useful context before you attempt a battery job.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="panel" style="padding:1.5rem; margin-bottom:2rem">
+        <h3 style="margin-top:0">Key components</h3>
+        <ul class="muted">
+          <li>STM32 ARM Cortex-M microcontroller family</li>
+          <li>E-paper display + controller</li>
+          <li>Optical heart-rate sensor (LED + photodiode)</li>
+          <li>Bluetooth LE module</li>
+          <li>3-axis accelerometer</li>
+          <li>Vibration motor</li>
+          <li>~200 mAh Li-ion pack (verify before ordering replacements)</li>
+        </ul>
+      </div>
+
+      <div class="grid-2">
+        {gallery.map((g) => (
+          <figure style="margin:0">
+            <img src={g.src} alt={g.caption} loading="lazy" style="border-radius:14px; border:1px solid var(--line)" />
+            <figcaption class="muted" style="margin-top:0.45rem; font-size:0.9rem">{g.caption}</figcaption>
+          </figure>
+        ))}
+      </div>
+
+      <div class="btn-row" style="margin-top:2rem">
+        <a class="btn btn-primary" href="/repair">Battery & parts hub</a>
+        <a class="btn btn-ghost" href="/watches">Watch catalog</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

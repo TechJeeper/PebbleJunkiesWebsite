@@ -1,0 +1,130 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title = 'Pebble Junkies',
+  description = 'The one-stop shop for classic and new Pebble smartwatches — timeline, repairs, apps, news, and community.',
+  ogImage = '/images/Logo_2.png',
+} = Astro.props;
+
+const pageTitle = title === 'Pebble Junkies' ? title : `${title} · Pebble Junkies`;
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#07090d" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Pebble Junkies News Pulse"
+      href="/rss.xml"
+    />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VEE9X9YCN0"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VEE9X9YCN0');
+    </script>
+  </head>
+  <body>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+    <div class="scroll-orbs" id="scroll-orbs" aria-hidden="true">
+      <span class="orb-a"></span>
+      <span class="orb-b"></span>
+      <span class="orb-c"></span>
+    </div>
+    <div class="site-wrap">
+      <header class="site-header" id="site-header">
+        <div class="container nav-inner">
+          <a class="brand" href="/">
+            <img src="/images/Logo_2.png" alt="Pebble Junkies" width="220" height="40" />
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" id="nav-toggle">
+            Menu
+          </button>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="/watches" aria-current={path === '/watches' ? 'page' : undefined}>Watches</a></li>
+            <li><a href="/timeline" aria-current={path === '/timeline' ? 'page' : undefined}>Timeline</a></li>
+            <li><a href="/repair" aria-current={path === '/repair' ? 'page' : undefined}>Repair</a></li>
+            <li><a href="/apps" aria-current={path === '/apps' ? 'page' : undefined}>Apps</a></li>
+            <li><a href="/news" aria-current={path === '/news' ? 'page' : undefined}>News</a></li>
+            <li><a href="/start" aria-current={path === '/start' ? 'page' : undefined}>Get Started</a></li>
+            <li><a href="/developers" aria-current={path === '/developers' ? 'page' : undefined}>Developers</a></li>
+            <li><a href="/community" aria-current={path === '/community' ? 'page' : undefined}>Community</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <main>
+        <slot />
+      </main>
+
+      <footer class="site-footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div>
+              <h4>Pebble Junkies</h4>
+              <p class="muted">
+                Community hub for every Pebble — Kickstarter classics through Time 2 and Round 2.
+                Not affiliated with Core Devices or Rebble; we just keep the map of the universe.
+              </p>
+              <p class="muted" style="margin:0">Graphics heritage by Noam Asulin · Site reinvented 2026</p>
+            </div>
+            <div>
+              <h4>Explore</h4>
+              <ul>
+                <li><a href="/timeline">Interactive timeline</a></li>
+                <li><a href="/watches">Watch catalog</a></li>
+                <li><a href="/repair">Repair & parts</a></li>
+                <li><a href="/apps">App guides</a></li>
+                <li><a href="/news">News pulse</a></li>
+                <li><a href="/rss.xml">RSS feed</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Official / ecosystem</h4>
+              <ul>
+                <li><a href="https://repebble.com/watch" target="_blank" rel="noopener">Buy new Pebbles</a></li>
+                <li><a href="https://rebble.io/" target="_blank" rel="noopener">Rebble</a></li>
+                <li><a href="https://apps.rebble.io/" target="_blank" rel="noopener">Appstore</a></li>
+                <li><a href="https://developer.repebble.com/" target="_blank" rel="noopener">Developer docs</a></li>
+                <li><a href="https://bsky.app/profile/ericmigi.com" target="_blank" rel="noopener">Eric on Bluesky</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <span>© {new Date().getFullYear()} Pebble Junkies</span>
+            <span>pebblejunkies.com · GitHub Pages</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../scripts/scroll-motion.js"></script>
+  </body>
+</html>

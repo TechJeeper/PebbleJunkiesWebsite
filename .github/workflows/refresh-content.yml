@@ -1,0 +1,48 @@
+name: Refresh site content (Cursor agent)
+
+on:
+  schedule:
+    # Weekly Mondays 07:00 UTC
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+    inputs:
+      model:
+        description: Cursor model id
+        required: false
+        default: composer-2.5
+      auto_pr:
+        description: Open a PR when the agent finishes (true/false)
+        required: false
+        default: 'true'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: refresh-content
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Run Cursor content-refresh agent
+        env:
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+          CURSOR_MODEL: ${{ github.event.inputs.model || 'composer-2.5' }}
+          CONTENT_REFRESH_REPO: https://github.com/${{ github.repository }}
+          CONTENT_REFRESH_REF: ${{ github.event.repository.default_branch }}
+          CONTENT_REFRESH_AUTO_PR: ${{ github.event.inputs.auto_pr || 'true' }}
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+        run: npm run refresh-content

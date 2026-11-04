@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TimelineExplorer from '../components/TimelineExplorer.astro';
+---
+
+<BaseLayout
+  title="Timeline"
+  description="Interactive Pebble history — Kickstarter, classic hardware, Fitbit winter, Rebble, open source, and the Core Devices revival."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">2012 → now</p>
+      <h1>The Pebble timeline</h1>
+      <p>
+        Scrub eras, open milestones, deep-link the moments that mattered. Arrow keys work when the
+        track is focused. This is the story of a watch that refused to die.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <TimelineExplorer />
+    </div>
+  </section>
+</BaseLayout>

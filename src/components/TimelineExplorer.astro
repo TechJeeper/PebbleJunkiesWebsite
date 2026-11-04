@@ -1,0 +1,174 @@
+---
+import '../styles/timeline.css';
+import timeline from '../data/timeline.json';
+
+const eras = [
+  { id: 'all', label: 'All eras' },
+  { id: 'origin', label: 'Origin' },
+  { id: 'classic', label: 'Classic' },
+  { id: 'winter', label: 'Winter' },
+  { id: 'revival', label: 'Revival' },
+];
+
+const initial = timeline[timeline.length - 1];
+---
+
+<section class="timeline-shell" id="timeline" data-timeline>
+  <div class="era-filters" role="tablist" aria-label="Filter timeline eras">
+    {eras.map((era, i) => (
+      <button
+        type="button"
+        data-era={era.id}
+        class:list={[{ 'is-active': i === 0 }]}
+        role="tab"
+        aria-selected={i === 0 ? 'true' : 'false'}
+      >
+        {era.label}
+      </button>
+    ))}
+  </div>
+
+  <div class="timeline-layout">
+    <div class="timeline-track-wrap">
+      <div class="timeline-rail" aria-hidden="true"></div>
+      <div class="timeline-track" tabindex="0" aria-label="Pebble history timeline">
+        {timeline.map((event, index) => (
+          <button
+            type="button"
+            class:list={['tl-node', { 'is-active': index === timeline.length - 1 }]}
+            data-id={event.id}
+            data-era={event.era}
+            data-index={index}
+            aria-pressed={index === timeline.length - 1 ? 'true' : 'false'}
+          >
+            <div class="tl-card">
+              <time datetime={event.date}>
+                {new Date(event.date + 'T12:00:00').toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'short',
+                })}
+              </time>
+              <h3>{event.title}</h3>
+              <p>{event.summary}</p>
+            </div>
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <aside class="timeline-detail" aria-live="polite">
+      <div class="scanlines" aria-hidden="true"></div>
+      <div class="detail-era" data-detail-era>{initial.era}</div>
+      <h2 data-detail-title>{initial.title}</h2>
+      <div class="detail-date" data-detail-date>
+        {new Date(initial.date + 'T12:00:00').toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })}
+      </div>
+      <p class="detail-body" data-detail-body>{initial.summary}</p>
+      <div class="detail-links" data-detail-links>
+        {initial.links.map((link) => (
+          <a class="btn btn-ghost" href={link.href} target="_blank" rel="noopener">
+            {link.label}
+          </a>
+        ))}
+      </div>
+    </aside>
+  </div>
+</section>
+
+<script define:vars={{ timeline }}>
+  const root = document.querySelector('[data-timeline]');
+  if (!root) throw new Error('timeline root missing');
+
+  const nodes = [...root.querySelectorAll('.tl-node')];
+  const filters = [...root.querySelectorAll('.era-filters button')];
+  const track = root.querySelector('.timeline-track');
+  const detailEra = root.querySelector('[data-detail-era]');
+  const detailTitle = root.querySelector('[data-detail-title]');
+  const detailDate = root.querySelector('[data-detail-date]');
+  const detailBody = root.querySelector('[data-detail-body]');
+  const detailLinks = root.querySelector('[data-detail-links]');
+
+  const fmt = (iso) =>
+    new Date(iso + 'T12:00:00').toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    });
+
+  function select(index) {
+    const event = timeline[index];
+    if (!event) return;
+
+    nodes.forEach((node, i) => {
+      const on = i === index;
+      node.classList.toggle('is-active', on);
+      node.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+
+    detailEra.textContent = event.era;
+    detailTitle.textContent = event.title;
+    detailDate.textContent = fmt(event.date);
+    detailBody.textContent = event.summary;
+    detailLinks.innerHTML = '';
+    for (const link of event.links || []) {
+      const a = document.createElement('a');
+      a.className = 'btn btn-ghost';
+      a.href = link.href;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = link.label;
+      detailLinks.appendChild(a);
+    }
+
+    const active = nodes[index];
+    active?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+
+    if (event.id) {
+      history.replaceState(null, '', `#${event.id}`);
+    }
+  }
+
+  function filterEra(era) {
+    filters.forEach((btn) => {
+      const on = btn.dataset.era === era;
+      btn.classList.toggle('is-active', on);
+      btn.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+
+    nodes.forEach((node) => {
+      const show = era === 'all' || node.dataset.era === era;
+      node.classList.toggle('is-hidden', !show);
+    });
+
+    const firstVisible = nodes.find((n) => !n.classList.contains('is-hidden'));
+    if (firstVisible) select(Number(firstVisible.dataset.index));
+  }
+
+  nodes.forEach((node) => {
+    node.addEventListener('click', () => select(Number(node.dataset.index)));
+  });
+
+  filters.forEach((btn) => {
+    btn.addEventListener('click', () => filterEra(btn.dataset.era));
+  });
+
+  track?.addEventListener('keydown', (e) => {
+    const current = nodes.findIndex((n) => n.classList.contains('is-active'));
+    if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      select(Math.min(timeline.length - 1, current + 1));
+    }
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      select(Math.max(0, current - 1));
+    }
+  });
+
+  const hash = location.hash.replace('#', '');
+  const fromHash = timeline.findIndex((e) => e.id === hash);
+  select(fromHash >= 0 ? fromHash : timeline.length - 1);
+</script>

@@ -1,0 +1,194 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TimelineExplorer from '../components/TimelineExplorer.astro';
+import watches from '../data/watches.json';
+import news from '../data/news.json';
+
+const featured = watches.new.slice(0, 3);
+const latestNews = news.slice(0, 4);
+---
+
+<BaseLayout
+  title="Pebble Junkies"
+  description="The one-stop shop for every Pebble — new Time 2 & Round 2, classic repairs, apps, timeline, and community news."
+>
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="/images/Wallpaper_1.jpg" alt="" />
+    </div>
+    <div class="container hero-content">
+      <p class="eyebrow">Classic · Revival · Community</p>
+      <h1 class="hero-brand">Pebble Junkies</h1>
+      <p class="hero-lead">
+        The one-stop shop for every Pebble on your wrist — new Core Devices hardware, decade-old
+        classics, repairs, apps, and the whole wild timeline.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="/watches">Explore the watches</a>
+        <a class="btn btn-ghost" href="/timeline">Ride the timeline</a>
+        <a
+          class="btn btn-ghost"
+          href="https://www.facebook.com/groups/pebble.junkies/"
+          target="_blank"
+          rel="noopener"
+        >
+          Facebook group
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Now shipping</p>
+        <h2>Pebble is back — and the classics still slap</h2>
+        <p>
+          Time 2 is in stock. Round 2 is ramping. Duo sold through. Meanwhile millions of original
+          Pebbles still need batteries, apps, and Rebble love. This hub covers both worlds.
+        </p>
+      </div>
+
+      <div class="watch-grid reveal">
+        {featured.map((w) => (
+          <article class="watch-tile">
+            <div class="media">
+              <img src={w.image} alt={w.name} loading="lazy" />
+            </div>
+            <div class="body">
+              <div class="top">
+                <h3>{w.name}</h3>
+                <span class={`pill pill-${w.statusTone}`}>{w.status}</span>
+              </div>
+              <p class="tagline">{w.tagline}</p>
+              <div class="price">{w.price}</div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="btn-row" style="margin-top:1.5rem">
+        <a class="btn btn-ghost" href="/watches">Full catalog →</a>
+        <a class="btn btn-ghost" href="https://repebble.com/watch" target="_blank" rel="noopener">
+          Buy on rePebble
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">What people asked for</p>
+        <h2>Everything in one place</h2>
+        <p>Straight from the Junkies community — repairs, app picks, and a pulse on company news.</p>
+      </div>
+
+      <div class="lane reveal">
+        <div class="lane-copy">
+          <div class="lane-kicker">Repair & parts</div>
+          <h3>Battery dead? Part numbers, guides, and who can fix it.</h3>
+          <p>
+            iFixit SKUs for Time Round and Time Steel, DIY videos, Steel PDFs from the old site, and
+            community repair referrals — all under one roof.
+          </p>
+          <a class="btn btn-primary" href="/repair">Open the repair hub</a>
+        </div>
+        <div class="lane-visual">
+          <img src="/images/Pebble_2_Battery.jpg" alt="Pebble battery hardware" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="lane reverse reveal">
+        <div class="lane-copy">
+          <div class="lane-kicker">App guides</div>
+          <h3>Junkies picks — not another buried store search.</h3>
+          <p>
+            Starter kits for daily drivers and watchfaces, deep-links into Rebble / rePebble Most
+            Loved, and tips for battery-hungry animations.
+          </p>
+          <a class="btn btn-primary" href="/apps">Browse app guides</a>
+        </div>
+        <div class="lane-visual">
+          <img src="/images/Pebble_Watch_Transparent1.gif" alt="Animated Pebble watch" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="lane reveal">
+        <div class="lane-copy">
+          <div class="lane-kicker">News pulse</div>
+          <h3>Eric posts on Bluesky. Blogs scatter. We gather.</h3>
+          <p>
+            Curated updates from @ericmigi.com, rePebble blog, and Rebble — so you are not hunting
+            three timelines to learn Round 2 shipped another pallet.
+          </p>
+          <a class="btn btn-primary" href="/news">Read the pulse</a>
+        </div>
+        <div class="lane-visual">
+          <img src="/images/Time_Steel_2.jpg" alt="Pebble Time Steel detail" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">History you can scrub</p>
+        <h2>Interactive timeline</h2>
+        <p>
+          From the 2012 Kickstarter rocket, through the Fitbit winter and Rebble survival, to Google
+          open-sourcing PebbleOS and the Core Devices revival.
+        </p>
+      </div>
+      <div class="reveal">
+        <TimelineExplorer />
+      </div>
+      <div class="btn-row" style="margin-top:1rem">
+        <a class="btn btn-ghost" href="/timeline">Fullscreen timeline page →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Latest signal</p>
+        <h2>Fresh from the wire</h2>
+      </div>
+      <div class="news-list reveal">
+        {latestNews.map((item) => (
+          <a class="news-item" href={item.href} target="_blank" rel="noopener">
+            <time datetime={item.date}>
+              {new Date(item.date + 'T12:00:00').toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+              })}
+            </time>
+            <div>
+              <h3>{item.title}</h3>
+              <p>{item.blurb}</p>
+            </div>
+            <span class="source">{item.source}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container reveal">
+      <div class="panel" style="padding: clamp(1.5rem, 4vw, 2.5rem); display:grid; gap:1rem; grid-template-columns: 1.2fr auto; align-items:center;">
+        <div>
+          <p class="eyebrow">New or classic?</p>
+          <h2 style="font-size:clamp(1.8rem,3vw,2.4rem); margin:0 0 0.4rem">Get started in five minutes</h2>
+          <p class="muted" style="margin:0">
+            Dual paths for Time 2 owners and decade-old survivors — companion apps, Rebble, and first apps.
+          </p>
+        </div>
+        <a class="btn btn-primary" href="/start">Launch checklist</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

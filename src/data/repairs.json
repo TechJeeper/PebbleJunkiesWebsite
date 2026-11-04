@@ -1,0 +1,77 @@
+{
+  "disclaimer": "Repair info is community-sourced and unofficial. Lithium batteries are hazardous — if you're unsure, use a trusted technician. Pebble Junkies is not liable for damage, injury, or bricked watches.",
+  "batteries": [
+    {
+      "model": "Pebble Time Round",
+      "part": "LSSP301618AE",
+      "capacity": "58 mAh · 3.8 V",
+      "ifixit": "https://www.ifixit.com/products/pebble-time-round-replacement-battery",
+      "guide": "https://www.ifixit.com/Guide/Pebble+Time+Round+Battery+Replacement/146527",
+      "difficulty": "Moderate",
+      "notes": "Tiny springs under the bezel — don't lose them. Outer ring adhesive is one-shot; many folks say Round repairs are high-risk for the battery size you get back."
+    },
+    {
+      "model": "Pebble Time Steel",
+      "part": "LSSP551923AE",
+      "capacity": "250 mAh · 3.8 V",
+      "ifixit": "https://www.ifixit.com/products/pebble-time-steel-replacement-battery",
+      "guide": "https://www.ifixit.com/Guide/Pebble+Time+Steel+Battery+Replacement/164426",
+      "difficulty": "Hard (soldering)",
+      "notes": "Prefer 3.8 V cells so capacity % reads correctly. Display is bonded — don't separate glass from LCD. Site PDFs cover Steel teardowns too."
+    },
+    {
+      "model": "Pebble Time / OG / 2",
+      "part": "Community equivalents",
+      "capacity": "Varies by shell",
+      "ifixit": "https://www.ifixit.com/Device/Pebble_Time",
+      "guide": "https://www.youtube.com/watch?v=WEs2i2CSits",
+      "difficulty": "Moderate–Hard",
+      "notes": "Watch our embedded DIY video. Measure the old pack; swollen batteries are common on decade-old watches."
+    }
+  ],
+  "docs": [
+    {
+      "title": "Pebble Steel — Battery Swapping",
+      "href": "/docs/Pebble_Steel_-_Battery_Swapping.pdf"
+    },
+    {
+      "title": "Pebble Steel — Battery Replacement PDF",
+      "href": "/docs/Pebble_Steel_battery_replacement.pdf"
+    },
+    {
+      "title": "Time Steel Tear-Down Photos",
+      "href": "/docs/Pebble_Time_Steel_Tear-Down_Photos.pdf"
+    }
+  ],
+  "services": [
+    {
+      "name": "pebblebot repairs",
+      "region": "Community (Discord / Reddit)",
+      "notes": "Frequently recommended in Pebble Junkies & r/pebble for Time Steel and Round battery work. Confirm current turnaround before shipping.",
+      "how": "Ask in Rebble Discord or r/pebble — do not mail watches to strangers without recent references."
+    },
+    {
+      "name": "Local micro-solder / watch tech",
+      "region": "Wherever you live",
+      "notes": "Phone-repair shops with board-level skills can often handle Steel battery leads if you bring the part.",
+      "how": "Bring the iFixit part number + guide printout."
+    }
+  ],
+  "guides": [
+    {
+      "title": "Pebble 2 button fix",
+      "href": "/guides/button-fix",
+      "blurb": "Sticky or dead buttons on Pebble 2 — community procedure."
+    },
+    {
+      "title": "FExxxxx error codes",
+      "href": "/guides/error-codes",
+      "blurb": "Decode sadface / firmware error codes."
+    },
+    {
+      "title": "Inside the Pebble HR",
+      "href": "/guides/inside-hr",
+      "blurb": "Teardown photo tour of the HR hardware."
+    }
+  ]
+}

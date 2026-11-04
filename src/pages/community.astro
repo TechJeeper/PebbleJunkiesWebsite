@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const places = [
+  {
+    name: 'Pebble Junkies Facebook',
+    blurb: 'The namesake group — repairs, flexes, and long-running threads.',
+    href: 'https://www.facebook.com/groups/pebble.junkies/',
+    tag: 'Facebook',
+  },
+  {
+    name: 'r/pebble',
+    blurb: 'News, app recommendations, shipping anxiety, Round 2 photos.',
+    href: 'https://www.reddit.com/r/pebble/',
+    tag: 'Reddit',
+  },
+  {
+    name: 'Rebble Discord',
+    blurb: 'Dev help, repair referrals, firmware chatter.',
+    href: 'https://discord.gg/aRUAYFN',
+    tag: 'Discord',
+  },
+  {
+    name: 'Rebble Forum',
+    blurb: 'Long-form guides and store discussions.',
+    href: 'https://forum.repebble.com/',
+    tag: 'Forum',
+  },
+  {
+    name: 'Eric Migicovsky · Bluesky',
+    blurb: 'Closest thing to an official company feed right now.',
+    href: 'https://bsky.app/profile/ericmigi.com',
+    tag: 'Official-ish',
+  },
+  {
+    name: 'Wikipedia · Pebble',
+    blurb: 'Dense history when you need citations.',
+    href: 'https://en.wikipedia.org/wiki/Pebble_(watch)',
+    tag: 'History',
+  },
+];
+---
+
+<BaseLayout
+  title="Community"
+  description="Pebble Junkies Facebook, r/pebble, Rebble Discord, forums, and Eric's Bluesky — the social map."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Find your people</p>
+      <h1>Community directory</h1>
+      <p>The watch survived because of these rooms. Jump in.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="news-list">
+        {places.map((p) => (
+          <a class="news-item" href={p.href} target="_blank" rel="noopener">
+            <time>{p.tag}</time>
+            <div>
+              <h3>{p.name}</h3>
+              <p>{p.blurb}</p>
+            </div>
+            <span class="source">Join</span>
+          </a>
+        ))}
+      </div>
+
+      <div class="panel" style="padding:1.5rem; margin-top:2rem; display:flex; flex-wrap:wrap; gap:1rem; align-items:center; justify-content:space-between">
+        <div>
+          <h3 style="margin:0 0 0.35rem">Support the caretaker</h3>
+          <p class="muted" style="margin:0">If this hub helps, coffee keeps the lights weird and orange.</p>
+        </div>
+        <a class="btn btn-primary" href="https://buymeacoffee.com/printventory" target="_blank" rel="noopener">
+          Buy me a coffee
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

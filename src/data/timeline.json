@@ -1,0 +1,138 @@
+[
+  {
+    "id": "kickstarter",
+    "date": "2012-04-11",
+    "era": "origin",
+    "title": "Kickstarter lightning strikes",
+    "summary": "Eric Migicovsky launches Pebble on Kickstarter with a $100k goal. It becomes the most-funded project in Kickstarter history — $10.27M from 68,929 backers.",
+    "links": [{ "label": "Wikipedia", "href": "https://en.wikipedia.org/wiki/Pebble_(watch)" }]
+  },
+  {
+    "id": "first-ship",
+    "date": "2013-01-23",
+    "era": "origin",
+    "title": "First Pebbles ship",
+    "summary": "After manufacturing hurdles, the original black-and-white e-paper Pebble starts shipping. Always-on screen, week-long battery, four buttons — a new category is born.",
+    "links": []
+  },
+  {
+    "id": "steel",
+    "date": "2014-02-01",
+    "era": "classic",
+    "title": "Pebble Steel arrives",
+    "summary": "A stainless-steel premium Pebble with a glass screen. Proof the brand could do dress watches without killing battery life.",
+    "links": []
+  },
+  {
+    "id": "time-ks",
+    "date": "2015-02-24",
+    "era": "classic",
+    "title": "Pebble Time Kickstarter",
+    "summary": "Color Sharp Memory LCD, microphone, Timeline UI. Another record-breaking Kickstarter — the Time series defines the golden era of Pebble.",
+    "links": []
+  },
+  {
+    "id": "time-round",
+    "date": "2015-11-01",
+    "era": "classic",
+    "title": "Pebble Time Round",
+    "summary": "The thinnest, lightest round Pebble. Stylish and beloved — and famously fiddly when the tiny battery eventually dies.",
+    "links": []
+  },
+  {
+    "id": "pebble-2",
+    "date": "2016-09-01",
+    "era": "classic",
+    "title": "Pebble 2 & Pebble 2 HR",
+    "summary": "Heart-rate sensing lands on a B&W Pebble. Over two million watches sold across the brand's lifetime.",
+    "links": []
+  },
+  {
+    "id": "fitbit",
+    "date": "2016-12-06",
+    "era": "winter",
+    "title": "Fitbit acquires Pebble assets",
+    "summary": "Hardware production stops. The planned Time 2 and Pebble Core are cancelled. Software IP moves to Fitbit; Kickstarter refunds for unshipped Pebble 2s.",
+    "links": [{ "label": "Fitbit announcement", "href": "https://blog.google/products-and-platforms/devices/fitbit/fitbit-acquires-assets-pebble/" }]
+  },
+  {
+    "id": "rebble",
+    "date": "2018-06-30",
+    "era": "winter",
+    "title": "Rebble keeps the lights on",
+    "summary": "Fitbit shuts original cloud services. Rebble Web Services take over the appstore, Timeline, weather, dictation, and firmware — community-funded survival.",
+    "links": [{ "label": "Rebble", "href": "https://rebble.io/" }]
+  },
+  {
+    "id": "google-fitbit",
+    "date": "2021-01-14",
+    "era": "winter",
+    "title": "Google acquires Fitbit",
+    "summary": "PebbleOS source quietly sits inside Google. The community keeps legacy hardware alive while hoping the code might someday be freed.",
+    "links": []
+  },
+  {
+    "id": "open-source",
+    "date": "2025-01-27",
+    "era": "revival",
+    "title": "Google open-sources PebbleOS",
+    "summary": "Most of the classic firmware lands on GitHub. Chipset/BT bits stripped — but the door to a real comeback swings open.",
+    "links": [{ "label": "Google OSS blog", "href": "https://opensource.googleblog.com/2025/01/see-code-that-powered-pebble-smartwatches.html" }]
+  },
+  {
+    "id": "core-launch",
+    "date": "2025-03-18",
+    "era": "revival",
+    "title": "Core Devices opens pre-orders",
+    "summary": "Eric returns with Core 2 Duo and Core Time 2 — open-source PebbleOS, weeks of battery, 10,000+ existing apps. The dream watch that was cancelled in 2016 gets a second life.",
+    "links": [{ "label": "rePebble", "href": "https://repebble.com/watch" }]
+  },
+  {
+    "id": "trademark",
+    "date": "2025-07-01",
+    "era": "revival",
+    "title": "Pebble name returns",
+    "summary": "Core Devices recovers the Pebble trademark. Core 2 Duo and Core Time 2 become Pebble 2 Duo and Pebble Time 2.",
+    "links": []
+  },
+  {
+    "id": "rebble-core",
+    "date": "2025-10-09",
+    "era": "revival",
+    "title": "Rebble × Core partnership",
+    "summary": "Shared appstore backend. Devs publish once; apps appear for legacy Rebble users and new Core watches. The ecosystem stays unified.",
+    "links": [{ "label": "Rebble post", "href": "https://rebble.io/2025/10/09/rebbles-in-a-world-with-core.html" }]
+  },
+  {
+    "id": "round-2",
+    "date": "2026-01-01",
+    "era": "revival",
+    "title": "Pebble Round 2 announced",
+    "summary": "A stylish round successor at $199 — stainless frame, 1.3\" 64-color e-paper, touch + buttons. Pre-orders open.",
+    "links": [{ "label": "Buy / status", "href": "https://repebble.com/watch" }]
+  },
+  {
+    "id": "pt2-mass",
+    "date": "2026-03-24",
+    "era": "revival",
+    "title": "Time 2 enters mass production",
+    "summary": "20,000+ pre-orders. 30m water resistance on the line. First units ship late March; production ramps toward 500/day.",
+    "links": [{ "label": "Production blog", "href": "https://repebble.com/blog/pebble-time-2-is-in-mass-production" }]
+  },
+  {
+    "id": "pt2-instock",
+    "date": "2026-08-25",
+    "era": "revival",
+    "title": "Time 2 in stock worldwide",
+    "summary": "Pre-order backlog cleared. Pebble Time 2 ships within 48 hours from rePebble.com — 93 countries and counting.",
+    "links": [{ "label": "Shop Time 2", "href": "https://repebble.com/watch" }]
+  },
+  {
+    "id": "round-2-ship",
+    "date": "2026-10-01",
+    "era": "revival",
+    "title": "Round 2 starts shipping",
+    "summary": "Factory batches leave Asia. Soft launch ramps while software (PebbleOS + mobile app) keeps getting weekly love — plugins, WASM watchfaces in the browser, and more.",
+    "links": [{ "label": "Eric on Bluesky", "href": "https://bsky.app/profile/ericmigi.com" }]
+  }
+]

@@ -1,0 +1,45 @@
+name: Update news nightly
+
+on:
+  schedule:
+    # 06:15 UTC every day
+    - cron: '15 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-news
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Prefer default branch so nightly updates land where Pages builds from
+          ref: ${{ github.event.repository.default_branch }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Fetch Bluesky + blog feeds
+        run: npm run update-news
+
+      - name: Commit news.json if changed
+        run: |
+          if git diff --quiet -- src/data/news.json; then
+            echo "No news.json changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/news.json
+          git commit -m "chore(news): nightly pulse refresh"
+          git push
