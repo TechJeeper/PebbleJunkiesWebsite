@@ -134,5 +134,24 @@
     "title": "Round 2 starts shipping",
     "summary": "Factory batches leave Asia. Soft launch ramps while software (PebbleOS + mobile app) keeps getting weekly love — plugins, WASM watchfaces in the browser, and more.",
     "links": [{ "label": "Eric on Bluesky", "href": "https://bsky.app/profile/ericmigi.com" }]
+  },
+  {
+    "id": "index-instock",
+    "date": "2026-10-30",
+    "era": "revival",
+    "title": "Index 01 in stock",
+    "summary": "All ring sizes ship within 48 hours from rePebble.com — voice-capture “external memory” hardware joins Time 2 on the buy-it-now list.",
+    "links": [
+      { "label": "Index 01", "href": "https://repebble.com/index" },
+      { "label": "Eric on Bluesky", "href": "https://bsky.app/profile/ericmigi.com/post/3mz4foc6pqk2h" }
+    ]
+  },
+  {
+    "id": "rebble-board-2026",
+    "date": "2026-03-31",
+    "era": "revival",
+    "title": "Rebble elects a new board",
+    "summary": "First community board election wraps — David Wise stays president, JP joins, and the foundation sets goals for hackathons and life in the Pebble 2.0 era.",
+    "links": [{ "label": "Rebble blog", "href": "https://rebble.io/2026/03/31/the-new-board.html" }]
   }
 ]

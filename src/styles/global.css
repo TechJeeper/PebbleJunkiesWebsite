@@ -811,6 +811,124 @@ p {
   }
 }
 
+/* App store cards */
+.app-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  gap: 1rem;
+}
+
+.app-card {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  text-decoration: none;
+  color: inherit;
+  align-items: start;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.app-card:hover {
+  border-color: rgba(255, 138, 31, 0.45);
+  background: rgba(255, 138, 31, 0.06);
+  color: inherit;
+}
+
+.app-card-media {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.35);
+  aspect-ratio: 144 / 168;
+}
+
+.app-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.app-card-fallback {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--orange);
+}
+
+.app-card-rank {
+  position: absolute;
+  top: 0.35rem;
+  left: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.72);
+  color: var(--orange);
+}
+
+.app-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.app-card-top h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.app-card-hearts {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--orange-hot);
+  white-space: nowrap;
+}
+
+.app-card-meta {
+  margin: 0.25rem 0 0.45rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.app-card-meta .dot {
+  opacity: 0.5;
+  margin: 0 0.25rem;
+}
+
+.app-card-desc {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.app-card-platforms {
+  margin: 0.55rem 0 0;
+  font-size: 0.68rem;
+  color: var(--cyan);
+  opacity: 0.85;
+}
+
+@media (max-width: 480px) {
+  .app-card {
+    grid-template-columns: 1fr;
+  }
+
+  .app-card-media {
+    max-width: 6.5rem;
+  }
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--line);
