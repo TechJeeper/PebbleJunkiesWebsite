@@ -1,5 +1,18 @@
 [
   {
+    "id": "bsky-cfa362942b",
+    "date": "2026-11-05",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "Pebble plugins are now live in the latest SDK (pebble sdk install latest) and on CloudPebble.rePebble.com! Up…",
+    "blurb": "Pebble plugins are now live in the latest SDK (pebble sdk install latest) and on CloudPebble.rePebble.com! Update mobile app and give them a spin (Settings → Plugins) Check out Plugins on apps.rePebble.com/plugins (devs…",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3mzljsdpawc2w",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
+  },
+  {
     "id": "bsky-66cf779499",
     "date": "2026-11-04",
     "source": "Bluesky · Eric Migicovsky",
