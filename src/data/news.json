@@ -13,6 +13,19 @@
     "auto": true
   },
   {
+    "id": "bsky-c174133251",
+    "date": "2026-11-05",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "Fireplace watchface on Pebble Time 2, complete with sound effect.",
+    "blurb": "Fireplace watchface on Pebble Time 2, complete with sound effect.",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3mzlzwu3nbs25",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
+  },
+  {
     "id": "bsky-66cf779499",
     "date": "2026-11-04",
     "source": "Bluesky · Eric Migicovsky",
@@ -498,17 +511,6 @@
     "tags": [
       "rebble",
       "ecosystem"
-    ]
-  },
-  {
-    "id": "oss",
-    "date": "2025-01-27",
-    "source": "Google Open Source",
-    "title": "See the code that powered the Pebble smartwatches",
-    "blurb": "Google releases most of classic PebbleOS — the spark that made Core Devices and the hardware comeback possible.",
-    "href": "https://opensource.googleblog.com/2025/01/see-code-that-powered-pebble-smartwatches.html",
-    "tags": [
-      "opensource"
     ]
   }
 ]
