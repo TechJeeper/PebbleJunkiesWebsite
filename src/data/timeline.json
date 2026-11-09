@@ -147,6 +147,17 @@
     ]
   },
   {
+    "id": "plugins-live",
+    "date": "2026-11-05",
+    "era": "revival",
+    "title": "Plugins land in the production SDK",
+    "summary": "Headless phone-side Plugins graduate from preview to `pebble sdk install latest` and CloudPebble — watchfaces and apps can pull shared data (weather, location, home control) with a new permissions model.",
+    "links": [
+      { "label": "Plugins guide", "href": "https://developer.repebble.com/guides/plugins/" },
+      { "label": "Eric on Bluesky", "href": "https://bsky.app/profile/ericmigi.com/post/3mzljsdpawc2w" }
+    ]
+  },
+  {
     "id": "rebble-board-2026",
     "date": "2026-03-31",
     "era": "revival",
