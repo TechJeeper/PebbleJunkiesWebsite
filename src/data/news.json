@@ -1,5 +1,18 @@
 [
   {
+    "id": "bsky-653ac539d0",
+    "date": "2026-11-12",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "Fun stuff going on in PebbleOS modding world - someone added BLE support to unlock their car, fully offline (…",
+    "blurb": "Fun stuff going on in PebbleOS modding world - someone added BLE support to unlock their car, fully offline (watch connects directly to car, proximity unlock) Aim your agent at the repo (github.com/coredevices/...) and…",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3n23njnayss2x",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
+  },
+  {
     "id": "bsky-cfa362942b",
     "date": "2026-11-05",
     "source": "Bluesky · Eric Migicovsky",
@@ -500,17 +513,5 @@
       "blog"
     ],
     "auto": true
-  },
-  {
-    "id": "rebble-core",
-    "date": "2025-10-09",
-    "source": "Rebble Blog",
-    "title": "Rebbles in a world with Core",
-    "blurb": "Shared appstore backend between Rebble and Core Devices. Publish once, reach both ecosystems. Core helps fund Rebble Web Services.",
-    "href": "https://rebble.io/2025/10/09/rebbles-in-a-world-with-core.html",
-    "tags": [
-      "rebble",
-      "ecosystem"
-    ]
   }
 ]
