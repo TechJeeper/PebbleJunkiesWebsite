@@ -22,7 +22,7 @@ const BLOG_FEEDS = [
 
 const BLUESKY_ACTOR = 'ericmigi.com';
 const PEBBLE_HINT =
-  /\b(pebble|repebble|rebble|watchface|pebbleos|time\s*2|round\s*2|index\s*01|core devices|sdk|firmware)\b/i;
+  /\b(pebble|repebble|rebble|cloudpebble|watchface|pebbleos|time\s*2|round\s*2|index\s*01|core devices|sdk|firmware)\b/i;
 
 function slugId(prefix, input) {
   const hash = createHash('sha1').update(input).digest('hex').slice(0, 10);
