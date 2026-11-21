@@ -1,5 +1,31 @@
 [
   {
+    "id": "bsky-87d00709f3",
+    "date": "2026-11-20",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "maybe we should change the Index 01 tagline to 'give it a shot!'",
+    "blurb": "maybe we should change the Index 01 tagline to 'give it a shot!'",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3n2r342b7ws2a",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
+  },
+  {
+    "id": "bsky-d74204709f",
+    "date": "2026-11-20",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "Thanks for reviewing Index 01, @engadget.com! www.engadget.com/2321607/pebb...",
+    "blurb": "Thanks for reviewing Index 01, @engadget.com! www.engadget.com/2321607/pebb...",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3n2r33lymmc2a",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
+  },
+  {
     "id": "bsky-5d2d2d32f2",
     "date": "2026-11-18",
     "source": "Bluesky · Eric Migicovsky",
@@ -483,32 +509,6 @@
     "title": "Pebble Mega Update - July 2026",
     "blurb": "TL:DR; Pebble Time 2 Shipping Status Pebble Software Updates PT2 - Issues You’ve Reported Pebble Round 2 Production Update Index 01 Production Update Pebble Time 2 Shipping Status Since we started mass production in lat…",
     "href": "https://repebble.com/blog/pebble-mega-update-july-2026",
-    "tags": [
-      "core",
-      "blog"
-    ],
-    "auto": true
-  },
-  {
-    "id": "blog-c06771c6ad",
-    "date": "2026-05-18",
-    "source": "rePebble Blog",
-    "title": "How I Use My Index 01 + Production Update",
-    "blurb": "TL;DR Production Update - behind schedule but on track How I use my Index 01 - watch the Tick Talk episode for demos! Product design philosophy - why we made it this way Index software - see how Index 01 data appears in…",
-    "href": "https://repebble.com/blog/how-i-use-my-index-01-production-update",
-    "tags": [
-      "core",
-      "blog"
-    ],
-    "auto": true
-  },
-  {
-    "id": "blog-d3501025c4",
-    "date": "2026-04-28",
-    "source": "rePebble Blog",
-    "title": "Spring 2026 Dev Contest Results!",
-    "blurb": "Over 500 new Pebble apps and watchfaces! Thank you to all the developers who entered the developer contest It was so much fun following the leaderboard and seeing new apps show up every day. A few thoughts: It's so incr…",
-    "href": "https://repebble.com/blog/spring-2026-dev-contest-results",
     "tags": [
       "core",
       "blog"
