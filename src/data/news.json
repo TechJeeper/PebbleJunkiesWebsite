@@ -1,5 +1,31 @@
 [
   {
+    "id": "bsky-78a82cffe0",
+    "date": "2026-11-23",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "Pebble does one sale a year - it's on! Headline: a few more Pebble 2 Duos for sale + Pebble 2 Duo: $124 ( $̶1…",
+    "blurb": "Pebble does one sale a year - it's on! Headline: a few more Pebble 2 Duos for sale + Pebble 2 Duo: $124 ( $̶1̶4̶9̶) + Pebble Time 2: $200 ($̶2̶2̶5̶) + more In stock, ships within 48 hours. While supplies last (literally…",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3n2ww67afqc2v",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
+  },
+  {
+    "id": "bsky-965d4426d8",
+    "date": "2026-11-22",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "Index 01 is the #1 item on the @wsj.com tech gift guide! Thanks for testing it out, @nicnguyen.bsky.social :)…",
+    "blurb": "Index 01 is the #1 item on the @wsj.com tech gift guide! Thanks for testing it out, @nicnguyen.bsky.social :) www.wsj.com/tech/persona...",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3n2wazkteck2k",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
+  },
+  {
     "id": "bsky-87d00709f3",
     "date": "2026-11-20",
     "source": "Bluesky · Eric Migicovsky",
@@ -488,31 +514,5 @@
       "apps",
       "store"
     ]
-  },
-  {
-    "id": "blog-01b13fcae4",
-    "date": "2026-07-24",
-    "source": "rePebble Blog",
-    "title": "Index 01 Is In Mass Production!",
-    "blurb": "TL:DR Index 01 is in mass production What you need to know about Index 01 What can I do with Index 01? What to expect Things to be aware of Things to look forward to Great news everybody Index 01 has now entered mass pr…",
-    "href": "https://repebble.com/blog/index-01-is-in-mass-production",
-    "tags": [
-      "core",
-      "blog"
-    ],
-    "auto": true
-  },
-  {
-    "id": "blog-a0bb4aeeb4",
-    "date": "2026-07-14",
-    "source": "rePebble Blog",
-    "title": "Pebble Mega Update - July 2026",
-    "blurb": "TL:DR; Pebble Time 2 Shipping Status Pebble Software Updates PT2 - Issues You’ve Reported Pebble Round 2 Production Update Index 01 Production Update Pebble Time 2 Shipping Status Since we started mass production in lat…",
-    "href": "https://repebble.com/blog/pebble-mega-update-july-2026",
-    "tags": [
-      "core",
-      "blog"
-    ],
-    "auto": true
   }
 ]
