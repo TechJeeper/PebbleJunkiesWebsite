@@ -1,5 +1,18 @@
 [
   {
+    "id": "bsky-2166241965",
+    "date": "2026-11-24",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "made a pebble desktop app that (among other things) does what I’ve always wanted - sends presence to the Pebb…",
+    "blurb": "made a pebble desktop app that (among other things) does what I’ve always wanted - sends presence to the Pebble mobile app and suppresses notifications (only Beeper for now) when I’m at my computer",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3n2zf46q32c22",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
+  },
+  {
     "id": "bsky-78a82cffe0",
     "date": "2026-11-23",
     "source": "Bluesky · Eric Migicovsky",
@@ -501,18 +514,6 @@
     "tags": [
       "hardware",
       "time-2"
-    ]
-  },
-  {
-    "id": "appstore-wasm",
-    "date": "2026-08-01",
-    "source": "Bluesky · Eric Migicovsky",
-    "title": "Watchfaces run live in the browser",
-    "blurb": "apps.rePebble.com Top Charts + WASM PebbleOS previews. Battery-impact insights for animated faces.",
-    "href": "https://apps.repebble.com/",
-    "tags": [
-      "apps",
-      "store"
     ]
   }
 ]
