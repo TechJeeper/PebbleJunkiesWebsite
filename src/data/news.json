@@ -1,5 +1,18 @@
 [
   {
+    "id": "bsky-0bb45e43b9",
+    "date": "2026-11-25",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "Thanks for covering Index 01, @zdnet.bsky.social! www.zdnet.com/tech/pebble-...",
+    "blurb": "Thanks for covering Index 01, @zdnet.bsky.social! www.zdnet.com/tech/pebble-...",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3n35qhg4ysc2h",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
+  },
+  {
     "id": "bsky-2166241965",
     "date": "2026-11-24",
     "source": "Bluesky · Eric Migicovsky",
@@ -503,17 +516,5 @@
       "blog"
     ],
     "auto": true
-  },
-  {
-    "id": "pt2-instock",
-    "date": "2026-08-25",
-    "source": "rePebble / Bluesky",
-    "title": "All Time 2 pre-orders shipped — now in stock",
-    "blurb": "Didn't pre-order? PT2 is on rePebble.com/watch and ships within 48 hours. Color selectors for folks who hadn't locked one in.",
-    "href": "https://repebble.com/watch",
-    "tags": [
-      "hardware",
-      "time-2"
-    ]
   }
 ]
