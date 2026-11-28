@@ -1,5 +1,18 @@
 [
   {
+    "id": "bsky-ff1c4c358d",
+    "date": "2026-11-27",
+    "source": "Bluesky · Eric Migicovsky",
+    "title": "turns out you can get PebbleOS to run on basically anything. Just plug in the device, point your agent at cor…",
+    "blurb": "turns out you can get PebbleOS to run on basically anything. Just plug in the device, point your agent at coredevices/PebbleOS and have fun! Running on xteink x4 pro after a few hours of clanker clanking :)",
+    "href": "https://bsky.app/profile/ericmigi.com/post/3n3crrmvqec2x",
+    "tags": [
+      "bluesky",
+      "core"
+    ],
+    "auto": true
+  },
+  {
     "id": "bsky-0bb45e43b9",
     "date": "2026-11-25",
     "source": "Bluesky · Eric Migicovsky",
@@ -498,19 +511,6 @@
     "title": "Pebble Round 2 Starts Shipping!",
     "blurb": "TLDR PR2 is in production!! See all the strap options What you need to know about Pebble Round 2 Address confirmation email instructions FAQ Pebble Round 2 is in production!! Finally! 😌 We’re not out of the woods yet,…",
     "href": "https://repebble.com/blog/pebble-round-2-starts-shipping",
-    "tags": [
-      "core",
-      "blog"
-    ],
-    "auto": true
-  },
-  {
-    "id": "blog-a61a9df3cd",
-    "date": "2026-08-30",
-    "source": "rePebble Blog",
-    "title": "New Pebble Weather App + Software Updates",
-    "blurb": "All Pebble Time 2 invites have been sent and we're now in-stock! It’s been a long Time coming, but if you have been waiting, now is your moment. Pebble Time 2 is in stock on rePebble.com/watch and ships within 48 hours!…",
-    "href": "https://repebble.com/blog/new-pebble-weather-app-software-updates",
     "tags": [
       "core",
       "blog"
